@@ -36,6 +36,12 @@ class TrainingTests(unittest.TestCase):
             config = dict(input_points=32, output_points=16, batch_size=2, target_points=32, device='cpu')
             whole = train(dataset, root / 'whole', epochs=3, **config)
             train(dataset, root / 'resumed', epochs=1, **config)
+            # 模拟新增消融参数之前的 v2 检查点，验证默认基线可继续恢复。
+            legacy = torch.load(root/'resumed'/'last.pt', weights_only=True)
+            legacy['config'].pop('output_mode')
+            legacy['config'].pop('boundary_weight')
+            legacy.pop('output_mode')
+            torch.save(legacy, root/'resumed'/'last.pt')
             resumed = train(dataset, root / 'resumed', epochs=3, resume=root / 'resumed' / 'last.pt', **config)
             self.assertEqual(whole['history'], resumed['history'])
             a = torch.load(root / 'whole' / 'last.pt', weights_only=True)

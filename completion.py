@@ -5,9 +5,12 @@ from torch import nn
 
 
 class LocalCompletion(nn.Module):
-    def __init__(self, output_points=128):
+    def __init__(self, output_points=128, output_mode='soft'):
         super().__init__()
         self.output_points = output_points
+        if output_mode not in ('soft', 'tanh'):
+            raise ValueError('未知的球内输出方式。')
+        self.output_mode = output_mode
         self.encoder = nn.Sequential(nn.Linear(3, 64), nn.ReLU(), nn.Linear(64, 128),
                                      nn.ReLU(), nn.Linear(128, 128), nn.ReLU())
         self.decoder = nn.Sequential(nn.Linear(128 + 4, 256), nn.ReLU(),
@@ -19,7 +22,13 @@ class LocalCompletion(nn.Module):
         features = self.encoder(relative).amax(dim=1)
         raw = self.decoder(torch.cat((features, region), dim=1)).reshape(-1, self.output_points, 3)
         # 输出被限制在指定球内；保留区域由拼接原始点保证。
-        local = raw / (1 + torch.linalg.vector_norm(raw, dim=-1, keepdim=True))
+        norm = torch.linalg.vector_norm(raw, dim=-1, keepdim=True)
+        if self.output_mode == 'soft':
+            local = raw / (1 + norm)
+        else:
+            # 相同原始幅度能到达更外侧，保持球内限制且不改变向量方向。
+            safe_norm = norm.clamp_min(1e-6)
+            local = raw * (torch.tanh(safe_norm) / safe_norm)
         return center[:, None, :] + radius[:, None, :] * local
 
 
@@ -30,6 +39,14 @@ def chamfer_per_sample(prediction, target):
 
 def chamfer_squared(prediction, target):
     return chamfer_per_sample(prediction, target).mean()
+
+
+def boundary_coverage_loss(prediction, target, region):
+    """真实外缘点到预测点的单向平方距离均值；没有外缘点时为零。"""
+    distances = torch.cdist(prediction, target).square().amin(dim=1)
+    radial = torch.linalg.vector_norm(target-region[:, None, :3], dim=-1)
+    outer = radial >= region[:, 3:4] * 0.8
+    return (distances * outer).sum(dim=1) / outer.sum(dim=1).clamp_min(1)
 
 
 def sample_points(points, count, rng):
@@ -49,7 +66,7 @@ def context_points(points, center, count, rng):
 
 def load_checkpoint(path):
     checkpoint = torch.load(path, map_location='cpu', weights_only=True)
-    model = LocalCompletion(checkpoint['output_points'])
+    model = LocalCompletion(checkpoint['output_points'], checkpoint.get('output_mode', 'soft'))
     model.load_state_dict(checkpoint['state_dict'])
     model.eval()
     return model, checkpoint

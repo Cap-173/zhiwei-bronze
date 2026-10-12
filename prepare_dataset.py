@@ -63,7 +63,7 @@ def load_training_sample(path):
 
 
 def build_dataset(models, output, samples=10, point_limit=4096, seed=42,
-                  radius_range=(0.08, 0.18), fraction_range=(0.02, 0.20)):
+                  radius_range=(0.08, 0.18), fraction_range=(0.02, 0.20), split_assignments=None):
     ids = [model_id for model_id, _ in models]
     if not ids or len(set(ids)) != len(ids):
         raise ValueError('需要模型，且每个模型 ID 必须唯一。')
@@ -75,7 +75,14 @@ def build_dataset(models, output, samples=10, point_limit=4096, seed=42,
         raise ValueError('缺失比例需要满足 0 < 最小值 <= 最大值 < 1。')
     if output.exists():
         raise FileExistsError(f'输出目录已存在，不会覆盖: {output}')
-    splits = split_models(ids, seed)
+    if split_assignments is not None:
+        if set(split_assignments) != set(ids) or any(s not in ('train', 'val', 'test') for s in split_assignments.values()):
+            raise ValueError('指定划分必须覆盖全部模型且只包含 train/val/test。')
+        if 'train' not in split_assignments.values():
+            raise ValueError('指定划分必须包含训练模型。')
+        splits = dict(split_assignments)
+    else:
+        splits = split_models(ids, seed)
     rng = np.random.default_rng(seed)
     prepared = []
     fingerprints = set()
@@ -100,8 +107,8 @@ def build_dataset(models, output, samples=10, point_limit=4096, seed=42,
     manifest = dict(schema_version=1, seed=seed, point_limit=point_limit,
                     radius_range=list(radius_range), fraction_range=list(fraction_range),
                     splits=splits, status='building', samples=entries,
-                    evaluation_ready=len(ids) >= 3,
-                    note='Split by supplied physical model ID. Fewer than 3 models: train only.')
+                    evaluation_ready=all(s in splits.values() for s in ('train', 'val', 'test')),
+                    note='Split by supplied physical model ID; explicit splits preserved when provided.')
     manifest_path = output / 'manifest.json'
     def write_manifest():
         manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
@@ -140,6 +147,7 @@ def build_dataset(models, output, samples=10, point_limit=4096, seed=42,
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--models', type=Path, help='JSON 对象：器物实例 ID 到 PLY 路径；相对路径基于 JSON 目录')
+    parser.add_argument('--splits', type=Path, help='可选 JSON 对象：模型 ID 到 train/val/test，用于保留公开数据官方划分')
     parser.add_argument('--samples-per-model', type=int, default=10)
     parser.add_argument('--points', type=int, default=4096)
     parser.add_argument('--seed', type=int, default=42)
@@ -160,10 +168,11 @@ def main(argv=None):
             models = [('demo_vessel', path)]
         output = args.output_dir or ROOT / 'outputs' / 'datasets' / datetime.now().strftime('dataset_%Y%m%d_%H%M%S_%f')
         manifest = build_dataset(models, output, args.samples_per_model, args.points, args.seed,
-                                 args.radius_range, args.missing_range)
+                                 args.radius_range, args.missing_range,
+                                 json.loads(args.splits.read_text(encoding='utf-8')) if args.splits else None)
         print(f'生成完成: {len(manifest["samples"])} 个样本 | {len(models)} 个模型')
         if not manifest['evaluation_ready']:
-            print('不足 3 个模型，全部放入 train；仅用于调试，不能评价泛化。')
+            print('缺少验证或测试划分；不能报告完整的泛化评价。')
         print(f'数据目录: {output.resolve()}')
         print(f'首个预览: {output.resolve() / manifest["samples"][0]["path"] / "comparison.html"}')
         return 0

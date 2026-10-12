@@ -9,7 +9,7 @@ import sys
 import torch
 from torch.utils.data import DataLoader
 
-from completion import LocalCompletion, chamfer_per_sample
+from completion import LocalCompletion, chamfer_per_sample, boundary_coverage_loss
 from main import ROOT
 from training_data import CompletionDataset, dataset_fingerprint, evaluate_entries, read_manifest
 
@@ -31,20 +31,24 @@ def atomic_checkpoint(checkpoint, path):
 
 
 def train(dataset, output, epochs=50, input_points=512, output_points=128, seed=42, lr=0.001,
-          batch_size=8, target_points=256, device='auto', workers=0, amp=False, resume=None):
+          batch_size=8, target_points=256, device='auto', workers=0, amp=False, resume=None,
+          output_mode='soft', boundary_weight=0.):
     dataset, output = Path(dataset), Path(output)
     if min(epochs, output_points, batch_size, target_points) < 1 or input_points < 2 or workers < 0 or seed < 0 or not math.isfinite(lr) or lr <= 0:
         raise ValueError('训练参数无效：点数、批大小、轮数和学习率必须为正。')
     device = resolve_device(device)
     if amp and device.type != 'cuda':
         raise ValueError('混合精度 --amp 需要 CUDA。')
+    if output_mode not in ('soft', 'tanh') or not math.isfinite(boundary_weight) or boundary_weight < 0:
+        raise ValueError('输出方式或外缘约束权重无效。')
     manifest = read_manifest(dataset)
     entries = {split: [e for e in manifest['samples'] if e['split'] == split] for split in ('train', 'val')}
     if not entries['train']:
         raise ValueError('没有训练样本。')
     fingerprint = dataset_fingerprint(dataset, manifest)
     config = dict(input_points=input_points, output_points=output_points, seed=seed, lr=lr,
-                  batch_size=batch_size, target_points=target_points, amp=amp)
+                  batch_size=batch_size, target_points=target_points, amp=amp,
+                  output_mode=output_mode, boundary_weight=boundary_weight)
     restored = None
     if resume:
         resume = Path(resume).resolve()
@@ -55,7 +59,8 @@ def train(dataset, output, epochs=50, input_points=512, output_points=128, seed=
             raise ValueError('旧版模型仅支持推理，不能完整续训；请开始新的训练。')
         if restored['dataset_fingerprint'] != fingerprint:
             raise ValueError('数据集内容变化，拒绝续训。')
-        if restored['config'] != config:
+        previous_config = dict(output_mode='soft', boundary_weight=0., **restored['config']) if 'output_mode' not in restored['config'] else restored['config']
+        if previous_config != config:
             raise ValueError('续训参数与检查点不一致，请沿用原训练配置。')
         if epochs <= restored['epoch']:
             raise ValueError('--epochs 是总轮数，必须大于已完成轮数。')
@@ -65,7 +70,7 @@ def train(dataset, output, epochs=50, input_points=512, output_points=128, seed=
         output.mkdir(parents=True, exist_ok=False)
     torch.manual_seed(seed)
     torch.set_num_threads(2)
-    model = LocalCompletion(output_points).to(device)
+    model = LocalCompletion(output_points, output_mode).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     scaler = torch.amp.GradScaler('cuda', enabled=amp)
     history, best, first_epoch = [], float('inf'), 1
@@ -99,7 +104,10 @@ def train(dataset, output, epochs=50, input_points=512, output_points=128, seed=
             with torch.autocast(device_type=device.type, enabled=amp):
                 prediction = model(points, region)
             # 距离与尺度运算保持 float32，降低半精度数值风险。
-            loss = (chamfer_per_sample(prediction.float(), target) / region[:, 3].square()).mean()
+            per_sample = chamfer_per_sample(prediction.float(), target)
+            if boundary_weight:
+                per_sample = per_sample + boundary_weight * boundary_coverage_loss(prediction.float(), target, region)
+            loss = (per_sample / region[:, 3].square()).mean()
             if not torch.isfinite(loss):
                 raise ValueError('训练损失非有限，请检查数据。')
             scaler.scale(loss).backward()
@@ -120,7 +128,8 @@ def train(dataset, output, epochs=50, input_points=512, output_points=128, seed=
         checkpoint = dict(state_dict=model.state_dict(), optimizer=optimizer.state_dict(), scaler=scaler.state_dict(),
                           output_points=output_points, input_points=input_points, seed=seed, epoch=epoch,
                           dataset=str(dataset.resolve()), selection_split='val' if validation else 'train',
-                          model_version=1, training_version=2, config=config, dataset_fingerprint=fingerprint,
+                          model_version=1 if output_mode == 'soft' else 2, output_mode=output_mode,
+                          training_version=2, config=config, dataset_fingerprint=fingerprint,
                           best_score=best, initial_train_cd_squared=initial, history=history,
                           torch_rng=torch.get_rng_state(), cuda_rng=torch.cuda.get_rng_state_all() if device.type == 'cuda' else [])
         # best 先写入，last 是完整轮次的恢复入口。
@@ -151,6 +160,8 @@ def main(argv=None):
     parser.add_argument('--seed', type=int, default=42)
     parser.add_argument('--lr', type=float, default=0.001)
     parser.add_argument('--resume', type=Path)
+    parser.add_argument('--output-mode', choices=['soft', 'tanh'], default='soft')
+    parser.add_argument('--boundary-weight', type=float, default=0.)
     parser.add_argument('--output-dir', type=Path)
     args = parser.parse_args(argv)
     try:
@@ -163,7 +174,8 @@ def main(argv=None):
             dataset = datasets[-1]
         output = args.output_dir or (args.resume.resolve().parent if args.resume else ROOT / 'outputs' / 'runs' / datetime.now().strftime('run_%Y%m%d_%H%M%S_%f'))
         report = train(dataset, output, args.epochs, args.input_points, args.output_points, args.seed, args.lr,
-                       args.batch_size, args.target_points, args.device, args.workers, args.amp, args.resume)
+                       args.batch_size, args.target_points, args.device, args.workers, args.amp, args.resume,
+                       args.output_mode, args.boundary_weight)
         print(f'模型保存: {output.resolve()} | 评价范围: {report["evaluation_scope"]}')
         return 0
     except (OSError, ValueError, KeyError, RuntimeError) as error:

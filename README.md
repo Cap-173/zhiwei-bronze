@@ -160,7 +160,50 @@ HTML 包含绘图库，可离线使用；程序不会自动启动浏览器。
 仅有示例器皿时，训练分数下降说明流程能学习，不代表真实青铜器修复能力或泛化性能。
 保存加载遵循 [PyTorch 官方权重保存说明](https://docs.pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html)，不加载外部完整 Python 模型对象。
 
+## 数据检查与训练曲线
+
+模型到位之前可以先用示例验证检查和报告流程。无需新增依赖。
+直接在 PyCharm 运行 `inspect_dataset.py` 检查最近生成的数据集，运行 `report_run.py` 查看最近训练的曲线。
+
+```powershell
+.\.venv\Scripts\python.exe inspect_dataset.py
+.\.venv\Scripts\python.exe report_run.py
+```
+
+数据检查包括：模型划分、选区 Mask、球形选区定义、点数记录、原始点与颜色保持，以及归一化坐标还原。
+生成 JSON 检查结果及样本数/缺失比例 HTML 图表，不修改源数据。
+没有 val/test 的数据集会标注仅用于调试；结构检查通过不代表模型质量足够或原始扫描完整。
+训练报告包含损失、训练/验证 CD² 和 F-score；旧记录没有 F-score 时不绘制该曲线，没有验证集时不伪造验证曲线。
+输出位于 `outputs/reports/`，每次创建新的目录。
+
+指定数据或运行目录：
+
+```powershell
+.\.venv\Scripts\python.exe inspect_dataset.py --dataset outputs/datasets/dataset_具体目录
+.\.venv\Scripts\python.exe report_run.py --run outputs/runs/run_具体目录
+```
+
+模型拿到后先确认：独立器物 ID、来源与使用权限、文件格式、坐标单位、是否完整，以及有无严重噪声/重复扫描。
+当前读取仅支持 PLY，OBJ/STL 等格式收到后再转换，并检查表面采样质量。
+
 ## 后续步骤
+
+外缘覆盖与输出方式的独立对照命令见 [消融实验说明](ABLATIONS.md)。
+
+验证集诊断（只用 val，不把 test 用作改进依据）：
+
+```powershell
+.\.venv\Scripts\python.exe analyze_validation.py --dataset outputs/datasets/dataset_具体目录 --checkpoint outputs/runs/run_具体目录/best.pt
+.\.venv\Scripts\python.exe -m pip install -r requirements-analysis.txt
+.\.venv\Scripts\python.exe render_diagnostics.py
+```
+
+诊断检查真实缺失点与预测点在球形外缘带（距球心 >= 0.8R）的分布，以及真实外缘点在 0.1R 距离内有无预测邻居。
+它是定位收缩和覆盖问题的工具，不是表面连续性的证明，也不是官方论文评价指标。
+输出含全部验证样本记录、低/中/高 CD 案例 HTML 和静态局部多视角图。
+静态图的 PCA 只用于统一观察角度，完整目标不参与预测。
+
+公开器皿数据下载和导入见 [公开数据说明](PUBLIC_DATA.md)。
 
 GPU 安装、批量训练、断点续训和独立评价的命令见 [GPU 运行说明](GPU_TRAINING.md)。
 
