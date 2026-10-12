@@ -114,11 +114,59 @@ HTML 包含绘图库，可离线使用；程序不会自动启动浏览器。
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
+## 基础局部补全训练
+
+现已实现轻量 PointNet 风格编码器和 MLP 解码器，输入仅为可见点云与球形选区，不含文本。
+模型预测球内 128 个点，拼接原始可见点形成结果；当前只预测 XYZ，不生成颜色或网格。
+这是工程基线，不是文档中完整的多模态方法。
+
+安装训练依赖（已在本项目虚拟环境安装 CPU 版）：
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-train.txt
+```
+
+如果需要明确选择 CPU 版，可按 [PyTorch 官方安装说明](https://pytorch.org/get-started/locally/)安装 PyTorch。
+训练和预测可直接在 PyCharm 运行 `train.py`、`predict.py`：
+
+```powershell
+.\.venv\Scripts\python.exe train.py
+.\.venv\Scripts\python.exe predict.py
+```
+
+训练默认读取最近创建的数据集，自动选择可用的 CUDA 或 CPU，运行 50 轮，batch size 为 8，输入采样 512 点（局部邻居与全局上下文各半）。
+每步从缺失目标采样 256 点计算双向平均平方 Chamfer 损失，除以选区半径平方进行尺度调整。
+评价使用全部缺失目标点与固定输入采样；CD² 越小越好，不能与未平方或不同归一化定义的 CD 直接比较。
+每轮保存 `outputs/runs/run_.../last.pt`；有验证集时按验证 CD² 保存 `best.pt`，否则按训练 CD² 保存并明确标注。
+`history.json` 保存初始分数与每轮记录。测试集不用于选择模型。
+预测默认优先预览测试样本，再选验证样本、训练样本；只预览一个样本，不是完整测试集评价。
+
+指定参数：
+
+```powershell
+.\.venv\Scripts\python.exe train.py --dataset outputs/datasets/dataset_具体目录 --epochs 100
+.\.venv\Scripts\python.exe predict.py --checkpoint outputs/runs/run_具体目录/best.pt --sample outputs/datasets/dataset_具体目录/train/model_0000_sample_0000
+```
+
+真实残缺点云推理（不需要完整目标）：
+
+```powershell
+.\.venv\Scripts\python.exe predict.py --input "D:\models\damaged.ply" --center 10 20 30 --radius 5
+```
+
+输入应已经去掉选区内待替换的点，程序只添加预测点，不自动删除输入点。
+推理归一化仅依据输入，预测后还原到原始尺度。结果目录包含 `generated.ply`、`completed.ply`、`metrics.json` 和 `comparison.html`。
+完整参考与被删除点只在推理结束后用于评价和展示，不参与预测。
+仅有示例器皿时，训练分数下降说明流程能学习，不代表真实青铜器修复能力或泛化性能。
+保存加载遵循 [PyTorch 官方权重保存说明](https://docs.pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html)，不加载外部完整 Python 模型对象。
+
 ## 后续步骤
 
+GPU 安装、批量训练、断点续训和独立评价的命令见 [GPU 运行说明](GPU_TRAINING.md)。
+
 1. 准备更多完整模型并检查缺口质量。
-2. 固定点数批处理与基础局部补全模型。
-3. 训练、局部几何评价与失败案例分析。
+2. 多器物验证、完整测试集评价与失败案例分析。
+3. 根据基线结果改进局部形状和边界质量。
 4. 文本控制与交互系统。
 
 完整方案见 [V1.0 文档](智维青铜_多模态3D局部可控编辑_V1.0_README.md)。
