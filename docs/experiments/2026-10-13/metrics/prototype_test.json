@@ -1,0 +1,349 @@
+{
+  "sample_count": 40,
+  "model_count": 2,
+  "mean_local_cd_squared": 0.005951966519933194,
+  "mean_local_fscore": 0.11544871152120277,
+  "model_macro_cd_squared": 0.005951966519933194,
+  "model_macro_fscore": 0.11544871152120278,
+  "fscore_threshold": 0.02,
+  "coordinate_space": "normalized input coordinates",
+  "models": {
+    "bronze_06": {
+      "samples": 20,
+      "local_cd_squared": 0.0050832442357204854,
+      "local_fscore": 0.12420750698063125
+    },
+    "bronze_07": {
+      "samples": 20,
+      "local_cd_squared": 0.006820688804145903,
+      "local_fscore": 0.10668991606177433
+    }
+  },
+  "samples": [
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0000",
+      "local_cd_squared": 0.005417139269411564,
+      "local_fscore": 0.06308587379031154,
+      "precision": 0.5546875,
+      "recall": 0.03344481438398361
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0001",
+      "local_cd_squared": 0.004219030495733023,
+      "local_fscore": 0.10043397419119916,
+      "precision": 0.6328125,
+      "recall": 0.05454545468091965
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0002",
+      "local_cd_squared": 0.006760842632502317,
+      "local_fscore": 0.07860958080043617,
+      "precision": 0.453125,
+      "recall": 0.04303797334432602
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0003",
+      "local_cd_squared": 0.005254858173429966,
+      "local_fscore": 0.09516415004317359,
+      "precision": 0.515625,
+      "recall": 0.052419353276491165
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0004",
+      "local_cd_squared": 0.0037572996225208044,
+      "local_fscore": 0.17172694078466738,
+      "precision": 0.578125,
+      "recall": 0.10084033757448196
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0005",
+      "local_cd_squared": 0.0023902105167508125,
+      "local_fscore": 0.19721871110885472,
+      "precision": 0.609375,
+      "recall": 0.11764705926179886
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0006",
+      "local_cd_squared": 0.007789142429828644,
+      "local_fscore": 0.04098443165336689,
+      "precision": 0.53125,
+      "recall": 0.021314388141036034
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0007",
+      "local_cd_squared": 0.004117809236049652,
+      "local_fscore": 0.10996016034349423,
+      "precision": 0.5390625,
+      "recall": 0.06122449040412903
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0008",
+      "local_cd_squared": 0.004253685008734465,
+      "local_fscore": 0.13256659061191,
+      "precision": 0.5703125,
+      "recall": 0.07500000298023224
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0009",
+      "local_cd_squared": 0.002225013915449381,
+      "local_fscore": 0.19725433064921466,
+      "precision": 0.65625,
+      "recall": 0.1160714253783226
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0010",
+      "local_cd_squared": 0.004413742572069168,
+      "local_fscore": 0.13372152666020054,
+      "precision": 0.6015625,
+      "recall": 0.0752212405204773
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0011",
+      "local_cd_squared": 0.006532819010317326,
+      "local_fscore": 0.17084282677598786,
+      "precision": 0.5859375,
+      "recall": 0.10000000149011612
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0012",
+      "local_cd_squared": 0.004327388480305672,
+      "local_fscore": 0.15699333531335993,
+      "precision": 0.515625,
+      "recall": 0.09259258955717087
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0013",
+      "local_cd_squared": 0.004699583165347576,
+      "local_fscore": 0.11192265253931072,
+      "precision": 0.5546875,
+      "recall": 0.062240663915872574
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0014",
+      "local_cd_squared": 0.003683758433908224,
+      "local_fscore": 0.17261977273104073,
+      "precision": 0.4609375,
+      "recall": 0.10619468986988068
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0015",
+      "local_cd_squared": 0.009975001215934753,
+      "local_fscore": 0.03369524483657609,
+      "precision": 0.46875,
+      "recall": 0.017475727945566177
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0016",
+      "local_cd_squared": 0.006727535277605057,
+      "local_fscore": 0.08435987839605147,
+      "precision": 0.4609375,
+      "recall": 0.04642857238650322
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0017",
+      "local_cd_squared": 0.004754810128360987,
+      "local_fscore": 0.14066537021070363,
+      "precision": 0.5234375,
+      "recall": 0.08124999701976776
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0018",
+      "local_cd_squared": 0.006935492157936096,
+      "local_fscore": 0.1260903667415895,
+      "precision": 0.5546875,
+      "recall": 0.071129709482193
+    },
+    {
+      "model_id": "bronze_06",
+      "path": "test/model_0006_sample_0019",
+      "local_cd_squared": 0.003429722972214222,
+      "local_fscore": 0.16623442143117573,
+      "precision": 0.5703125,
+      "recall": 0.0972972959280014
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0000",
+      "local_cd_squared": 0.007368400227278471,
+      "local_fscore": 0.059734516398923874,
+      "precision": 0.421875,
+      "recall": 0.03214285895228386
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0001",
+      "local_cd_squared": 0.003288308158516884,
+      "local_fscore": 0.23596320529956397,
+      "precision": 0.5859375,
+      "recall": 0.14772726595401764
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0002",
+      "local_cd_squared": 0.01027785986661911,
+      "local_fscore": 0.057193138432084206,
+      "precision": 0.5078125,
+      "recall": 0.03030303120613098
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0003",
+      "local_cd_squared": 0.005927415564656258,
+      "local_fscore": 0.08868243528252441,
+      "precision": 0.4375,
+      "recall": 0.04934210702776909
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0004",
+      "local_cd_squared": 0.003822693368420005,
+      "local_fscore": 0.11363636363636363,
+      "precision": 0.625,
+      "recall": 0.0625
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0005",
+      "local_cd_squared": 0.003373469691723585,
+      "local_fscore": 0.11798355282966348,
+      "precision": 0.46875,
+      "recall": 0.06748466193675995
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0006",
+      "local_cd_squared": 0.011744428426027298,
+      "local_fscore": 0.06645569778194489,
+      "precision": 0.1640625,
+      "recall": 0.0416666679084301
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0007",
+      "local_cd_squared": 0.010423274710774422,
+      "local_fscore": 0.06236981908427747,
+      "precision": 0.3828125,
+      "recall": 0.03395061567425728
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0008",
+      "local_cd_squared": 0.007872064597904682,
+      "local_fscore": 0.04091174744343142,
+      "precision": 0.4375,
+      "recall": 0.021459227427840233
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0009",
+      "local_cd_squared": 0.008363657630980015,
+      "local_fscore": 0.07666690039344196,
+      "precision": 0.5078125,
+      "recall": 0.04146341606974602
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0010",
+      "local_cd_squared": 0.004948200657963753,
+      "local_fscore": 0.12567745883503548,
+      "precision": 0.609375,
+      "recall": 0.07006369531154633
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0011",
+      "local_cd_squared": 0.0100809745490551,
+      "local_fscore": 0.053742802349215905,
+      "precision": 0.328125,
+      "recall": 0.02926829271018505
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0012",
+      "local_cd_squared": 0.002978571690618992,
+      "local_fscore": 0.24077047119082168,
+      "precision": 0.5859375,
+      "recall": 0.1515151560306549
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0013",
+      "local_cd_squared": 0.005734006874263287,
+      "local_fscore": 0.13738441321281286,
+      "precision": 0.609375,
+      "recall": 0.07741935551166534
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0014",
+      "local_cd_squared": 0.003984536975622177,
+      "local_fscore": 0.17172694078466738,
+      "precision": 0.578125,
+      "recall": 0.10084033757448196
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0015",
+      "local_cd_squared": 0.002655046060681343,
+      "local_fscore": 0.14245888167475007,
+      "precision": 0.5703125,
+      "recall": 0.08139535039663315
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0016",
+      "local_cd_squared": 0.009760061278939247,
+      "local_fscore": 0.06641808250029041,
+      "precision": 0.4453125,
+      "recall": 0.03588516637682915
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0017",
+      "local_cd_squared": 0.00820339284837246,
+      "local_fscore": 0.08976588672822122,
+      "precision": 0.4765625,
+      "recall": 0.04954954981803894
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0018",
+      "local_cd_squared": 0.008234652690589428,
+      "local_fscore": 0.10795606888045316,
+      "precision": 0.484375,
+      "recall": 0.0607476644217968
+    },
+    {
+      "model_id": "bronze_07",
+      "path": "test/model_0007_sample_0019",
+      "local_cd_squared": 0.007372760213911533,
+      "local_fscore": 0.07829993849699912,
+      "precision": 0.4765625,
+      "recall": 0.04265403002500534
+    }
+  ],
+  "split": "test",
+  "checkpoint": "PROJECT_ROOT\\outputs\\runs\\bronze_cd128_seed42\\best.pt",
+  "checkpoint_selection_split": "val",
+  "matches_training_dataset": true,
+  "dataset_fingerprint": "6a84e03555c803c58f6802520831db307af9a4cff4579796d0232ac8eccebf03"
+}

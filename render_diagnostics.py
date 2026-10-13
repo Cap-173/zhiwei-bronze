@@ -40,6 +40,8 @@ def render(directory):
     output = directory / 'local_views.png'
     figure.savefig(output, dpi=150)
     plt.close(figure)
+    from organize_figures import organize
+    organize()
     return output
 
 

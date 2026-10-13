@@ -40,6 +40,9 @@ def compare(dataset, runs, output):
         report = analyze(dataset, Path(directory)/'best.pt', output/label)
         summary = report['summary']
         rows.append(dict(label=label, run=str(Path(directory).resolve()), best_epoch=best['epoch'],
+                         architecture=best['config'].get('architecture', 'mlp'),
+                         parameter_count=sum(v.numel() for v in best['state_dict'].values()),
+                         coarse_weight=best['config'].get('coarse_weight', 0.),
                          output_mode=best.get('output_mode', 'soft'), boundary_weight=best['config'].get('boundary_weight', 0.),
                          val_cd_squared=summary['local_cd_squared'],
                          val_boundary_coverage=summary['boundary_coverage_at_0_1_radius'],

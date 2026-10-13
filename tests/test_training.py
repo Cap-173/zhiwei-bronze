@@ -13,6 +13,47 @@ from training_data import nearest_squared, read_manifest
 
 
 class TrainingTests(unittest.TestCase):
+    def test_hierarchical_resume_matches_uninterrupted_training(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            models=[]
+            for i in range(3):
+                path=root/f'{i}.ply'
+                write_cloud(path,np.random.default_rng(i+30).normal(size=(180,3)))
+                models.append((str(i),path))
+            dataset=root/'dataset'
+            build_dataset(models,dataset,samples=2,point_limit=180)
+            config=dict(input_points=32,output_points=16,target_points=16,batch_size=2,
+                        device='cpu',output_mode='tanh',architecture='hierarchical',
+                        coarse_points=4,coarse_weight=.01)
+            whole=train(dataset,root/'whole',epochs=2,**config)
+            train(dataset,root/'resumed',epochs=1,**config)
+            resumed=train(dataset,root/'resumed',epochs=2,resume=root/'resumed/last.pt',**config)
+            self.assertEqual(whole['history'],resumed['history'])
+            with self.assertRaisesRegex(ValueError,'参数'):
+                train(dataset,root/'resumed',epochs=3,resume=root/'resumed/last.pt',
+                      **{**config,'coarse_weight':.02})
+
+    def test_dcd_training_resume_and_configuration(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            models = []
+            for i in range(3):
+                path = root / f'{i}.ply'
+                write_cloud(path, np.random.default_rng(i+20).normal(size=(150, 3)))
+                models.append((str(i), path))
+            dataset = root/'dataset'
+            build_dataset(models, dataset, samples=1, point_limit=150)
+            config = dict(input_points=32, output_points=16, target_points=16,
+                          batch_size=1, device='cpu', output_mode='tanh', loss_mode='dcd')
+            train(dataset, root/'run', epochs=1, **config)
+            report = train(dataset, root/'run', epochs=2, resume=root/'run/last.pt', **config)
+            self.assertEqual(report['config']['loss_mode'], 'dcd')
+            self.assertEqual(len(report['history']), 2)
+            with self.assertRaisesRegex(ValueError, '参数'):
+                train(dataset, root/'run', epochs=3, resume=root/'run/last.pt',
+                      **config, dcd_alpha=100.)
+
     def test_chunked_distance(self):
         a, b = torch.randn(13, 3), torch.randn(17, 3)
         expected = torch.cdist(a[None], b[None]).square()[0].amin(dim=1)

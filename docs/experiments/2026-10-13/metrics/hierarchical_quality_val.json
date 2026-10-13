@@ -1,0 +1,425 @@
+{
+  "split": "val",
+  "checkpoint": "PROJECT_ROOT\\outputs\\runs\\bronze_hier32_aux01_seed42\\best.pt",
+  "samples": [
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0000",
+      "dcd_equal_points_mean": 0.885172700881958,
+      "dcd_target_draw_std": 0.008765556532940927,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.023054637014865875,
+      "prediction_close_fraction_0_02_radius": 0.4765625,
+      "prediction_mesh_mean_distance_over_radius": 0.09293325026196023
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0001",
+      "dcd_equal_points_mean": 0.9200026154518127,
+      "dcd_target_draw_std": 0.006166550010504891,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.03322317451238632,
+      "prediction_close_fraction_0_02_radius": 0.4375,
+      "prediction_mesh_mean_distance_over_radius": 0.0727399864363131
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0002",
+      "dcd_equal_points_mean": 0.9122145414352417,
+      "dcd_target_draw_std": 0.008567918613512214,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.02648700773715973,
+      "prediction_close_fraction_0_02_radius": 0.4921875,
+      "prediction_mesh_mean_distance_over_radius": 0.0602503666777824
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0003",
+      "dcd_equal_points_mean": 0.9534917116165161,
+      "dcd_target_draw_std": 0.005407927974087726,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.025769690051674843,
+      "prediction_close_fraction_0_02_radius": 0.453125,
+      "prediction_mesh_mean_distance_over_radius": 0.05798489234620305
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0004",
+      "dcd_equal_points_mean": 0.9253148078918457,
+      "dcd_target_draw_std": 0.0043016535820004365,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.02880735509097576,
+      "prediction_close_fraction_0_02_radius": 0.453125,
+      "prediction_mesh_mean_distance_over_radius": 0.07608084056460869
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0005",
+      "dcd_equal_points_mean": 0.9195701718330384,
+      "dcd_target_draw_std": 0.012411221714818016,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.027883941307663918,
+      "prediction_close_fraction_0_02_radius": 0.4921875,
+      "prediction_mesh_mean_distance_over_radius": 0.0968644672443368
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0006",
+      "dcd_equal_points_mean": 0.8989540219306946,
+      "dcd_target_draw_std": 0.006238859001862272,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.026872385293245316,
+      "prediction_close_fraction_0_02_radius": 0.3984375,
+      "prediction_mesh_mean_distance_over_radius": 0.05693677353100661
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0007",
+      "dcd_equal_points_mean": 0.87489253282547,
+      "dcd_target_draw_std": 0.007603118899275797,
+      "target_sampling_with_replacement": true,
+      "prediction_nn_median_over_radius": 0.023318558931350708,
+      "prediction_close_fraction_0_02_radius": 0.46875,
+      "prediction_mesh_mean_distance_over_radius": 0.07458402593356188
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0008",
+      "dcd_equal_points_mean": 0.9335435628890991,
+      "dcd_target_draw_std": 0.007630934617663507,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.02853121981024742,
+      "prediction_close_fraction_0_02_radius": 0.4921875,
+      "prediction_mesh_mean_distance_over_radius": 0.07763652279731334
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0009",
+      "dcd_equal_points_mean": 0.8643951892852784,
+      "dcd_target_draw_std": 0.007594697061081449,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.027587752789258957,
+      "prediction_close_fraction_0_02_radius": 0.453125,
+      "prediction_mesh_mean_distance_over_radius": 0.08076659746443046
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0010",
+      "dcd_equal_points_mean": 0.9014297604560852,
+      "dcd_target_draw_std": 0.0036998055632209005,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.02633565105497837,
+      "prediction_close_fraction_0_02_radius": 0.4296875,
+      "prediction_mesh_mean_distance_over_radius": 0.0834065649792529
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0011",
+      "dcd_equal_points_mean": 0.9228263020515441,
+      "dcd_target_draw_std": 0.0071891319198891255,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.027824003249406815,
+      "prediction_close_fraction_0_02_radius": 0.4296875,
+      "prediction_mesh_mean_distance_over_radius": 0.0680437661835257
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0012",
+      "dcd_equal_points_mean": 0.8802657008171082,
+      "dcd_target_draw_std": 0.004077583678051645,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.022533206269145012,
+      "prediction_close_fraction_0_02_radius": 0.4765625,
+      "prediction_mesh_mean_distance_over_radius": 0.07778357563388494
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0013",
+      "dcd_equal_points_mean": 0.9254753947257995,
+      "dcd_target_draw_std": 0.006659552741339191,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.01953841932117939,
+      "prediction_close_fraction_0_02_radius": 0.5,
+      "prediction_mesh_mean_distance_over_radius": 0.0838989658229023
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0014",
+      "dcd_equal_points_mean": 0.8713821530342102,
+      "dcd_target_draw_std": 0.01074321348740429,
+      "target_sampling_with_replacement": true,
+      "prediction_nn_median_over_radius": 0.03245149180293083,
+      "prediction_close_fraction_0_02_radius": 0.390625,
+      "prediction_mesh_mean_distance_over_radius": 0.06669603394919424
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0015",
+      "dcd_equal_points_mean": 0.9597023725509644,
+      "dcd_target_draw_std": 0.006388162402988521,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.024957608431577682,
+      "prediction_close_fraction_0_02_radius": 0.4765625,
+      "prediction_mesh_mean_distance_over_radius": 0.0785288149486654
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0016",
+      "dcd_equal_points_mean": 0.939076840877533,
+      "dcd_target_draw_std": 0.006784519148030599,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.03097403049468994,
+      "prediction_close_fraction_0_02_radius": 0.4921875,
+      "prediction_mesh_mean_distance_over_radius": 0.09949380352951895
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0017",
+      "dcd_equal_points_mean": 0.9309052467346192,
+      "dcd_target_draw_std": 0.002652383261373515,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.021701138466596603,
+      "prediction_close_fraction_0_02_radius": 0.4609375,
+      "prediction_mesh_mean_distance_over_radius": 0.06514024170075929
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0018",
+      "dcd_equal_points_mean": 0.8748014450073243,
+      "dcd_target_draw_std": 0.004762226106424266,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.021642178297042847,
+      "prediction_close_fraction_0_02_radius": 0.4765625,
+      "prediction_mesh_mean_distance_over_radius": 0.06432239018140111
+    },
+    {
+      "model_id": "bronze_03",
+      "path": "val/model_0003_sample_0019",
+      "dcd_equal_points_mean": 0.949227797985077,
+      "dcd_target_draw_std": 0.006609285066182676,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.016063544899225235,
+      "prediction_close_fraction_0_02_radius": 0.5,
+      "prediction_mesh_mean_distance_over_radius": 0.07934978333699844
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0000",
+      "dcd_equal_points_mean": 0.9200809001922607,
+      "dcd_target_draw_std": 0.005894555171005273,
+      "target_sampling_with_replacement": true,
+      "prediction_nn_median_over_radius": 0.03003496676683426,
+      "prediction_close_fraction_0_02_radius": 0.4609375,
+      "prediction_mesh_mean_distance_over_radius": 0.0845158534735721
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0001",
+      "dcd_equal_points_mean": 0.9055933952331543,
+      "dcd_target_draw_std": 0.0032360238541881015,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.024478279054164886,
+      "prediction_close_fraction_0_02_radius": 0.4609375,
+      "prediction_mesh_mean_distance_over_radius": 0.07798136490208492
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0002",
+      "dcd_equal_points_mean": 0.9004810690879822,
+      "dcd_target_draw_std": 0.002373364560150478,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.024024706333875656,
+      "prediction_close_fraction_0_02_radius": 0.4453125,
+      "prediction_mesh_mean_distance_over_radius": 0.06048231892257513
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0003",
+      "dcd_equal_points_mean": 0.9266270518302917,
+      "dcd_target_draw_std": 0.006286344434720086,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.024198275059461594,
+      "prediction_close_fraction_0_02_radius": 0.46875,
+      "prediction_mesh_mean_distance_over_radius": 0.07281436417896509
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0004",
+      "dcd_equal_points_mean": 0.9299724102020264,
+      "dcd_target_draw_std": 0.0037273589450285537,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.027581151574850082,
+      "prediction_close_fraction_0_02_radius": 0.4609375,
+      "prediction_mesh_mean_distance_over_radius": 0.06057099651944757
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0005",
+      "dcd_equal_points_mean": 0.9543502569198609,
+      "dcd_target_draw_std": 0.004514180669145973,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.028321044519543648,
+      "prediction_close_fraction_0_02_radius": 0.4609375,
+      "prediction_mesh_mean_distance_over_radius": 0.07661783443875415
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0006",
+      "dcd_equal_points_mean": 0.8944409608840942,
+      "dcd_target_draw_std": 0.004172226182990405,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.026445666328072548,
+      "prediction_close_fraction_0_02_radius": 0.453125,
+      "prediction_mesh_mean_distance_over_radius": 0.06264658421412776
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0007",
+      "dcd_equal_points_mean": 0.9241899013519287,
+      "dcd_target_draw_std": 0.00835946411357504,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.02984227053821087,
+      "prediction_close_fraction_0_02_radius": 0.390625,
+      "prediction_mesh_mean_distance_over_radius": 0.08318468209541628
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0008",
+      "dcd_equal_points_mean": 0.9275648117065429,
+      "dcd_target_draw_std": 0.004074990533126967,
+      "target_sampling_with_replacement": true,
+      "prediction_nn_median_over_radius": 0.03594627231359482,
+      "prediction_close_fraction_0_02_radius": 0.421875,
+      "prediction_mesh_mean_distance_over_radius": 0.06057838477400259
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0009",
+      "dcd_equal_points_mean": 0.9649842023849488,
+      "dcd_target_draw_std": 0.0060275422090056,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.030493266880512238,
+      "prediction_close_fraction_0_02_radius": 0.484375,
+      "prediction_mesh_mean_distance_over_radius": 0.08275954178662938
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0010",
+      "dcd_equal_points_mean": 0.9485180616378784,
+      "dcd_target_draw_std": 0.007846291172770095,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.024862049147486687,
+      "prediction_close_fraction_0_02_radius": 0.40625,
+      "prediction_mesh_mean_distance_over_radius": 0.09371063743969961
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0011",
+      "dcd_equal_points_mean": 0.9024871706962585,
+      "dcd_target_draw_std": 0.0027625586034460826,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.02815559320151806,
+      "prediction_close_fraction_0_02_radius": 0.4609375,
+      "prediction_mesh_mean_distance_over_radius": 0.08008053892300801
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0012",
+      "dcd_equal_points_mean": 0.9492486119270325,
+      "dcd_target_draw_std": 0.0067621787321824126,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.026302091777324677,
+      "prediction_close_fraction_0_02_radius": 0.421875,
+      "prediction_mesh_mean_distance_over_radius": 0.0750814006108395
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0013",
+      "dcd_equal_points_mean": 0.9386257886886596,
+      "dcd_target_draw_std": 0.009753888987756042,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.023863032460212708,
+      "prediction_close_fraction_0_02_radius": 0.484375,
+      "prediction_mesh_mean_distance_over_radius": 0.045788859559346515
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0014",
+      "dcd_equal_points_mean": 0.9076586127281189,
+      "dcd_target_draw_std": 0.004661236991809317,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.026486236602067947,
+      "prediction_close_fraction_0_02_radius": 0.484375,
+      "prediction_mesh_mean_distance_over_radius": 0.08193421772949809
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0015",
+      "dcd_equal_points_mean": 0.8836037755012512,
+      "dcd_target_draw_std": 0.007236958320153208,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.033014874905347824,
+      "prediction_close_fraction_0_02_radius": 0.4609375,
+      "prediction_mesh_mean_distance_over_radius": 0.060190938395818
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0016",
+      "dcd_equal_points_mean": 0.9478557467460632,
+      "dcd_target_draw_std": 0.00741625343740197,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.02898179180920124,
+      "prediction_close_fraction_0_02_radius": 0.46875,
+      "prediction_mesh_mean_distance_over_radius": 0.08329648849573024
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0017",
+      "dcd_equal_points_mean": 0.9211222290992737,
+      "dcd_target_draw_std": 0.004420672907672967,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.02390621230006218,
+      "prediction_close_fraction_0_02_radius": 0.4609375,
+      "prediction_mesh_mean_distance_over_radius": 0.06487696912135289
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0018",
+      "dcd_equal_points_mean": 0.9283493876457214,
+      "dcd_target_draw_std": 0.005587028717658588,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.02180408500134945,
+      "prediction_close_fraction_0_02_radius": 0.4609375,
+      "prediction_mesh_mean_distance_over_radius": 0.06565749717413309
+    },
+    {
+      "model_id": "bronze_09",
+      "path": "val/model_0009_sample_0019",
+      "dcd_equal_points_mean": 0.9093725085258484,
+      "dcd_target_draw_std": 0.004297391456716416,
+      "target_sampling_with_replacement": false,
+      "prediction_nn_median_over_radius": 0.02637343481183052,
+      "prediction_close_fraction_0_02_radius": 0.4765625,
+      "prediction_mesh_mean_distance_over_radius": 0.05362683324730505
+    }
+  ],
+  "sample_count": 40,
+  "model_count": 2,
+  "summary": {
+    "dcd_equal_points_mean": 0.9181942930817604,
+    "prediction_nn_median_over_radius": 0.026516807405278085,
+    "prediction_close_fraction_0_02_radius": 0.45859375,
+    "prediction_mesh_mean_distance_over_radius": 0.07349594923814814
+  },
+  "protocol": {
+    "evaluation_seed": 43,
+    "target_draw_seed": 31415,
+    "target_draws": 5,
+    "dcd_alpha": 1000,
+    "dcd_exponent": 1,
+    "points": 128,
+    "coordinate_space": "visible-input normalized coordinates",
+    "mesh_reference": "full original OBJ; evaluation only, no snapping",
+    "note": "Close-point fraction is an engineering diagnostic, not a paper metric; low mesh distance alone does not prove correct patch or continuity."
+  }
+}

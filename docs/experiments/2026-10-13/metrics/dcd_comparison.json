@@ -1,0 +1,40 @@
+{
+  "split": "val",
+  "budget": {
+    "epoch": 20,
+    "dataset_fingerprint": "6a84e03555c803c58f6802520831db307af9a4cff4579796d0232ac8eccebf03",
+    "seed": 42,
+    "input_points": 512,
+    "output_points": 128,
+    "target_points": 128,
+    "batch_size": 8,
+    "lr": 0.001,
+    "amp": false,
+    "device": "cpu"
+  },
+  "runs": [
+    {
+      "label": "cd128",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_cd128_seed42",
+      "best_epoch": 20,
+      "output_mode": "tanh",
+      "boundary_weight": 0.0,
+      "val_cd_squared": 0.006045539979822934,
+      "val_boundary_coverage": 0.04422643834259361,
+      "val_boundary_error_over_radius": 0.237756634503603,
+      "predicted_outer_fraction": 0.0779296875
+    },
+    {
+      "label": "dcd128",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_dcd128_seed42",
+      "best_epoch": 20,
+      "output_mode": "tanh",
+      "boundary_weight": 0.0,
+      "val_cd_squared": 0.00686245352262631,
+      "val_boundary_coverage": 0.06883730515837669,
+      "val_boundary_error_over_radius": 0.23048946894705297,
+      "predicted_outer_fraction": 0.1201171875
+    }
+  ],
+  "note": "One seed, short training; not proof of general improvement or surface continuity."
+}

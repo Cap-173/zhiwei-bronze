@@ -1,0 +1,25 @@
+{
+  "exploratory_seed": 42,
+  "confirmation_seeds": [
+    43,
+    44
+  ],
+  "evaluation_seed": 43,
+  "epochs": 20,
+  "dataset": "outputs/datasets/bronze_20261013_seed42",
+  "variants": {
+    "mlp": {
+      "decoder_width": 256
+    },
+    "wide": {
+      "decoder_width": 1140
+    },
+    "hier_aux": {
+      "architecture": "hierarchical",
+      "coarse_points": 32,
+      "coarse_weight": 0.01
+    }
+  },
+  "selection": "hier_aux chosen by seed42 validation CD; freeze before confirmation",
+  "note": "Fixed object split. Test set was already used for prototype; no new test evaluation during method development."
+}

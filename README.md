@@ -1,7 +1,33 @@
 # 智维青铜
 
 面向青铜器数字化修复的多模态三维局部可控编辑项目。
-目前实现 PLY 点云读取、统计、可视化，以及球形选区和模拟局部缺失，尚未实现 AI 修复。
+现已跑通青铜器点云局部补全原型：OBJ表面采样、模拟缺口、训练、验证选型、独立测试和残缺PLY推理。仍是小规模实验，不包含文本控制、交互选区界面或网格重建。
+
+## 当前交付入口
+
+[GitHub可查看的实验报告、指标与配图](docs/experiments/2026-10-13/README.md)。以下outputs/链接为本地运行产物，不随Git上传。
+
+研究进度更新：[分层解码与三种子容量对照](outputs/repeats/bronze_hierarchy_confirmation/README.md)。这是交付原型之后的验证实验，原型冻结模型保持原样。
+
+- [原型实验报告与运行说明](outputs/prototype/bronze_completion/README.md)
+- [离线HTML报告](outputs/prototype/bronze_completion/report.html)
+- [模型](outputs/prototype/bronze_completion/model.pt)
+- [实验图片索引](outputs/experiment_figures/README.md)
+- [文献依据与研究计划](LITERATURE_PLAN.md)
+
+运行已打包的两个测试案例（不读取完整目标）：
+
+```powershell
+.\.venv\Scripts\python.exe outputs/prototype/bronze_completion/run_demo.py
+```
+
+使用自己的残缺PLY，球心和半径替换为实际输入坐标：
+
+```powershell
+.\.venv\Scripts\python.exe complete_region.py --input "models/damaged.ply" --checkpoint outputs/prototype/bronze_completion/model.pt --center 0 0 0 --radius 0.2
+```
+
+完整模型上模拟删除并补全可加 `--remove-region`；实际残缺输入不需要该选项。球外可见点坐标保持，输出是点云而非打印网格。当前冻结模型在14个器物上训练/验证/测试，小样本结论需谨慎。
 
 ## 运行（Windows / PowerShell）
 
@@ -184,7 +210,7 @@ HTML 包含绘图库，可离线使用；程序不会自动启动浏览器。
 ```
 
 模型拿到后先确认：独立器物 ID、来源与使用权限、文件格式、坐标单位、是否完整，以及有无严重噪声/重复扫描。
-当前读取仅支持 PLY，OBJ/STL 等格式收到后再转换，并检查表面采样质量。
+点云读取支持PLY；本地OBJ使用 `import_local_models.py` 转换为表面采样PLY，原始网格保留在models目录。
 
 ## 后续步骤
 

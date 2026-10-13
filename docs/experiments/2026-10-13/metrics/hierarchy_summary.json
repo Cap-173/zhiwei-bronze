@@ -1,0 +1,174 @@
+{
+  "protocol": {
+    "exploratory_seed": 42,
+    "confirmation_seeds": [
+      43,
+      44
+    ],
+    "evaluation_seed": 43,
+    "epochs": 20,
+    "dataset": "outputs/datasets/bronze_20261013_seed42",
+    "variants": {
+      "mlp": {
+        "decoder_width": 256
+      },
+      "wide": {
+        "decoder_width": 1140
+      },
+      "hier_aux": {
+        "architecture": "hierarchical",
+        "coarse_points": 32,
+        "coarse_weight": 0.01
+      }
+    },
+    "selection": "hier_aux chosen by seed42 validation CD; freeze before confirmation",
+    "note": "Fixed object split. Test set was already used for prototype; no new test evaluation during method development."
+  },
+  "rows": [
+    {
+      "seed": 42,
+      "label": "mlp",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_cd128_seed42",
+      "best_epoch": 20,
+      "parameters": 157824,
+      "cd_squared": 0.006045540369814262,
+      "fscore": 0.10510688843972164
+    },
+    {
+      "seed": 42,
+      "label": "wide",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_wide1140_seed42",
+      "best_epoch": 20,
+      "parameters": 614852,
+      "cd_squared": 0.005619863886386156,
+      "fscore": 0.1203230120067543
+    },
+    {
+      "seed": 42,
+      "label": "hier_aux",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_hier32_aux01_seed42",
+      "best_epoch": 20,
+      "parameters": 615084,
+      "cd_squared": 0.0053940357465762645,
+      "fscore": 0.1151501135085556
+    },
+    {
+      "seed": 43,
+      "label": "mlp",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_cd128_seed43",
+      "best_epoch": 19,
+      "parameters": 157824,
+      "cd_squared": 0.0060664509364869446,
+      "fscore": 0.10962533902798036
+    },
+    {
+      "seed": 43,
+      "label": "wide",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_wide1140_seed43",
+      "best_epoch": 20,
+      "parameters": 614852,
+      "cd_squared": 0.005688558978727087,
+      "fscore": 0.1231036116316315
+    },
+    {
+      "seed": 43,
+      "label": "hier_aux",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_hier32_aux01_seed43",
+      "best_epoch": 20,
+      "parameters": 615084,
+      "cd_squared": 0.005778056921553798,
+      "fscore": 0.10335313384771556
+    },
+    {
+      "seed": 44,
+      "label": "mlp",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_cd128_seed44",
+      "best_epoch": 20,
+      "parameters": 157824,
+      "cd_squared": 0.006217712140642107,
+      "fscore": 0.10170165888593799
+    },
+    {
+      "seed": 44,
+      "label": "wide",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_wide1140_seed44",
+      "best_epoch": 18,
+      "parameters": 614852,
+      "cd_squared": 0.005840336863184348,
+      "fscore": 0.11546384355664015
+    },
+    {
+      "seed": 44,
+      "label": "hier_aux",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_hier32_aux01_seed44",
+      "best_epoch": 20,
+      "parameters": 615084,
+      "cd_squared": 0.005756169295636937,
+      "fscore": 0.10300673962226467
+    }
+  ],
+  "aggregates": {
+    "mlp": {
+      "cd_squared": {
+        "mean": 0.0061099011489811035,
+        "sample_std": 9.395062741589172e-05
+      },
+      "fscore": {
+        "mean": 0.10547796211788,
+        "sample_std": 0.003974852010366626
+      }
+    },
+    "wide": {
+      "cd_squared": {
+        "mean": 0.005716253242765864,
+        "sample_std": 0.00011281539154765648
+      },
+      "fscore": {
+        "mean": 0.1196301557316753,
+        "sample_std": 0.0038667236031751104
+      }
+    },
+    "hier_aux": {
+      "cd_squared": {
+        "mean": 0.005642753987922334,
+        "sample_std": 0.00021567415173307173
+      },
+      "fscore": {
+        "mean": 0.10716999565951195,
+        "sample_std": 0.006913154699796994
+      }
+    }
+  },
+  "paired": [
+    {
+      "seed": 42,
+      "reduction_vs_small": 0.10776615213604368,
+      "reduction_vs_wide": 0.04018391626120155
+    },
+    {
+      "seed": 43,
+      "reduction_vs_small": 0.047539165477888834,
+      "reduction_vs_wide": -0.015732972649382226
+    },
+    {
+      "seed": 44,
+      "reduction_vs_small": 0.0742303333710631,
+      "reduction_vs_wide": 0.014411423436544668
+    }
+  ],
+  "note": "seed42 exploratory; seeds43/44 confirmatory. Fixed 2 validation objects, not independent object replication or statistical significance.",
+  "confirmatory": {
+    "mlp": {
+      "cd_squared": 0.006142081538564525,
+      "fscore": 0.10566349895695917
+    },
+    "wide": {
+      "cd_squared": 0.005764447920955717,
+      "fscore": 0.11928372759413583
+    },
+    "hier_aux": {
+      "cd_squared": 0.005767113108595368,
+      "fscore": 0.10317993673499012
+    }
+  }
+}

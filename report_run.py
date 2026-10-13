@@ -17,7 +17,8 @@ def render_history(history_path, output):
     if not rows:
         raise ValueError('训练历史为空。')
     epochs = [row['epoch'] for row in rows]
-    figure = make_subplots(rows=1, cols=3, subplot_titles=('训练损失（区域尺度）', '局部 CD²（越小越好）', '局部 F-score（越大越好）'))
+    loss_title = '训练DCD损失' if report.get('config', {}).get('loss_mode') == 'dcd' else '训练损失（区域尺度）'
+    figure = make_subplots(rows=1, cols=3, subplot_titles=(loss_title, '局部 CD²（越小越好）', '局部 F-score（越大越好）'))
     fields = [('train_loss', '训练损失', 1), ('train_cd_squared', '训练 CD²', 2),
               ('val_cd_squared', '验证 CD²', 2), ('train_fscore', '训练 F-score', 3), ('val_fscore', '验证 F-score', 3)]
     for key, name, column in fields:

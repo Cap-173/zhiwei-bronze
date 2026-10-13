@@ -1,0 +1,74 @@
+{
+  "split": "val",
+  "budget": {
+    "epoch": 20,
+    "dataset_fingerprint": "6a84e03555c803c58f6802520831db307af9a4cff4579796d0232ac8eccebf03",
+    "seed": 42,
+    "input_points": 512,
+    "output_points": 128,
+    "target_points": 128,
+    "batch_size": 8,
+    "lr": 0.001,
+    "amp": false,
+    "device": "cpu"
+  },
+  "runs": [
+    {
+      "label": "mlp",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_cd128_seed42",
+      "best_epoch": 20,
+      "architecture": "mlp",
+      "parameter_count": 157824,
+      "coarse_weight": 0.0,
+      "output_mode": "tanh",
+      "boundary_weight": 0.0,
+      "val_cd_squared": 0.006045539979822934,
+      "val_boundary_coverage": 0.04422643834259361,
+      "val_boundary_error_over_radius": 0.237756634503603,
+      "predicted_outer_fraction": 0.0779296875
+    },
+    {
+      "label": "wide",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_wide1140_seed42",
+      "best_epoch": 20,
+      "architecture": "mlp",
+      "parameter_count": 614852,
+      "coarse_weight": 0.0,
+      "output_mode": "tanh",
+      "boundary_weight": 0.0,
+      "val_cd_squared": 0.005619863764150068,
+      "val_boundary_coverage": 0.07042716720607131,
+      "val_boundary_error_over_radius": 0.2231887124478817,
+      "predicted_outer_fraction": 0.09140625
+    },
+    {
+      "label": "hier",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_hier32_seed42",
+      "best_epoch": 20,
+      "architecture": "hierarchical",
+      "parameter_count": 615084,
+      "coarse_weight": 0.0,
+      "output_mode": "tanh",
+      "boundary_weight": 0.0,
+      "val_cd_squared": 0.0054429742944194,
+      "val_boundary_coverage": 0.0715210601920262,
+      "val_boundary_error_over_radius": 0.21839119419455527,
+      "predicted_outer_fraction": 0.0951171875
+    },
+    {
+      "label": "hier_aux",
+      "run": "PROJECT_ROOT\\outputs\\runs\\bronze_hier32_aux01_seed42",
+      "best_epoch": 20,
+      "architecture": "hierarchical",
+      "parameter_count": 615084,
+      "coarse_weight": 0.01,
+      "output_mode": "tanh",
+      "boundary_weight": 0.0,
+      "val_cd_squared": 0.005394035647623241,
+      "val_boundary_coverage": 0.07746241302229465,
+      "val_boundary_error_over_radius": 0.21408437490463256,
+      "predicted_outer_fraction": 0.1029296875
+    }
+  ],
+  "note": "One seed, short training; not proof of general improvement or surface continuity."
+}
