@@ -1,0 +1,28 @@
+{
+  "reference": "PointNet++ (NeurIPS 2017), section 3.2; author pointnet_util.py sample_and_group and pointnet_sa_module",
+  "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/d8bf84be3800d12f74d8b05e9b89836f-Paper.pdf",
+  "code_url": "https://github.com/charlesq34/pointnet2/blob/master/utils/pointnet_util.py",
+  "training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "evaluation_seed": 43,
+  "epochs": 20,
+  "anchors": 32,
+  "neighbors": 16,
+  "decoder_width": 1140,
+  "input_points": 512,
+  "output_points": 128,
+  "target_points": 128,
+  "batch_size": 8,
+  "lr": 0.001,
+  "primary_comparison": "local vs pointwise_xyz with exactly equal trainable parameters and identical decoder",
+  "secondary_comparison": "existing wide MLP; additional 384 encoder parameters in both new variants",
+  "selection": "best per-run validation CD squared; summarize using common evaluation sampling seed43",
+  "adaptation": "one local set abstraction plus global max; exact kNN including anchor rather than fixed-radius ball; 32/16 are frozen engineering budget choices, not paper-optimal settings; no BN/MSG/feature propagation; canonical FPS nearest-hole start; region units divided by hole radius",
+  "loss": "CD squared divided by hole radius squared only; no repulsion or edge loss",
+  "scope": "fixed 2 validation objects; no test-set access; reference meshes for evaluation only",
+  "quality_scope": "all 40 validation holes for seed42 variants; three training seeds CD and F-score",
+  "limitations": "not a full PointNet++ reproduction or a claim of statistically significant generalization"
+}

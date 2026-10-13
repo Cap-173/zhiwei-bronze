@@ -13,6 +13,64 @@ from training_data import nearest_squared, read_manifest
 
 
 class TrainingTests(unittest.TestCase):
+    def test_exact_emd_resume_and_loss_configuration(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);models=[]
+            for i in range(3):
+                path=root/f'{i}.ply'
+                write_cloud(path,np.random.default_rng(i+130).normal(size=(150,3)))
+                models.append((str(i),path))
+            dataset=root/'dataset'
+            build_dataset(models,dataset,samples=1,point_limit=150)
+            config=dict(input_points=32,output_points=16,target_points=16,batch_size=1,
+                        device='cpu',architecture='pointwise_xyz',encoder_anchors=4,encoder_neighbors=8,loss_mode='emd_exact')
+            whole=train(dataset,root/'whole',epochs=2,**config)
+            train(dataset,root/'resumed',epochs=1,**config)
+            resumed=train(dataset,root/'resumed',epochs=2,resume=root/'resumed/last.pt',**config)
+            self.assertEqual(whole['history'],resumed['history'])
+            with self.assertRaisesRegex(ValueError,'参数'):
+                train(dataset,root/'resumed',epochs=3,resume=root/'resumed/last.pt',**{**config,'loss_mode':'cd'})
+
+    def test_local_encoder_resume_matches_uninterrupted(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            models=[]
+            for i in range(3):
+                path=root/f'{i}.ply'
+                write_cloud(path,np.random.default_rng(i+90).normal(size=(150,3)))
+                models.append((str(i),path))
+            dataset=root/'dataset'
+            build_dataset(models,dataset,samples=1,point_limit=150)
+            config=dict(input_points=32,output_points=16,target_points=16,batch_size=1,
+                        device='cpu',architecture='local',encoder_anchors=4,encoder_neighbors=8)
+            whole=train(dataset,root/'whole',epochs=2,**config)
+            train(dataset,root/'resumed',epochs=1,**config)
+            resumed=train(dataset,root/'resumed',epochs=2,resume=root/'resumed/last.pt',**config)
+            self.assertEqual(whole['history'],resumed['history'])
+            with self.assertRaisesRegex(ValueError,'参数'):
+                train(dataset,root/'resumed',epochs=3,resume=root/'resumed/last.pt',
+                      **{**config,'encoder_neighbors':9})
+
+    def test_repulsion_resume_configuration(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            models=[]
+            for i in range(3):
+                path=root/f'{i}.ply'
+                write_cloud(path,np.random.default_rng(i+80).normal(size=(150,3)))
+                models.append((str(i),path))
+            dataset=root/'dataset'
+            build_dataset(models,dataset,samples=1,point_limit=150)
+            config=dict(input_points=32,output_points=16,target_points=16,batch_size=1,
+                        device='cpu',repulsion_weight=.01)
+            whole=train(dataset,root/'whole',epochs=2,**config)
+            train(dataset,root/'resumed',epochs=1,**config)
+            resumed=train(dataset,root/'resumed',epochs=2,resume=root/'resumed/last.pt',**config)
+            self.assertEqual(whole['history'],resumed['history'])
+            with self.assertRaisesRegex(ValueError,'参数'):
+                train(dataset,root/'resumed',epochs=3,resume=root/'resumed/last.pt',
+                      **{**config,'repulsion_bandwidth':.04})
+
     def test_hierarchical_resume_matches_uninterrupted_training(self):
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder)

@@ -1,0 +1,7 @@
+{
+  "all_480_sample_rows_finite": true,
+  "all_240_source_holes_evaluated_once_per_method": true,
+  "heldout_object_count": 12,
+  "original_test_models_excluded": true,
+  "group_split_and_byte_copy_tests": "passed"
+}

@@ -1,0 +1,1448 @@
+{
+  "selection": "per validation object median (rank11/20) and highest wide-CD error; all methods use identical cases",
+  "dataset_fingerprint": "6a84e03555c803c58f6802520831db307af9a4cff4579796d0232ac8eccebf03",
+  "evaluation_seed": 43,
+  "provenance": {
+    "Pointwise control": {
+      "checkpoint": "PROJECT_ROOT\\outputs\\runs\\bronze_pointwise_xyz_e60_seed42\\best.pt",
+      "sha256": "9678e69d72ea1f933ea227716b29dc28207e2f59035644be6b12375fad61baa5",
+      "epoch": 46,
+      "parameters": 615236,
+      "config": {
+        "input_points": 512,
+        "output_points": 128,
+        "seed": 42,
+        "lr": 0.001,
+        "batch_size": 8,
+        "target_points": 128,
+        "amp": false,
+        "output_mode": "tanh",
+        "boundary_weight": 0.0,
+        "decoder_width": 1140,
+        "architecture": "pointwise_xyz",
+        "encoder_anchors": 32,
+        "encoder_neighbors": 16,
+        "encoder_protocol": "FPS from canonical nearest-origin start; exact kNN including anchor; offsets in hole-radius units"
+      }
+    },
+    "Local neighborhoods": {
+      "checkpoint": "PROJECT_ROOT\\outputs\\runs\\bronze_local_e60_seed42\\best.pt",
+      "sha256": "9de5e1298c4d897f2b79b97d81fcf64626adc4e3d66442619f3aa4d4c84285a8",
+      "epoch": 35,
+      "parameters": 615236,
+      "config": {
+        "input_points": 512,
+        "output_points": 128,
+        "seed": 42,
+        "lr": 0.001,
+        "batch_size": 8,
+        "target_points": 128,
+        "amp": false,
+        "output_mode": "tanh",
+        "boundary_weight": 0.0,
+        "decoder_width": 1140,
+        "architecture": "local",
+        "encoder_anchors": 32,
+        "encoder_neighbors": 16,
+        "encoder_protocol": "FPS from canonical nearest-origin start; exact kNN including anchor; offsets in hole-radius units"
+      }
+    }
+  },
+  "cases": [
+    {
+      "name": "bronze_03_median",
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0005",
+        "input_points": 3857,
+        "target_points": 239
+      },
+      "validation_index": 5,
+      "figure": "bronze_neighborhood60_bronze_03_median.png",
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0038303944747895002,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.8124741315841675,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.2196306437253952,
+          "boundary_coverage_at_0_1_radius": 0.03773584961891174,
+          "close_fraction_0_02R": 0.2109375,
+          "mesh_distance_over_radius": 0.07164135706068736
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.005622805096209049,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.7916676998138428,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.27423980832099915,
+          "boundary_coverage_at_0_1_radius": 0.01886792480945587,
+          "close_fraction_0_02R": 0.375,
+          "mesh_distance_over_radius": 0.09330406161548559
+        }
+      }
+    },
+    {
+      "name": "bronze_03_highest",
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0015",
+        "input_points": 3501,
+        "target_points": 595
+      },
+      "validation_index": 15,
+      "figure": "bronze_neighborhood60_bronze_03_highest.png",
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.007716657593846321,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8699261546134949,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.22778652608394623,
+          "boundary_coverage_at_0_1_radius": 0.07488986849784851,
+          "close_fraction_0_02R": 0.1328125,
+          "mesh_distance_over_radius": 0.07503083990504052
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.014829066582024097,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8197059631347656,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.32612374424934387,
+          "boundary_coverage_at_0_1_radius": 0.017621144652366638,
+          "close_fraction_0_02R": 0.25,
+          "mesh_distance_over_radius": 0.08900407447667125
+        }
+      }
+    },
+    {
+      "name": "bronze_09_median",
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0003",
+        "input_points": 3857,
+        "target_points": 239
+      },
+      "validation_index": 23,
+      "figure": "bronze_neighborhood60_bronze_09_median.png",
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0064971656538546085,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.8438312411308289,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.25827667117118835,
+          "boundary_coverage_at_0_1_radius": 0.0,
+          "close_fraction_0_02R": 0.0625,
+          "mesh_distance_over_radius": 0.07993977620107565
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.007687749806791544,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.7962855100631714,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.30933505296707153,
+          "boundary_coverage_at_0_1_radius": 0.0470588244497776,
+          "close_fraction_0_02R": 0.3515625,
+          "mesh_distance_over_radius": 0.06817656532509762
+        }
+      }
+    },
+    {
+      "name": "bronze_09_highest",
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0010",
+        "input_points": 3824,
+        "target_points": 272
+      },
+      "validation_index": 30,
+      "figure": "bronze_neighborhood60_bronze_09_highest.png",
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.009549388661980629,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.834122896194458,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.2311856597661972,
+          "boundary_coverage_at_0_1_radius": 0.07079645991325378,
+          "close_fraction_0_02R": 0.0546875,
+          "mesh_distance_over_radius": 0.10132524747323922
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.010809391736984253,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8419883847236633,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.2511824667453766,
+          "boundary_coverage_at_0_1_radius": 0.044247787445783615,
+          "close_fraction_0_02R": 0.2578125,
+          "mesh_distance_over_radius": 0.10363879178758605
+        }
+      }
+    }
+  ],
+  "all_validation_metrics": [
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0000",
+        "input_points": 3945,
+        "target_points": 151
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0023354855366051197,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.3907284736633301,
+          "target_boundary_points": 59,
+          "predicted_radius_p95": 0.8435907363891602,
+          "target_radius_p95": 0.9790786504745483,
+          "boundary_mean_distance_over_radius": 0.19485758244991302,
+          "boundary_coverage_at_0_1_radius": 0.10169491171836853
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.003070640377700329,
+          "predicted_outer_fraction": 0.0,
+          "target_outer_fraction": 0.3907284736633301,
+          "target_boundary_points": 59,
+          "predicted_radius_p95": 0.7058291435241699,
+          "target_radius_p95": 0.9790786504745483,
+          "boundary_mean_distance_over_radius": 0.27708226442337036,
+          "boundary_coverage_at_0_1_radius": 0.0
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0001",
+        "input_points": 3647,
+        "target_points": 449
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.004532507620751858,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.28953230381011963,
+          "target_boundary_points": 130,
+          "predicted_radius_p95": 0.84182208776474,
+          "target_radius_p95": 0.9591849446296692,
+          "boundary_mean_distance_over_radius": 0.21790455281734467,
+          "boundary_coverage_at_0_1_radius": 0.10000000149011612
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.005997085478156805,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.28953230381011963,
+          "target_boundary_points": 130,
+          "predicted_radius_p95": 0.7916297912597656,
+          "target_radius_p95": 0.9591849446296692,
+          "boundary_mean_distance_over_radius": 0.2188328206539154,
+          "boundary_coverage_at_0_1_radius": 0.03846153989434242
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0002",
+        "input_points": 3722,
+        "target_points": 374
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.004051070660352707,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3288770020008087,
+          "target_boundary_points": 123,
+          "predicted_radius_p95": 0.830390453338623,
+          "target_radius_p95": 0.9716244339942932,
+          "boundary_mean_distance_over_radius": 0.2176646739244461,
+          "boundary_coverage_at_0_1_radius": 0.08943089097738266
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.004348014481365681,
+          "predicted_outer_fraction": 0.0234375,
+          "target_outer_fraction": 0.3288770020008087,
+          "target_boundary_points": 123,
+          "predicted_radius_p95": 0.7848300933837891,
+          "target_radius_p95": 0.9716244339942932,
+          "boundary_mean_distance_over_radius": 0.2334335893392563,
+          "boundary_coverage_at_0_1_radius": 0.04878048598766327
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0003",
+        "input_points": 3381,
+        "target_points": 715
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0070013366639614105,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3524475395679474,
+          "target_boundary_points": 252,
+          "predicted_radius_p95": 0.8574033379554749,
+          "target_radius_p95": 0.9735366106033325,
+          "boundary_mean_distance_over_radius": 0.19632890820503235,
+          "boundary_coverage_at_0_1_radius": 0.0992063507437706
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.007771328091621399,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.3524475395679474,
+          "target_boundary_points": 252,
+          "predicted_radius_p95": 0.7975746393203735,
+          "target_radius_p95": 0.9735366106033325,
+          "boundary_mean_distance_over_radius": 0.2114616334438324,
+          "boundary_coverage_at_0_1_radius": 0.0793650820851326
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0004",
+        "input_points": 3736,
+        "target_points": 360
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.003255739575251937,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.375,
+          "target_boundary_points": 135,
+          "predicted_radius_p95": 0.8455023765563965,
+          "target_radius_p95": 0.9740853905677795,
+          "boundary_mean_distance_over_radius": 0.189774289727211,
+          "boundary_coverage_at_0_1_radius": 0.07407407462596893
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.005121702328324318,
+          "predicted_outer_fraction": 0.015625,
+          "target_outer_fraction": 0.375,
+          "target_boundary_points": 135,
+          "predicted_radius_p95": 0.7875856161117554,
+          "target_radius_p95": 0.9740853905677795,
+          "boundary_mean_distance_over_radius": 0.24310541152954102,
+          "boundary_coverage_at_0_1_radius": 0.05925925821065903
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0005",
+        "input_points": 3857,
+        "target_points": 239
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0038303944747895002,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.8124741315841675,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.2196306437253952,
+          "boundary_coverage_at_0_1_radius": 0.03773584961891174
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.005622805096209049,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.7916676998138428,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.27423980832099915,
+          "boundary_coverage_at_0_1_radius": 0.01886792480945587
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0006",
+        "input_points": 3882,
+        "target_points": 214
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.003904215758666396,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3177570104598999,
+          "target_boundary_points": 68,
+          "predicted_radius_p95": 0.8927240967750549,
+          "target_radius_p95": 0.9731767177581787,
+          "boundary_mean_distance_over_radius": 0.15905584394931793,
+          "boundary_coverage_at_0_1_radius": 0.19117647409439087
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.004526136443018913,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3177570104598999,
+          "target_boundary_points": 68,
+          "predicted_radius_p95": 0.8431430459022522,
+          "target_radius_p95": 0.9731767177581787,
+          "boundary_mean_distance_over_radius": 0.20316967368125916,
+          "boundary_coverage_at_0_1_radius": 0.07352941483259201
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0007",
+        "input_points": 3975,
+        "target_points": 121
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0016401726752519608,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.3636363744735718,
+          "target_boundary_points": 44,
+          "predicted_radius_p95": 0.878214418888092,
+          "target_radius_p95": 0.969841480255127,
+          "boundary_mean_distance_over_radius": 0.16697745025157928,
+          "boundary_coverage_at_0_1_radius": 0.25
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.0025360560975968838,
+          "predicted_outer_fraction": 0.03125,
+          "target_outer_fraction": 0.3636363744735718,
+          "target_boundary_points": 44,
+          "predicted_radius_p95": 0.7910787463188171,
+          "target_radius_p95": 0.969841480255127,
+          "boundary_mean_distance_over_radius": 0.22453929483890533,
+          "boundary_coverage_at_0_1_radius": 0.09090909361839294
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0008",
+        "input_points": 3654,
+        "target_points": 442
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.005677033215761185,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.418552041053772,
+          "target_boundary_points": 185,
+          "predicted_radius_p95": 0.82602858543396,
+          "target_radius_p95": 0.9807806015014648,
+          "boundary_mean_distance_over_radius": 0.24254491925239563,
+          "boundary_coverage_at_0_1_radius": 0.054054055362939835
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.006352544762194157,
+          "predicted_outer_fraction": 0.0078125,
+          "target_outer_fraction": 0.418552041053772,
+          "target_boundary_points": 185,
+          "predicted_radius_p95": 0.7657912969589233,
+          "target_radius_p95": 0.9807806015014648,
+          "boundary_mean_distance_over_radius": 0.2687136232852936,
+          "boundary_coverage_at_0_1_radius": 0.0
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0009",
+        "input_points": 3864,
+        "target_points": 232
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.002239213790744543,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.36206895112991333,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8426504731178284,
+          "target_radius_p95": 0.9745315909385681,
+          "boundary_mean_distance_over_radius": 0.18230943381786346,
+          "boundary_coverage_at_0_1_radius": 0.130952388048172
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.003762672422453761,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.36206895112991333,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.7937538027763367,
+          "target_radius_p95": 0.9745315909385681,
+          "boundary_mean_distance_over_radius": 0.24977877736091614,
+          "boundary_coverage_at_0_1_radius": 0.0
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0010",
+        "input_points": 3858,
+        "target_points": 238
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0034107654355466366,
+          "predicted_outer_fraction": 0.0234375,
+          "target_outer_fraction": 0.3529411852359772,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.7823069095611572,
+          "target_radius_p95": 0.9702329635620117,
+          "boundary_mean_distance_over_radius": 0.19478628039360046,
+          "boundary_coverage_at_0_1_radius": 0.130952388048172
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.005857357755303383,
+          "predicted_outer_fraction": 0.0078125,
+          "target_outer_fraction": 0.3529411852359772,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.7559212446212769,
+          "target_radius_p95": 0.9702329635620117,
+          "boundary_mean_distance_over_radius": 0.2423105388879776,
+          "boundary_coverage_at_0_1_radius": 0.02380952425301075
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0011",
+        "input_points": 3883,
+        "target_points": 213
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0038856337778270245,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.4178403615951538,
+          "target_boundary_points": 89,
+          "predicted_radius_p95": 0.8651475310325623,
+          "target_radius_p95": 0.9778649210929871,
+          "boundary_mean_distance_over_radius": 0.18751664459705353,
+          "boundary_coverage_at_0_1_radius": 0.15730337798595428
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.005276854149997234,
+          "predicted_outer_fraction": 0.0078125,
+          "target_outer_fraction": 0.4178403615951538,
+          "target_boundary_points": 89,
+          "predicted_radius_p95": 0.7380492687225342,
+          "target_radius_p95": 0.9778649210929871,
+          "boundary_mean_distance_over_radius": 0.2686055898666382,
+          "boundary_coverage_at_0_1_radius": 0.033707864582538605
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0012",
+        "input_points": 3936,
+        "target_points": 160
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0025694742798805237,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.48124998807907104,
+          "target_boundary_points": 77,
+          "predicted_radius_p95": 0.8092933893203735,
+          "target_radius_p95": 0.9834602475166321,
+          "boundary_mean_distance_over_radius": 0.21942900121212006,
+          "boundary_coverage_at_0_1_radius": 0.07792207598686218
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.0038356471341103315,
+          "predicted_outer_fraction": 0.015625,
+          "target_outer_fraction": 0.48124998807907104,
+          "target_boundary_points": 77,
+          "predicted_radius_p95": 0.7787507176399231,
+          "target_radius_p95": 0.9834602475166321,
+          "boundary_mean_distance_over_radius": 0.2899467647075653,
+          "boundary_coverage_at_0_1_radius": 0.025974025949835777
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0013",
+        "input_points": 3664,
+        "target_points": 432
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.005379344802349806,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.4027777910232544,
+          "target_boundary_points": 174,
+          "predicted_radius_p95": 0.8447310924530029,
+          "target_radius_p95": 0.9800962209701538,
+          "boundary_mean_distance_over_radius": 0.19061973690986633,
+          "boundary_coverage_at_0_1_radius": 0.06896551698446274
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.008041517809033394,
+          "predicted_outer_fraction": 0.0234375,
+          "target_outer_fraction": 0.4027777910232544,
+          "target_boundary_points": 174,
+          "predicted_radius_p95": 0.777744710445404,
+          "target_radius_p95": 0.9800962209701538,
+          "boundary_mean_distance_over_radius": 0.2862825095653534,
+          "boundary_coverage_at_0_1_radius": 0.02298850566148758
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0014",
+        "input_points": 3983,
+        "target_points": 113
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0030096571426838636,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.39823007583618164,
+          "target_boundary_points": 45,
+          "predicted_radius_p95": 0.8563997149467468,
+          "target_radius_p95": 0.942774772644043,
+          "boundary_mean_distance_over_radius": 0.24374735355377197,
+          "boundary_coverage_at_0_1_radius": 0.06666667014360428
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.003670474048703909,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.39823007583618164,
+          "target_boundary_points": 45,
+          "predicted_radius_p95": 0.8616182804107666,
+          "target_radius_p95": 0.942774772644043,
+          "boundary_mean_distance_over_radius": 0.262668639421463,
+          "boundary_coverage_at_0_1_radius": 0.0
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0015",
+        "input_points": 3501,
+        "target_points": 595
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.007716657593846321,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8699261546134949,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.22778652608394623,
+          "boundary_coverage_at_0_1_radius": 0.07488986849784851
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.014829066582024097,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8197059631347656,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.32612374424934387,
+          "boundary_coverage_at_0_1_radius": 0.017621144652366638
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0016",
+        "input_points": 3724,
+        "target_points": 372
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.005020580254495144,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.4462365508079529,
+          "target_boundary_points": 166,
+          "predicted_radius_p95": 0.8169560432434082,
+          "target_radius_p95": 0.9865362048149109,
+          "boundary_mean_distance_over_radius": 0.23203086853027344,
+          "boundary_coverage_at_0_1_radius": 0.08433734625577927
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.008139132522046566,
+          "predicted_outer_fraction": 0.0,
+          "target_outer_fraction": 0.4462365508079529,
+          "target_boundary_points": 166,
+          "predicted_radius_p95": 0.7508388161659241,
+          "target_radius_p95": 0.9865362048149109,
+          "boundary_mean_distance_over_radius": 0.2830307185649872,
+          "boundary_coverage_at_0_1_radius": 0.012048192322254181
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0017",
+        "input_points": 3491,
+        "target_points": 605
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.006208662409335375,
+          "predicted_outer_fraction": 0.171875,
+          "target_outer_fraction": 0.36859503388404846,
+          "target_boundary_points": 223,
+          "predicted_radius_p95": 0.8850497603416443,
+          "target_radius_p95": 0.9769948720932007,
+          "boundary_mean_distance_over_radius": 0.15942688286304474,
+          "boundary_coverage_at_0_1_radius": 0.219730943441391
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.008352437987923622,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.36859503388404846,
+          "target_boundary_points": 223,
+          "predicted_radius_p95": 0.8264766335487366,
+          "target_radius_p95": 0.9769948720932007,
+          "boundary_mean_distance_over_radius": 0.1983337551355362,
+          "boundary_coverage_at_0_1_radius": 0.08071748912334442
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0018",
+        "input_points": 3860,
+        "target_points": 236
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0028101266361773014,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.35593220591545105,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8585836291313171,
+          "target_radius_p95": 0.979104220867157,
+          "boundary_mean_distance_over_radius": 0.2110893875360489,
+          "boundary_coverage_at_0_1_radius": 0.130952388048172
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.0036662984639406204,
+          "predicted_outer_fraction": 0.0234375,
+          "target_outer_fraction": 0.35593220591545105,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.7683554887771606,
+          "target_radius_p95": 0.979104220867157,
+          "boundary_mean_distance_over_radius": 0.2657546103000641,
+          "boundary_coverage_at_0_1_radius": 0.0357142873108387
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0019",
+        "input_points": 3630,
+        "target_points": 466
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.00617511011660099,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.41416308283805847,
+          "target_boundary_points": 193,
+          "predicted_radius_p95": 0.7930415868759155,
+          "target_radius_p95": 0.9787494540214539,
+          "boundary_mean_distance_over_radius": 0.25149187445640564,
+          "boundary_coverage_at_0_1_radius": 0.02590673603117466
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.007712353952229023,
+          "predicted_outer_fraction": 0.0,
+          "target_outer_fraction": 0.41416308283805847,
+          "target_boundary_points": 193,
+          "predicted_radius_p95": 0.7706337571144104,
+          "target_radius_p95": 0.9787494540214539,
+          "boundary_mean_distance_over_radius": 0.30165064334869385,
+          "boundary_coverage_at_0_1_radius": 0.010362694039940834
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0000",
+        "input_points": 4009,
+        "target_points": 87
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0034548197872936726,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.29885056614875793,
+          "target_boundary_points": 26,
+          "predicted_radius_p95": 0.8886091709136963,
+          "target_radius_p95": 0.9560888409614563,
+          "boundary_mean_distance_over_radius": 0.26663389801979065,
+          "boundary_coverage_at_0_1_radius": 0.03846153989434242
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.005599438212811947,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.29885056614875793,
+          "target_boundary_points": 26,
+          "predicted_radius_p95": 0.8637524843215942,
+          "target_radius_p95": 0.9560888409614563,
+          "boundary_mean_distance_over_radius": 0.36880749464035034,
+          "boundary_coverage_at_0_1_radius": 0.03846153989434242
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0001",
+        "input_points": 3944,
+        "target_points": 152
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.005702902562916279,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.3684210479259491,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.9020912647247314,
+          "target_radius_p95": 0.9833866357803345,
+          "boundary_mean_distance_over_radius": 0.20121043920516968,
+          "boundary_coverage_at_0_1_radius": 0.0714285746216774
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.008234652690589428,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.3684210479259491,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8845298886299133,
+          "target_radius_p95": 0.9833866357803345,
+          "boundary_mean_distance_over_radius": 0.25304585695266724,
+          "boundary_coverage_at_0_1_radius": 0.0535714291036129
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0002",
+        "input_points": 3923,
+        "target_points": 173
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.003837245749309659,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.34682080149650574,
+          "target_boundary_points": 60,
+          "predicted_radius_p95": 0.8261851072311401,
+          "target_radius_p95": 0.9685534834861755,
+          "boundary_mean_distance_over_radius": 0.22143448889255524,
+          "boundary_coverage_at_0_1_radius": 0.10000000149011612
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.0043228245340287685,
+          "predicted_outer_fraction": 0.0234375,
+          "target_outer_fraction": 0.34682080149650574,
+          "target_boundary_points": 60,
+          "predicted_radius_p95": 0.7858728766441345,
+          "target_radius_p95": 0.9685534834861755,
+          "boundary_mean_distance_over_radius": 0.24890631437301636,
+          "boundary_coverage_at_0_1_radius": 0.0
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0003",
+        "input_points": 3857,
+        "target_points": 239
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0064971656538546085,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.8438312411308289,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.25827667117118835,
+          "boundary_coverage_at_0_1_radius": 0.0
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.007687749806791544,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.7962855100631714,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.30933505296707153,
+          "boundary_coverage_at_0_1_radius": 0.0470588244497776
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0004",
+        "input_points": 3926,
+        "target_points": 170
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.006965942680835724,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3294117748737335,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.9069593548774719,
+          "target_radius_p95": 0.9680007100105286,
+          "boundary_mean_distance_over_radius": 0.1793399453163147,
+          "boundary_coverage_at_0_1_radius": 0.125
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.011401381343603134,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3294117748737335,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8521506190299988,
+          "target_radius_p95": 0.9680007100105286,
+          "boundary_mean_distance_over_radius": 0.2433953583240509,
+          "boundary_coverage_at_0_1_radius": 0.0357142873108387
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0005",
+        "input_points": 3845,
+        "target_points": 251
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.007128643337637186,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.3187251091003418,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8917503952980042,
+          "target_radius_p95": 0.9572210311889648,
+          "boundary_mean_distance_over_radius": 0.19318853318691254,
+          "boundary_coverage_at_0_1_radius": 0.08749999850988388
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.0070274146273732185,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3187251091003418,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8767774701118469,
+          "target_radius_p95": 0.9572210311889648,
+          "boundary_mean_distance_over_radius": 0.21676574647426605,
+          "boundary_coverage_at_0_1_radius": 0.0625
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0006",
+        "input_points": 3932,
+        "target_points": 164
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0032991506159305573,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.31707316637039185,
+          "target_boundary_points": 52,
+          "predicted_radius_p95": 0.822872519493103,
+          "target_radius_p95": 0.9747485518455505,
+          "boundary_mean_distance_over_radius": 0.2309720665216446,
+          "boundary_coverage_at_0_1_radius": 0.057692307978868484
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.004623059649020433,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.31707316637039185,
+          "target_boundary_points": 52,
+          "predicted_radius_p95": 0.7886185646057129,
+          "target_radius_p95": 0.9747485518455505,
+          "boundary_mean_distance_over_radius": 0.2999301850795746,
+          "boundary_coverage_at_0_1_radius": 0.0
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0007",
+        "input_points": 3907,
+        "target_points": 189
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.00605354830622673,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.4021163880825043,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.87276691198349,
+          "target_radius_p95": 0.9684669375419617,
+          "boundary_mean_distance_over_radius": 0.18252407014369965,
+          "boundary_coverage_at_0_1_radius": 0.15789473056793213
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.009825048968195915,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.4021163880825043,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.8556203842163086,
+          "target_radius_p95": 0.9684669375419617,
+          "boundary_mean_distance_over_radius": 0.25372588634490967,
+          "boundary_coverage_at_0_1_radius": 0.1315789520740509
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0008",
+        "input_points": 3996,
+        "target_points": 100
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.003925928846001625,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3499999940395355,
+          "target_boundary_points": 35,
+          "predicted_radius_p95": 0.82192063331604,
+          "target_radius_p95": 0.9756636619567871,
+          "boundary_mean_distance_over_radius": 0.2341902256011963,
+          "boundary_coverage_at_0_1_radius": 0.08571428805589676
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.0062604667618870735,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.3499999940395355,
+          "target_boundary_points": 35,
+          "predicted_radius_p95": 0.8124849200248718,
+          "target_radius_p95": 0.9756636619567871,
+          "boundary_mean_distance_over_radius": 0.2649424076080322,
+          "boundary_coverage_at_0_1_radius": 0.05714285746216774
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0009",
+        "input_points": 3724,
+        "target_points": 372
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.009949703700840473,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.4139784872531891,
+          "target_boundary_points": 154,
+          "predicted_radius_p95": 0.8263272643089294,
+          "target_radius_p95": 0.9739745259284973,
+          "boundary_mean_distance_over_radius": 0.2310618758201599,
+          "boundary_coverage_at_0_1_radius": 0.03246753290295601
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.01221501175314188,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.4139784872531891,
+          "target_boundary_points": 154,
+          "predicted_radius_p95": 0.8243968486785889,
+          "target_radius_p95": 0.9739745259284973,
+          "boundary_mean_distance_over_radius": 0.2739104628562927,
+          "boundary_coverage_at_0_1_radius": 0.012987012974917889
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0010",
+        "input_points": 3824,
+        "target_points": 272
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.009549388661980629,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.834122896194458,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.2311856597661972,
+          "boundary_coverage_at_0_1_radius": 0.07079645991325378
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.010809391736984253,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8419883847236633,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.2511824667453766,
+          "boundary_coverage_at_0_1_radius": 0.044247787445783615
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0011",
+        "input_points": 3958,
+        "target_points": 138
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.004182250238955021,
+          "predicted_outer_fraction": 0.171875,
+          "target_outer_fraction": 0.3913043439388275,
+          "target_boundary_points": 54,
+          "predicted_radius_p95": 0.8985193967819214,
+          "target_radius_p95": 0.9822359085083008,
+          "boundary_mean_distance_over_radius": 0.24905328452587128,
+          "boundary_coverage_at_0_1_radius": 0.018518518656492233
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.004794751293957233,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3913043439388275,
+          "target_boundary_points": 54,
+          "predicted_radius_p95": 0.8497615456581116,
+          "target_radius_p95": 0.9822359085083008,
+          "boundary_mean_distance_over_radius": 0.2775796055793762,
+          "boundary_coverage_at_0_1_radius": 0.0555555559694767
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0012",
+        "input_points": 3773,
+        "target_points": 323
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.006404309533536434,
+          "predicted_outer_fraction": 0.1640625,
+          "target_outer_fraction": 0.3900928795337677,
+          "target_boundary_points": 126,
+          "predicted_radius_p95": 0.8968901038169861,
+          "target_radius_p95": 0.9747716188430786,
+          "boundary_mean_distance_over_radius": 0.19011111557483673,
+          "boundary_coverage_at_0_1_radius": 0.1031746044754982
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.008327631279826164,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.3900928795337677,
+          "target_boundary_points": 126,
+          "predicted_radius_p95": 0.8509182333946228,
+          "target_radius_p95": 0.9747716188430786,
+          "boundary_mean_distance_over_radius": 0.24107147753238678,
+          "boundary_coverage_at_0_1_radius": 0.02380952425301075
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0013",
+        "input_points": 3719,
+        "target_points": 377
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0058168997056782246,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8991735577583313,
+          "target_radius_p95": 0.9697325825691223,
+          "boundary_mean_distance_over_radius": 0.15241724252700806,
+          "boundary_coverage_at_0_1_radius": 0.22413793206214905
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.008381363935768604,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8512896299362183,
+          "target_radius_p95": 0.9697325825691223,
+          "boundary_mean_distance_over_radius": 0.19733017683029175,
+          "boundary_coverage_at_0_1_radius": 0.11206896603107452
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0014",
+        "input_points": 3919,
+        "target_points": 177
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0039027025923132896,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.42937853932380676,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.8196670413017273,
+          "target_radius_p95": 0.9719735383987427,
+          "boundary_mean_distance_over_radius": 0.22291016578674316,
+          "boundary_coverage_at_0_1_radius": 0.09210526198148727
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.01176978088915348,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.42937853932380676,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.833301842212677,
+          "target_radius_p95": 0.9719735383987427,
+          "boundary_mean_distance_over_radius": 0.39973053336143494,
+          "boundary_coverage_at_0_1_radius": 0.02631578966975212
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0015",
+        "input_points": 3923,
+        "target_points": 173
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.0031993782613426447,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.52601158618927,
+          "target_boundary_points": 91,
+          "predicted_radius_p95": 0.8573251366615295,
+          "target_radius_p95": 0.9754564762115479,
+          "boundary_mean_distance_over_radius": 0.1966281533241272,
+          "boundary_coverage_at_0_1_radius": 0.12087912112474442
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.008524272590875626,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.52601158618927,
+          "target_boundary_points": 91,
+          "predicted_radius_p95": 0.8572105169296265,
+          "target_radius_p95": 0.9754564762115479,
+          "boundary_mean_distance_over_radius": 0.38022559881210327,
+          "boundary_coverage_at_0_1_radius": 0.010989011265337467
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0016",
+        "input_points": 3757,
+        "target_points": 339
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.006177632603794336,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3421829044818878,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8320375680923462,
+          "target_radius_p95": 0.9744400382041931,
+          "boundary_mean_distance_over_radius": 0.19160081446170807,
+          "boundary_coverage_at_0_1_radius": 0.09482758492231369
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.01226850412786007,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3421829044818878,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8155781626701355,
+          "target_radius_p95": 0.9744400382041931,
+          "boundary_mean_distance_over_radius": 0.29620233178138733,
+          "boundary_coverage_at_0_1_radius": 0.008620689623057842
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0017",
+        "input_points": 3833,
+        "target_points": 263
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.006491653621196747,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.4182509481906891,
+          "target_boundary_points": 110,
+          "predicted_radius_p95": 0.7946327328681946,
+          "target_radius_p95": 0.9785174131393433,
+          "boundary_mean_distance_over_radius": 0.23695792257785797,
+          "boundary_coverage_at_0_1_radius": 0.0181818176060915
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.006921014748513699,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.4182509481906891,
+          "target_boundary_points": 110,
+          "predicted_radius_p95": 0.8045344352722168,
+          "target_radius_p95": 0.9785174131393433,
+          "boundary_mean_distance_over_radius": 0.2569762170314789,
+          "boundary_coverage_at_0_1_radius": 0.05454545468091965
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0018",
+        "input_points": 3837,
+        "target_points": 259
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.004685950931161642,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.4517374634742737,
+          "target_boundary_points": 117,
+          "predicted_radius_p95": 0.8832781314849854,
+          "target_radius_p95": 0.9813030958175659,
+          "boundary_mean_distance_over_radius": 0.1977369636297226,
+          "boundary_coverage_at_0_1_radius": 0.07692307978868484
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.00813988409936428,
+          "predicted_outer_fraction": 0.0390625,
+          "target_outer_fraction": 0.4517374634742737,
+          "target_boundary_points": 117,
+          "predicted_radius_p95": 0.785930335521698,
+          "target_radius_p95": 0.9813030958175659,
+          "boundary_mean_distance_over_radius": 0.2748671770095825,
+          "boundary_coverage_at_0_1_radius": 0.025641025975346565
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0019",
+        "input_points": 3836,
+        "target_points": 260
+      },
+      "metrics": {
+        "Pointwise control": {
+          "local_cd_squared": 0.005366882309317589,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.9002181887626648,
+          "target_radius_p95": 0.9735583662986755,
+          "boundary_mean_distance_over_radius": 0.1812625527381897,
+          "boundary_coverage_at_0_1_radius": 0.20000000298023224
+        },
+        "Local neighborhoods": {
+          "local_cd_squared": 0.006623127497732639,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.864427387714386,
+          "target_radius_p95": 0.9735583662986755,
+          "boundary_mean_distance_over_radius": 0.21354269981384277,
+          "boundary_coverage_at_0_1_radius": 0.03750000149011612
+        }
+      }
+    }
+  ],
+  "limitations": "Selected examples, not random population samples. PCA uses target for display only. Ball boundary coverage is not a physical seam metric. Exact duplicate points may overlap in images. Models differ in parameter count; use wide CD for capacity comparison."
+}

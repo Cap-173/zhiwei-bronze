@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "seed": 42,
+      "label": "CD",
+      "best_epoch": 20,
+      "cd": 0.005619863886386156,
+      "fscore": 0.1203230120067543
+    },
+    {
+      "seed": 42,
+      "label": "CD + repulsion",
+      "best_epoch": 20,
+      "cd": 0.005538289115065709,
+      "fscore": 0.1252447132941415
+    },
+    {
+      "seed": 43,
+      "label": "CD",
+      "best_epoch": 20,
+      "cd": 0.005688558978727087,
+      "fscore": 0.1231036116316315
+    },
+    {
+      "seed": 43,
+      "label": "CD + repulsion",
+      "best_epoch": 19,
+      "cd": 0.005540381598984822,
+      "fscore": 0.11637354696903306
+    },
+    {
+      "seed": 44,
+      "label": "CD",
+      "best_epoch": 18,
+      "cd": 0.005840336863184348,
+      "fscore": 0.11546384355664015
+    },
+    {
+      "seed": 44,
+      "label": "CD + repulsion",
+      "best_epoch": 20,
+      "cd": 0.005570147308753803,
+      "fscore": 0.11248252382134674
+    }
+  ],
+  "means": {
+    "CD": {
+      "cd": 0.005716253242765864,
+      "fscore": 0.1196301557316753
+    },
+    "CD + repulsion": {
+      "cd": 0.005549606007601445,
+      "fscore": 0.11803359469484043
+    }
+  },
+  "evaluation_seed": 43,
+  "split": "val",
+  "note": "2 validation objects; repeated training seeds, not independent object replication"
+}

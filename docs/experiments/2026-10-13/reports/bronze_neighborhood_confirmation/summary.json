@@ -1,0 +1,283 @@
+{
+  "protocol": {
+    "reference": "PointNet++ (NeurIPS 2017), section 3.2; author pointnet_util.py sample_and_group and pointnet_sa_module",
+    "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/d8bf84be3800d12f74d8b05e9b89836f-Paper.pdf",
+    "code_url": "https://github.com/charlesq34/pointnet2/blob/master/utils/pointnet_util.py",
+    "training_seeds": [
+      42,
+      43,
+      44
+    ],
+    "evaluation_seed": 43,
+    "epochs": 20,
+    "anchors": 32,
+    "neighbors": 16,
+    "decoder_width": 1140,
+    "input_points": 512,
+    "output_points": 128,
+    "target_points": 128,
+    "batch_size": 8,
+    "lr": 0.001,
+    "primary_comparison": "local vs pointwise_xyz with exactly equal trainable parameters and identical decoder",
+    "secondary_comparison": "existing wide MLP; additional 384 encoder parameters in both new variants",
+    "selection": "best per-run validation CD squared; summarize using common evaluation sampling seed43",
+    "adaptation": "one local set abstraction plus global max; exact kNN including anchor rather than fixed-radius ball; 32/16 are frozen engineering budget choices, not paper-optimal settings; no BN/MSG/feature propagation; canonical FPS nearest-hole start; region units divided by hole radius",
+    "loss": "CD squared divided by hole radius squared only; no repulsion or edge loss",
+    "scope": "fixed 2 validation objects; no test-set access; reference meshes for evaluation only",
+    "quality_scope": "all 40 validation holes for seed42 variants; three training seeds CD and F-score",
+    "limitations": "not a full PointNet++ reproduction or a claim of statistically significant generalization"
+  },
+  "rows": [
+    {
+      "seed": 42,
+      "label": "wide",
+      "best_epoch": 20,
+      "parameters": 614852,
+      "cd": 0.005619863886386156,
+      "fscore": 0.1203230120067543,
+      "model_metrics": {
+        "bronze_03": {
+          "samples": 20,
+          "local_cd_squared": 0.0051208669552579526,
+          "local_fscore": 0.1313941088441907
+        },
+        "bronze_09": {
+          "samples": 20,
+          "local_cd_squared": 0.00611886081751436,
+          "local_fscore": 0.10925191516931794
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "label": "pointwise_xyz",
+      "best_epoch": 20,
+      "parameters": 615236,
+      "cd": 0.005365491873817518,
+      "fscore": 0.12344730812307866,
+      "model_metrics": {
+        "bronze_03": {
+          "samples": 20,
+          "local_cd_squared": 0.004762077319901437,
+          "local_fscore": 0.14175090911288452
+        },
+        "bronze_09": {
+          "samples": 20,
+          "local_cd_squared": 0.0059689064277336,
+          "local_fscore": 0.10514370713327281
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "label": "local",
+      "best_epoch": 20,
+      "parameters": 615236,
+      "cd": 0.007191335613606497,
+      "fscore": 0.09045585002293335,
+      "model_metrics": {
+        "bronze_03": {
+          "samples": 20,
+          "local_cd_squared": 0.006180239154491574,
+          "local_fscore": 0.10128081471929959
+        },
+        "bronze_09": {
+          "samples": 20,
+          "local_cd_squared": 0.008202432072721422,
+          "local_fscore": 0.07963088532656709
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "label": "wide",
+      "best_epoch": 20,
+      "parameters": 614852,
+      "cd": 0.005688558978727087,
+      "fscore": 0.1231036116316315,
+      "model_metrics": {
+        "bronze_03": {
+          "samples": 20,
+          "local_cd_squared": 0.004977891873568297,
+          "local_fscore": 0.1368535688898858
+        },
+        "bronze_09": {
+          "samples": 20,
+          "local_cd_squared": 0.006399226083885878,
+          "local_fscore": 0.10935365437337718
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "label": "pointwise_xyz",
+      "best_epoch": 19,
+      "parameters": 615236,
+      "cd": 0.005893969180760905,
+      "fscore": 0.12063673793087024,
+      "model_metrics": {
+        "bronze_03": {
+          "samples": 20,
+          "local_cd_squared": 0.00517703709192574,
+          "local_fscore": 0.12342232167070655
+        },
+        "bronze_09": {
+          "samples": 20,
+          "local_cd_squared": 0.00661090126959607,
+          "local_fscore": 0.11785115419103394
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "label": "local",
+      "best_epoch": 19,
+      "parameters": 615236,
+      "cd": 0.007239211082924158,
+      "fscore": 0.09770659079720317,
+      "model_metrics": {
+        "bronze_03": {
+          "samples": 20,
+          "local_cd_squared": 0.006231116829439998,
+          "local_fscore": 0.10617606615333494
+        },
+        "bronze_09": {
+          "samples": 20,
+          "local_cd_squared": 0.008247305336408318,
+          "local_fscore": 0.08923711544107141
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "label": "wide",
+      "best_epoch": 18,
+      "parameters": 614852,
+      "cd": 0.005840336863184348,
+      "fscore": 0.11546384355664015,
+      "model_metrics": {
+        "bronze_03": {
+          "samples": 20,
+          "local_cd_squared": 0.005256037740036845,
+          "local_fscore": 0.12325472098028926
+        },
+        "bronze_09": {
+          "samples": 20,
+          "local_cd_squared": 0.00642463598633185,
+          "local_fscore": 0.10767296613299107
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "label": "pointwise_xyz",
+      "best_epoch": 20,
+      "parameters": 615236,
+      "cd": 0.005713110929355026,
+      "fscore": 0.11771595217669048,
+      "model_metrics": {
+        "bronze_03": {
+          "samples": 20,
+          "local_cd_squared": 0.004961309279315174,
+          "local_fscore": 0.13506640459021108
+        },
+        "bronze_09": {
+          "samples": 20,
+          "local_cd_squared": 0.006464912579394877,
+          "local_fscore": 0.10036549976316986
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "label": "local",
+      "best_epoch": 18,
+      "parameters": 615236,
+      "cd": 0.007219780865125358,
+      "fscore": 0.09059906784169344,
+      "model_metrics": {
+        "bronze_03": {
+          "samples": 20,
+          "local_cd_squared": 0.0063785082194954155,
+          "local_fscore": 0.09841673215200025
+        },
+        "bronze_09": {
+          "samples": 20,
+          "local_cd_squared": 0.008061053510755301,
+          "local_fscore": 0.0827814035313866
+        }
+      }
+    }
+  ],
+  "means": {
+    "wide": {
+      "cd": {
+        "mean": 0.005716253242765864,
+        "sample_std": 0.00011281539154765648
+      },
+      "fscore": {
+        "mean": 0.1196301557316753,
+        "sample_std": 0.0038667236031751104
+      }
+    },
+    "pointwise_xyz": {
+      "cd": {
+        "mean": 0.0056575239946444825,
+        "sample_std": 0.00026858796784558176
+      },
+      "fscore": {
+        "mean": 0.12059999941021311,
+        "sample_std": 0.002865854590732903
+      }
+    },
+    "local": {
+      "cd": {
+        "mean": 0.007216775853885338,
+        "sample_std": 2.4078781323211678e-05
+      },
+      "fscore": {
+        "mean": 0.09292050288727666,
+        "sample_std": 0.004145492244240868
+      }
+    }
+  },
+  "paired": [
+    {
+      "seed": 42,
+      "cd_reduction_vs_control": -0.3402938225847878,
+      "cd_reduction_vs_wide": -0.27962807622924
+    },
+    {
+      "seed": 43,
+      "cd_reduction_vs_control": -0.2282404031826959,
+      "cd_reduction_vs_wide": -0.2725913733154359
+    },
+    {
+      "seed": 44,
+      "cd_reduction_vs_control": -0.26372145655859436,
+      "cd_reduction_vs_wide": -0.2361925406454879
+    }
+  ],
+  "seed42_quality": {
+    "wide": {
+      "dcd_equal_points_mean": 0.9176844015717507,
+      "prediction_nn_median_over_radius": 0.04941245149821043,
+      "prediction_close_fraction_0_02_radius": 0.283984375,
+      "prediction_mesh_mean_distance_over_radius": 0.07141059310015636
+    },
+    "pointwise_xyz": {
+      "dcd_equal_points_mean": 0.9152333387732506,
+      "prediction_nn_median_over_radius": 0.04723019320517778,
+      "prediction_close_fraction_0_02_radius": 0.253515625,
+      "prediction_mesh_mean_distance_over_radius": 0.06973248548390669
+    },
+    "local": {
+      "dcd_equal_points_mean": 0.9387577745318414,
+      "prediction_nn_median_over_radius": 0.026388650620356204,
+      "prediction_close_fraction_0_02_radius": 0.4267578125,
+      "prediction_mesh_mean_distance_over_radius": 0.07784719970729037
+    }
+  },
+  "reduction_vs_matched_control": -0.2756067602571146,
+  "limitation": "Two fixed validation objects; no independent object replication or blind test. Different best epochs are selected per native validation sampling, final comparison uses seed43."
+}

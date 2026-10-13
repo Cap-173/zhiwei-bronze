@@ -1,0 +1,324 @@
+{
+  "object_id": "bronze_02",
+  "object_name": "司母戊鼎",
+  "source_dataset": "PROJECT_ROOT\\outputs\\datasets\\bronze_20261013_seed42",
+  "single_object_dataset": "PROJECT_ROOT\\outputs\\datasets\\bronze_single_object_fit",
+  "single_hole": {
+    "model_id": "bronze_02",
+    "split": "train",
+    "path": "train/model_0002_sample_0000",
+    "input_points": 3942,
+    "target_points": 154
+  },
+  "training_holes": [
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0000",
+      "input_points": 3942,
+      "target_points": 154
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0001",
+      "input_points": 3965,
+      "target_points": 131
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0002",
+      "input_points": 3901,
+      "target_points": 195
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0003",
+      "input_points": 3737,
+      "target_points": 359
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0004",
+      "input_points": 3994,
+      "target_points": 102
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0005",
+      "input_points": 3998,
+      "target_points": 98
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0006",
+      "input_points": 3775,
+      "target_points": 321
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0007",
+      "input_points": 4000,
+      "target_points": 96
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0008",
+      "input_points": 3898,
+      "target_points": 198
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0009",
+      "input_points": 3967,
+      "target_points": 129
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0010",
+      "input_points": 3933,
+      "target_points": 163
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0011",
+      "input_points": 3720,
+      "target_points": 376
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0012",
+      "input_points": 3866,
+      "target_points": 230
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0013",
+      "input_points": 3767,
+      "target_points": 329
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0014",
+      "input_points": 3746,
+      "target_points": 350
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0015",
+      "input_points": 3809,
+      "target_points": 287
+    }
+  ],
+  "unseen_same_object_holes": [
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0016",
+      "input_points": 3860,
+      "target_points": 236
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0017",
+      "input_points": 3767,
+      "target_points": 329
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0018",
+      "input_points": 3709,
+      "target_points": 387
+    },
+    {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0019",
+      "input_points": 4002,
+      "target_points": 94
+    }
+  ],
+  "cross_object_evaluation": [
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0000",
+      "input_points": 3945,
+      "target_points": 151
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0001",
+      "input_points": 3647,
+      "target_points": 449
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0002",
+      "input_points": 3722,
+      "target_points": 374
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0003",
+      "input_points": 3381,
+      "target_points": 715
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0004",
+      "input_points": 3736,
+      "target_points": 360
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0005",
+      "input_points": 3857,
+      "target_points": 239
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0006",
+      "input_points": 3882,
+      "target_points": 214
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0007",
+      "input_points": 3975,
+      "target_points": 121
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0008",
+      "input_points": 3654,
+      "target_points": 442
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0009",
+      "input_points": 3864,
+      "target_points": 232
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0010",
+      "input_points": 3858,
+      "target_points": 238
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0011",
+      "input_points": 3883,
+      "target_points": 213
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0012",
+      "input_points": 3936,
+      "target_points": 160
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0013",
+      "input_points": 3664,
+      "target_points": 432
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0014",
+      "input_points": 3983,
+      "target_points": 113
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0015",
+      "input_points": 3501,
+      "target_points": 595
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0016",
+      "input_points": 3724,
+      "target_points": 372
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0017",
+      "input_points": 3491,
+      "target_points": 605
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0018",
+      "input_points": 3860,
+      "target_points": 236
+    },
+    {
+      "model_id": "bronze_03",
+      "split": "val",
+      "path": "val/model_0003_sample_0019",
+      "input_points": 3630,
+      "target_points": 466
+    }
+  ],
+  "architectures": [
+    "pointwise_xyz",
+    "local"
+  ],
+  "training_seed": 42,
+  "evaluation_seed": 43,
+  "single_hole_steps": 1000,
+  "single_object_epochs": 200,
+  "batch_size": 4,
+  "learning_rate": 0.001,
+  "input_points": 512,
+  "output_points": 128,
+  "target_points": 128,
+  "decoder_width": 1140,
+  "encoder_anchors": 32,
+  "encoder_neighbors": 16,
+  "output_mode": "tanh",
+  "loss": "CD squared divided by R squared; no auxiliary loss",
+  "primary_checkpoint": "final fixed step/epoch, not training-loss best or unseen-hole selected",
+  "target_floor": "FPS128 and fixed5 random128 draws from full missing target; reference only, not a learned prediction",
+  "purpose": "Engineering fit sanity check, not a new method or generalized bronze completion score",
+  "excluded_original_test_models": [
+    "bronze_06",
+    "bronze_07"
+  ]
+}

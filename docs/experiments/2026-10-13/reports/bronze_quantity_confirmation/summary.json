@@ -1,0 +1,4449 @@
+{
+  "protocol": {
+    "counts": [
+      16,
+      64
+    ],
+    "exploratory_seed": 42,
+    "confirmation_seeds": [
+      43,
+      44
+    ],
+    "updates": 800,
+    "evaluation_seed": 43,
+    "prior_summary": "PROJECT_ROOT\\outputs\\diagnostics\\quantity_fit\\summary.json",
+    "prior_sha256": "b537225472a1bdfe792794d60e8a2569c79246613707b400b45528e1671fffb7",
+    "source_dataset": "PROJECT_ROOT\\outputs\\datasets\\bronze_20261013_seed42",
+    "roles": {
+      "seen_train16": [
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0000",
+          "input_points": 3942,
+          "target_points": 154
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0001",
+          "input_points": 3965,
+          "target_points": 131
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0002",
+          "input_points": 3901,
+          "target_points": 195
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0003",
+          "input_points": 3737,
+          "target_points": 359
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0004",
+          "input_points": 3994,
+          "target_points": 102
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0005",
+          "input_points": 3998,
+          "target_points": 98
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0006",
+          "input_points": 3775,
+          "target_points": 321
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0007",
+          "input_points": 4000,
+          "target_points": 96
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0008",
+          "input_points": 3898,
+          "target_points": 198
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0009",
+          "input_points": 3967,
+          "target_points": 129
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0010",
+          "input_points": 3933,
+          "target_points": 163
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0011",
+          "input_points": 3720,
+          "target_points": 376
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0012",
+          "input_points": 3866,
+          "target_points": 230
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0013",
+          "input_points": 3767,
+          "target_points": 329
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0014",
+          "input_points": 3746,
+          "target_points": 350
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0015",
+          "input_points": 3809,
+          "target_points": 287
+        }
+      ],
+      "unseen_same_object4": [
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0016",
+          "input_points": 3860,
+          "target_points": 236
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0017",
+          "input_points": 3767,
+          "target_points": 329
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0018",
+          "input_points": 3709,
+          "target_points": 387
+        },
+        {
+          "model_id": "bronze_02",
+          "split": "train",
+          "path": "train/model_0002_sample_0019",
+          "input_points": 4002,
+          "target_points": 94
+        }
+      ],
+      "cross_object20": [
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0000",
+          "input_points": 3945,
+          "target_points": 151
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0001",
+          "input_points": 3647,
+          "target_points": 449
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0002",
+          "input_points": 3722,
+          "target_points": 374
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0003",
+          "input_points": 3381,
+          "target_points": 715
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0004",
+          "input_points": 3736,
+          "target_points": 360
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0005",
+          "input_points": 3857,
+          "target_points": 239
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0006",
+          "input_points": 3882,
+          "target_points": 214
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0007",
+          "input_points": 3975,
+          "target_points": 121
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0008",
+          "input_points": 3654,
+          "target_points": 442
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0009",
+          "input_points": 3864,
+          "target_points": 232
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0010",
+          "input_points": 3858,
+          "target_points": 238
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0011",
+          "input_points": 3883,
+          "target_points": 213
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0012",
+          "input_points": 3936,
+          "target_points": 160
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0013",
+          "input_points": 3664,
+          "target_points": 432
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0014",
+          "input_points": 3983,
+          "target_points": 113
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0015",
+          "input_points": 3501,
+          "target_points": 595
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0016",
+          "input_points": 3724,
+          "target_points": 372
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0017",
+          "input_points": 3491,
+          "target_points": 605
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0018",
+          "input_points": 3860,
+          "target_points": 236
+        },
+        {
+          "model_id": "bronze_03",
+          "split": "val",
+          "path": "val/model_0003_sample_0019",
+          "input_points": 3630,
+          "target_points": 466
+        }
+      ]
+    },
+    "datasets": {
+      "16": {
+        "path": "PROJECT_ROOT\\outputs\\datasets\\bronze_single_object_fit",
+        "fingerprint": "7442da94a2103a0bc484614366e0954c6ee94ab8895179eb70973dfe0b8d3f50",
+        "epochs": 200
+      },
+      "64": {
+        "path": "PROJECT_ROOT\\outputs\\datasets\\bronze_quantity_64",
+        "fingerprint": "d90eedf72fe85f348166cdbe46427680eecbee089d807c0914c110f483315e94",
+        "epochs": 50
+      }
+    },
+    "config": {
+      "input_points": 512,
+      "output_points": 128,
+      "target_points": 128,
+      "batch_size": 4,
+      "lr": 0.001,
+      "device": "cpu",
+      "output_mode": "tanh",
+      "architecture": "pointwise_xyz",
+      "decoder_width": 1140
+    },
+    "checkpoint_policy": "last at 800 updates; no evaluation-based model selection",
+    "scope": "Candidate64 selected after seed42 exploration; only training seeds vary, holes and evaluation examples fixed. Same-object targets overlap; one cross-object reference, no original test06/07."
+  },
+  "checkpoint_sha256": {
+    "16_seed42": "181d00b33893ff31f3f33a48884ba298b5dd087153ccbcb4ba6587c7e8026e58",
+    "64_seed42": "a8bffcd6509b71fda3c03b10d6a745d68542becdb6ebe5ee4d5e15d773e68ff1",
+    "16_seed43": "96260d040ef74ef685e7e8212717e2952e888e366da8face6cacbeacc404ac3d",
+    "64_seed43": "eeec78f1c11014922cc983d515ab70bd20c2cd04683f86d967ce5f1440a4e288",
+    "16_seed44": "b7d00fd37dfd02b6c782bb7f217f4165ba2e985da2cdf1d243f20f9f10caa499",
+    "64_seed44": "a89c5c30179208c00e590ab1cb3aba0544c87313bc9cca98bb29d16cc8842097"
+  },
+  "evaluations": {
+    "16_seed42": {
+      "seen_train16": {
+        "sample_count": 16,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.0009955184195860056,
+        "mean_local_fscore": 0.6619023635060286,
+        "model_macro_cd_squared": 0.0009955184195860056,
+        "model_macro_fscore": 0.6619023635060286,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 16,
+            "local_cd_squared": 0.0009955184195860056,
+            "local_fscore": 0.6619023635060286
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0000",
+            "local_cd_squared": 0.0007041100179776549,
+            "local_fscore": 0.7319800188062572,
+            "precision": 0.9140625,
+            "recall": 0.6103895902633667
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0001",
+            "local_cd_squared": 0.0004366696812212467,
+            "local_fscore": 0.8579617273332215,
+            "precision": 0.9921875,
+            "recall": 0.7557252049446106
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0002",
+            "local_cd_squared": 0.0006805077427998185,
+            "local_fscore": 0.7231232678806745,
+            "precision": 0.921875,
+            "recall": 0.5948718190193176
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0003",
+            "local_cd_squared": 0.0018410353222861886,
+            "local_fscore": 0.32745266464359574,
+            "precision": 0.6171875,
+            "recall": 0.22284123301506042
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0004",
+            "local_cd_squared": 0.00027922220760956407,
+            "local_fscore": 0.9375000039581209,
+            "precision": 1.0,
+            "recall": 0.8823529481887817
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0005",
+            "local_cd_squared": 0.00022784125758334994,
+            "local_fscore": 0.9428860992733076,
+            "precision": 0.96875,
+            "recall": 0.918367326259613
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0006",
+            "local_cd_squared": 0.0019349157810211182,
+            "local_fscore": 0.3824697260643352,
+            "precision": 0.734375,
+            "recall": 0.2585669755935669
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0007",
+            "local_cd_squared": 0.00016539866919629276,
+            "local_fscore": 0.9947643878673572,
+            "precision": 1.0,
+            "recall": 0.9895833134651184
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0008",
+            "local_cd_squared": 0.0007829597452655435,
+            "local_fscore": 0.6875301043916231,
+            "precision": 0.9296875,
+            "recall": 0.5454545617103577
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0009",
+            "local_cd_squared": 0.0005878455704078078,
+            "local_fscore": 0.842396905479823,
+            "precision": 0.9453125,
+            "recall": 0.7596899271011353
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0010",
+            "local_cd_squared": 0.0005935847293585539,
+            "local_fscore": 0.7774402748802698,
+            "precision": 0.953125,
+            "recall": 0.6564416885375977
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0011",
+            "local_cd_squared": 0.001767531968653202,
+            "local_fscore": 0.44481202282536,
+            "precision": 0.796875,
+            "recall": 0.3085106313228607
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0012",
+            "local_cd_squared": 0.0007457708707079291,
+            "local_fscore": 0.7209105896311281,
+            "precision": 0.9453125,
+            "recall": 0.582608699798584
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0013",
+            "local_cd_squared": 0.0020526337902992964,
+            "local_fscore": 0.3663785169119804,
+            "precision": 0.6484375,
+            "recall": 0.25531914830207825
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0014",
+            "local_cd_squared": 0.0013653390342369676,
+            "local_fscore": 0.48222566614233375,
+            "precision": 0.8125,
+            "recall": 0.34285715222358704
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0015",
+            "local_cd_squared": 0.001762928324751556,
+            "local_fscore": 0.3706058400070688,
+            "precision": 0.6171875,
+            "recall": 0.2648083567619324
+          }
+        ]
+      },
+      "unseen_same_object4": {
+        "sample_count": 4,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.005887871899176389,
+        "mean_local_fscore": 0.14022956649050694,
+        "model_macro_cd_squared": 0.005887871899176389,
+        "model_macro_fscore": 0.14022956649050694,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 4,
+            "local_cd_squared": 0.005887871899176389,
+            "local_fscore": 0.14022956649050694
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0016",
+            "local_cd_squared": 0.006690335460007191,
+            "local_fscore": 0.10065425278134758,
+            "precision": 0.1953125,
+            "recall": 0.06779661029577255
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0017",
+            "local_cd_squared": 0.010970490984618664,
+            "local_fscore": 0.051212415566230796,
+            "precision": 0.0859375,
+            "recall": 0.036474164575338364
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0018",
+            "local_cd_squared": 0.0037958715111017227,
+            "local_fscore": 0.06930020207522827,
+            "precision": 0.1640625,
+            "recall": 0.043927647173404694
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0019",
+            "local_cd_squared": 0.0020947896409779787,
+            "local_fscore": 0.33975139553922107,
+            "precision": 0.3203125,
+            "recall": 0.3617021143436432
+          }
+        ]
+      },
+      "cross_object20": {
+        "sample_count": 20,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.008314488374162465,
+        "mean_local_fscore": 0.11648050780118684,
+        "model_macro_cd_squared": 0.008314488374162465,
+        "model_macro_fscore": 0.11648050780118684,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_03": {
+            "samples": 20,
+            "local_cd_squared": 0.008314488374162465,
+            "local_fscore": 0.11648050780118684
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0000",
+            "local_cd_squared": 0.0030572665855288506,
+            "local_fscore": 0.20310200455102842,
+            "precision": 0.3046875,
+            "recall": 0.15231788158416748
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0001",
+            "local_cd_squared": 0.009759431704878807,
+            "local_fscore": 0.07965482873314957,
+            "precision": 0.15625,
+            "recall": 0.05345211550593376
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0002",
+            "local_cd_squared": 0.006385869346559048,
+            "local_fscore": 0.09363295688620486,
+            "precision": 0.15625,
+            "recall": 0.06684491783380508
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0003",
+            "local_cd_squared": 0.012476576492190361,
+            "local_fscore": 0.07096094694076194,
+            "precision": 0.1953125,
+            "recall": 0.04335664212703705
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0004",
+            "local_cd_squared": 0.009338311851024628,
+            "local_fscore": 0.13047186074868708,
+            "precision": 0.2109375,
+            "recall": 0.09444444626569748
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0005",
+            "local_cd_squared": 0.008790601044893265,
+            "local_fscore": 0.1035422369501323,
+            "precision": 0.1484375,
+            "recall": 0.07949791103601456
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0006",
+            "local_cd_squared": 0.013421904295682907,
+            "local_fscore": 0.07121057973382516,
+            "precision": 0.078125,
+            "recall": 0.06542056053876877
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0007",
+            "local_cd_squared": 0.002675217343494296,
+            "local_fscore": 0.3074670497263572,
+            "precision": 0.328125,
+            "recall": 0.28925618529319763
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0008",
+            "local_cd_squared": 0.006136089563369751,
+            "local_fscore": 0.08305647878696863,
+            "precision": 0.15625,
+            "recall": 0.05656108632683754
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0009",
+            "local_cd_squared": 0.007137948181480169,
+            "local_fscore": 0.16360438188702814,
+            "precision": 0.2109375,
+            "recall": 0.13362069427967072
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0010",
+            "local_cd_squared": 0.008257164619863033,
+            "local_fscore": 0.1103202885059755,
+            "precision": 0.2421875,
+            "recall": 0.0714285746216774
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0011",
+            "local_cd_squared": 0.004946325905621052,
+            "local_fscore": 0.11556842623824637,
+            "precision": 0.1640625,
+            "recall": 0.08920187503099442
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0012",
+            "local_cd_squared": 0.0050035566091537476,
+            "local_fscore": 0.15625,
+            "precision": 0.15625,
+            "recall": 0.15625
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0013",
+            "local_cd_squared": 0.010755850002169609,
+            "local_fscore": 0.08564493898366632,
+            "precision": 0.1484375,
+            "recall": 0.06018518656492233
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0014",
+            "local_cd_squared": 0.007138999179005623,
+            "local_fscore": 0.08298755172226449,
+            "precision": 0.078125,
+            "recall": 0.08849557489156723
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0015",
+            "local_cd_squared": 0.012301027774810791,
+            "local_fscore": 0.06470165493424644,
+            "precision": 0.140625,
+            "recall": 0.042016807943582535
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0016",
+            "local_cd_squared": 0.008447349071502686,
+            "local_fscore": 0.08589211680102173,
+            "precision": 0.140625,
+            "recall": 0.06182795763015747
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0017",
+            "local_cd_squared": 0.016971461474895477,
+            "local_fscore": 0.048798383803561184,
+            "precision": 0.109375,
+            "recall": 0.03140495717525482
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0018",
+            "local_cd_squared": 0.004342278465628624,
+            "local_fscore": 0.18947368011910493,
+            "precision": 0.25,
+            "recall": 0.1525423675775528
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0019",
+            "local_cd_squared": 0.008946537971496582,
+            "local_fscore": 0.08326978997150632,
+            "precision": 0.1640625,
+            "recall": 0.055793993175029755
+          }
+        ]
+      }
+    },
+    "64_seed42": {
+      "seen_train16": {
+        "sample_count": 16,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.0023868111820775084,
+        "mean_local_fscore": 0.33186116414652855,
+        "model_macro_cd_squared": 0.0023868111820775084,
+        "model_macro_fscore": 0.33186116414652855,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 16,
+            "local_cd_squared": 0.0023868111820775084,
+            "local_fscore": 0.33186116414652855
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0000",
+            "local_cd_squared": 0.0017241031164303422,
+            "local_fscore": 0.3040847222643873,
+            "precision": 0.5234375,
+            "recall": 0.2142857164144516
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0001",
+            "local_cd_squared": 0.0010097292251884937,
+            "local_fscore": 0.6042050846270401,
+            "precision": 0.8125,
+            "recall": 0.48091602325439453
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0002",
+            "local_cd_squared": 0.0019261058187112212,
+            "local_fscore": 0.36014888264291833,
+            "precision": 0.578125,
+            "recall": 0.26153847575187683
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0003",
+            "local_cd_squared": 0.0038924370892345905,
+            "local_fscore": 0.15273968753086206,
+            "precision": 0.3203125,
+            "recall": 0.10027854889631271
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0004",
+            "local_cd_squared": 0.0009863001760095358,
+            "local_fscore": 0.645903880049639,
+            "precision": 0.828125,
+            "recall": 0.529411792755127
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0005",
+            "local_cd_squared": 0.0016361763700842857,
+            "local_fscore": 0.45504460505994304,
+            "precision": 0.53125,
+            "recall": 0.3979591727256775
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0006",
+            "local_cd_squared": 0.004360841121524572,
+            "local_fscore": 0.14819170433502174,
+            "precision": 0.4921875,
+            "recall": 0.08722741156816483
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0007",
+            "local_cd_squared": 0.00073036621324718,
+            "local_fscore": 0.6860795454545454,
+            "precision": 0.71875,
+            "recall": 0.65625
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0008",
+            "local_cd_squared": 0.002426372142508626,
+            "local_fscore": 0.21846322354612124,
+            "precision": 0.4296875,
+            "recall": 0.14646464586257935
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0009",
+            "local_cd_squared": 0.0015949272783473134,
+            "local_fscore": 0.36933798519210304,
+            "precision": 0.4140625,
+            "recall": 0.3333333432674408
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0010",
+            "local_cd_squared": 0.0018532646354287863,
+            "local_fscore": 0.3723739873093792,
+            "precision": 0.6328125,
+            "recall": 0.2638036906719208
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0011",
+            "local_cd_squared": 0.004006863571703434,
+            "local_fscore": 0.14823529829747945,
+            "precision": 0.328125,
+            "recall": 0.09574468433856964
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0012",
+            "local_cd_squared": 0.002389519475400448,
+            "local_fscore": 0.2944785255434426,
+            "precision": 0.5,
+            "recall": 0.208695650100708
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0013",
+            "local_cd_squared": 0.0030969209037721157,
+            "local_fscore": 0.1904686867060412,
+            "precision": 0.484375,
+            "recall": 0.11854103207588196
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0014",
+            "local_cd_squared": 0.003337017958983779,
+            "local_fscore": 0.1953075477202741,
+            "precision": 0.4375,
+            "recall": 0.1257142871618271
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0015",
+            "local_cd_squared": 0.003218033816665411,
+            "local_fscore": 0.16471526006525872,
+            "precision": 0.4453125,
+            "recall": 0.10104529559612274
+          }
+        ]
+      },
+      "unseen_same_object4": {
+        "sample_count": 4,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.0040388223133049905,
+        "mean_local_fscore": 0.1633249999096137,
+        "model_macro_cd_squared": 0.0040388223133049905,
+        "model_macro_fscore": 0.1633249999096137,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 4,
+            "local_cd_squared": 0.0040388223133049905,
+            "local_fscore": 0.1633249999096137
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0016",
+            "local_cd_squared": 0.0026587576139718294,
+            "local_fscore": 0.19320843694069853,
+            "precision": 0.3125,
+            "recall": 0.13983051478862762
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0017",
+            "local_cd_squared": 0.0055680228397250175,
+            "local_fscore": 0.10575554311089745,
+            "precision": 0.40625,
+            "recall": 0.060790274292230606
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0018",
+            "local_cd_squared": 0.005851661320775747,
+            "local_fscore": 0.05528497930607621,
+            "precision": 0.1171875,
+            "recall": 0.03617570921778679
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0019",
+            "local_cd_squared": 0.002076847478747368,
+            "local_fscore": 0.2990510402807825,
+            "precision": 0.4140625,
+            "recall": 0.23404255509376526
+          }
+        ]
+      },
+      "cross_object20": {
+        "sample_count": 20,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.007326534303138033,
+        "mean_local_fscore": 0.12564170876293496,
+        "model_macro_cd_squared": 0.007326534303138033,
+        "model_macro_fscore": 0.12564170876293496,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_03": {
+            "samples": 20,
+            "local_cd_squared": 0.007326534303138033,
+            "local_fscore": 0.12564170876293496
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0000",
+            "local_cd_squared": 0.0019901792984455824,
+            "local_fscore": 0.277668838409941,
+            "precision": 0.4609375,
+            "recall": 0.1986754983663559
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0001",
+            "local_cd_squared": 0.01029820367693901,
+            "local_fscore": 0.11330000297902448,
+            "precision": 0.4609375,
+            "recall": 0.06458797305822372
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0002",
+            "local_cd_squared": 0.005957595072686672,
+            "local_fscore": 0.09068410605806818,
+            "precision": 0.421875,
+            "recall": 0.050802137702703476
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0003",
+            "local_cd_squared": 0.014806287363171577,
+            "local_fscore": 0.028436018981820882,
+            "precision": 0.1875,
+            "recall": 0.015384615398943424
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0004",
+            "local_cd_squared": 0.00859592854976654,
+            "local_fscore": 0.1221804562529631,
+            "precision": 0.5078125,
+            "recall": 0.0694444477558136
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0005",
+            "local_cd_squared": 0.005613840185105801,
+            "local_fscore": 0.10287114092544028,
+            "precision": 0.421875,
+            "recall": 0.05857740715146065
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0006",
+            "local_cd_squared": 0.00856342725455761,
+            "local_fscore": 0.040903779023477846,
+            "precision": 0.1640625,
+            "recall": 0.023364486172795296
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0007",
+            "local_cd_squared": 0.0015514096012338996,
+            "local_fscore": 0.3968818705762642,
+            "precision": 0.5390625,
+            "recall": 0.3140496015548706
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0008",
+            "local_cd_squared": 0.005835766904056072,
+            "local_fscore": 0.09648961639452358,
+            "precision": 0.328125,
+            "recall": 0.05656108632683754
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0009",
+            "local_cd_squared": 0.005437925457954407,
+            "local_fscore": 0.21286398124300404,
+            "precision": 0.6015625,
+            "recall": 0.12931033968925476
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0010",
+            "local_cd_squared": 0.0058134859427809715,
+            "local_fscore": 0.11326562507831939,
+            "precision": 0.359375,
+            "recall": 0.06722689419984818
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0011",
+            "local_cd_squared": 0.006599890999495983,
+            "local_fscore": 0.08513294258469295,
+            "precision": 0.2421875,
+            "recall": 0.051643192768096924
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0012",
+            "local_cd_squared": 0.004257885739207268,
+            "local_fscore": 0.13497556592028345,
+            "precision": 0.3984375,
+            "recall": 0.08124999701976776
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0013",
+            "local_cd_squared": 0.008635512553155422,
+            "local_fscore": 0.0875000013411045,
+            "precision": 0.4375,
+            "recall": 0.0486111119389534
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0014",
+            "local_cd_squared": 0.006772066466510296,
+            "local_fscore": 0.1375573189054497,
+            "precision": 0.234375,
+            "recall": 0.09734513610601425
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0015",
+            "local_cd_squared": 0.012619949877262115,
+            "local_fscore": 0.04444444500390231,
+            "precision": 0.1875,
+            "recall": 0.02521008439362049
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0016",
+            "local_cd_squared": 0.006929745431989431,
+            "local_fscore": 0.10661670055111044,
+            "precision": 0.2578125,
+            "recall": 0.0672043040394783
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0017",
+            "local_cd_squared": 0.01435959804803133,
+            "local_fscore": 0.025950981664471812,
+            "precision": 0.1015625,
+            "recall": 0.014876033179461956
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0018",
+            "local_cd_squared": 0.0042204358614981174,
+            "local_fscore": 0.2252107556455282,
+            "precision": 0.515625,
+            "recall": 0.14406779408454895
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0019",
+            "local_cd_squared": 0.007671551778912544,
+            "local_fscore": 0.0699000277193086,
+            "precision": 0.3671875,
+            "recall": 0.03862661123275757
+          }
+        ]
+      }
+    },
+    "16_seed43": {
+      "seen_train16": {
+        "sample_count": 16,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.0009581123813404702,
+        "mean_local_fscore": 0.6617890828901213,
+        "model_macro_cd_squared": 0.0009581123813404702,
+        "model_macro_fscore": 0.6617890828901213,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 16,
+            "local_cd_squared": 0.0009581123813404702,
+            "local_fscore": 0.6617890828901213
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0000",
+            "local_cd_squared": 0.0006311542820185423,
+            "local_fscore": 0.773564462649407,
+            "precision": 0.9296875,
+            "recall": 0.6623376607894897
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0001",
+            "local_cd_squared": 0.0004068624402862042,
+            "local_fscore": 0.8711390716327432,
+            "precision": 0.9765625,
+            "recall": 0.7862595319747925
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0002",
+            "local_cd_squared": 0.0006047887727618217,
+            "local_fscore": 0.7577918263693512,
+            "precision": 0.9375,
+            "recall": 0.6358974575996399
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0003",
+            "local_cd_squared": 0.001566272578202188,
+            "local_fscore": 0.4324007777517967,
+            "precision": 0.734375,
+            "recall": 0.3064066767692566
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0004",
+            "local_cd_squared": 0.00030704474193044007,
+            "local_fscore": 0.9082984128017458,
+            "precision": 0.984375,
+            "recall": 0.843137264251709
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0005",
+            "local_cd_squared": 0.0002809464931488037,
+            "local_fscore": 0.9335717901985254,
+            "precision": 0.984375,
+            "recall": 0.8877550959587097
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0006",
+            "local_cd_squared": 0.0019770306535065174,
+            "local_fscore": 0.3823349018060511,
+            "precision": 0.6875,
+            "recall": 0.26479750871658325
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0007",
+            "local_cd_squared": 0.00023550621699541807,
+            "local_fscore": 0.9695469902584205,
+            "precision": 0.9921875,
+            "recall": 0.9479166865348816
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0008",
+            "local_cd_squared": 0.0008032951736822724,
+            "local_fscore": 0.6993864937394665,
+            "precision": 0.890625,
+            "recall": 0.5757575631141663
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0009",
+            "local_cd_squared": 0.0007281323196366429,
+            "local_fscore": 0.6882089976251592,
+            "precision": 0.8125,
+            "recall": 0.5968992114067078
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0010",
+            "local_cd_squared": 0.0005265285726636648,
+            "local_fscore": 0.7790860502765727,
+            "precision": 0.9453125,
+            "recall": 0.6625766754150391
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0011",
+            "local_cd_squared": 0.0017234248807653785,
+            "local_fscore": 0.47042731515473885,
+            "precision": 0.7890625,
+            "recall": 0.33510637283325195
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0012",
+            "local_cd_squared": 0.0008607610361650586,
+            "local_fscore": 0.6358462895087938,
+            "precision": 0.8359375,
+            "recall": 0.5130434632301331
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0013",
+            "local_cd_squared": 0.0018392086494714022,
+            "local_fscore": 0.4023121513904221,
+            "precision": 0.6796875,
+            "recall": 0.2857142984867096
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0014",
+            "local_cd_squared": 0.0013568602735176682,
+            "local_fscore": 0.45209643669311994,
+            "precision": 0.7109375,
+            "recall": 0.33142855763435364
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0015",
+            "local_cd_squared": 0.0014819810166954994,
+            "local_fscore": 0.43261335838562626,
+            "precision": 0.734375,
+            "recall": 0.30662021040916443
+          }
+        ]
+      },
+      "unseen_same_object4": {
+        "sample_count": 4,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.0060625249752774835,
+        "mean_local_fscore": 0.13313861033091978,
+        "model_macro_cd_squared": 0.0060625249752774835,
+        "model_macro_fscore": 0.13313861033091978,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 4,
+            "local_cd_squared": 0.0060625249752774835,
+            "local_fscore": 0.13313861033091978
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0016",
+            "local_cd_squared": 0.007083420641720295,
+            "local_fscore": 0.12335176734663555,
+            "precision": 0.2265625,
+            "recall": 0.08474576473236084
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0017",
+            "local_cd_squared": 0.01146019995212555,
+            "local_fscore": 0.07018578562183643,
+            "precision": 0.109375,
+            "recall": 0.05167173221707344
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0018",
+            "local_cd_squared": 0.0034913080744445324,
+            "local_fscore": 0.07169015760429334,
+            "precision": 0.1328125,
+            "recall": 0.04909560829401016
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0019",
+            "local_cd_squared": 0.002215171232819557,
+            "local_fscore": 0.2673267307509138,
+            "precision": 0.25,
+            "recall": 0.28723403811454773
+          }
+        ]
+      },
+      "cross_object20": {
+        "sample_count": 20,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.008611207769718021,
+        "mean_local_fscore": 0.10928326496576946,
+        "model_macro_cd_squared": 0.008611207769718021,
+        "model_macro_fscore": 0.10928326496576946,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_03": {
+            "samples": 20,
+            "local_cd_squared": 0.008611207769718021,
+            "local_fscore": 0.10928326496576946
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0000",
+            "local_cd_squared": 0.003093237290158868,
+            "local_fscore": 0.1597709359509431,
+            "precision": 0.2421875,
+            "recall": 0.1192052960395813
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0001",
+            "local_cd_squared": 0.010503862053155899,
+            "local_fscore": 0.08331225356013948,
+            "precision": 0.1484375,
+            "recall": 0.057906460016965866
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0002",
+            "local_cd_squared": 0.0072326017543673515,
+            "local_fscore": 0.09744110960173165,
+            "precision": 0.1796875,
+            "recall": 0.06684491783380508
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0003",
+            "local_cd_squared": 0.012479690834879875,
+            "local_fscore": 0.043829297033927864,
+            "precision": 0.125,
+            "recall": 0.02657342702150345
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0004",
+            "local_cd_squared": 0.009986917488276958,
+            "local_fscore": 0.1398488133212194,
+            "precision": 0.21875,
+            "recall": 0.10277777910232544
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0005",
+            "local_cd_squared": 0.008819717913866043,
+            "local_fscore": 0.1336654185100282,
+            "precision": 0.21875,
+            "recall": 0.09623430669307709
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0006",
+            "local_cd_squared": 0.017357390373945236,
+            "local_fscore": 0.03853211001927539,
+            "precision": 0.046875,
+            "recall": 0.032710280269384384
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0007",
+            "local_cd_squared": 0.002659546211361885,
+            "local_fscore": 0.26008311019763247,
+            "precision": 0.296875,
+            "recall": 0.23140496015548706
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0008",
+            "local_cd_squared": 0.0061356136575341225,
+            "local_fscore": 0.08252578987375443,
+            "precision": 0.171875,
+            "recall": 0.05429864302277565
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0009",
+            "local_cd_squared": 0.008361443877220154,
+            "local_fscore": 0.16860043073029593,
+            "precision": 0.2421875,
+            "recall": 0.12931033968925476
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0010",
+            "local_cd_squared": 0.008828513324260712,
+            "local_fscore": 0.09537326489023967,
+            "precision": 0.1640625,
+            "recall": 0.06722689419984818
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0011",
+            "local_cd_squared": 0.0056165182031691074,
+            "local_fscore": 0.08797654147283188,
+            "precision": 0.1171875,
+            "recall": 0.07042253762483597
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0012",
+            "local_cd_squared": 0.004648130852729082,
+            "local_fscore": 0.13347457417363714,
+            "precision": 0.1640625,
+            "recall": 0.11249999701976776
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0013",
+            "local_cd_squared": 0.01148710586130619,
+            "local_fscore": 0.09292035256442079,
+            "precision": 0.1640625,
+            "recall": 0.06481481343507767
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0014",
+            "local_cd_squared": 0.00743053900077939,
+            "local_fscore": 0.059016394383866924,
+            "precision": 0.046875,
+            "recall": 0.0796460211277008
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0015",
+            "local_cd_squared": 0.010073591023683548,
+            "local_fscore": 0.0759433410742008,
+            "precision": 0.171875,
+            "recall": 0.04873949661850929
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0016",
+            "local_cd_squared": 0.008606135845184326,
+            "local_fscore": 0.07922769474788781,
+            "precision": 0.1328125,
+            "recall": 0.05645161122083664
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0017",
+            "local_cd_squared": 0.015523729845881462,
+            "local_fscore": 0.0657734464005909,
+            "precision": 0.125,
+            "recall": 0.04462809860706329
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0018",
+            "local_cd_squared": 0.004310857504606247,
+            "local_fscore": 0.21246668281941614,
+            "precision": 0.2734375,
+            "recall": 0.173728808760643
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0019",
+            "local_cd_squared": 0.009069012477993965,
+            "local_fscore": 0.07588373798934919,
+            "precision": 0.1640625,
+            "recall": 0.04935622215270996
+          }
+        ]
+      }
+    },
+    "64_seed43": {
+      "seen_train16": {
+        "sample_count": 16,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.0024696188047528267,
+        "mean_local_fscore": 0.3034797772568634,
+        "model_macro_cd_squared": 0.0024696188047528267,
+        "model_macro_fscore": 0.3034797772568634,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 16,
+            "local_cd_squared": 0.0024696188047528267,
+            "local_fscore": 0.3034797772568634
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0000",
+            "local_cd_squared": 0.0023626298643648624,
+            "local_fscore": 0.15976632186347278,
+            "precision": 0.2890625,
+            "recall": 0.11038961261510849
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0001",
+            "local_cd_squared": 0.0009856494143605232,
+            "local_fscore": 0.5572015772452601,
+            "precision": 0.828125,
+            "recall": 0.4198473393917084
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0002",
+            "local_cd_squared": 0.00205183494836092,
+            "local_fscore": 0.29665754887250045,
+            "precision": 0.453125,
+            "recall": 0.22051282227039337
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0003",
+            "local_cd_squared": 0.003881593234837055,
+            "local_fscore": 0.12800975200394957,
+            "precision": 0.2734375,
+            "recall": 0.08356545865535736
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0004",
+            "local_cd_squared": 0.0011951534543186426,
+            "local_fscore": 0.5397489578065555,
+            "precision": 0.75,
+            "recall": 0.4215686321258545
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0005",
+            "local_cd_squared": 0.0013843977358192205,
+            "local_fscore": 0.47738193833099524,
+            "precision": 0.5234375,
+            "recall": 0.43877550959587097
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0006",
+            "local_cd_squared": 0.004772834479808807,
+            "local_fscore": 0.1151177362398928,
+            "precision": 0.359375,
+            "recall": 0.06853582710027695
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0007",
+            "local_cd_squared": 0.0006937894504517317,
+            "local_fscore": 0.7026996240366556,
+            "precision": 0.8203125,
+            "recall": 0.6145833134651184
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0008",
+            "local_cd_squared": 0.0023480658419430256,
+            "local_fscore": 0.257634896989929,
+            "precision": 0.515625,
+            "recall": 0.17171716690063477
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0009",
+            "local_cd_squared": 0.0016093375161290169,
+            "local_fscore": 0.34624465159762513,
+            "precision": 0.3515625,
+            "recall": 0.341085284948349
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0010",
+            "local_cd_squared": 0.0018372114282101393,
+            "local_fscore": 0.3196160831025596,
+            "precision": 0.578125,
+            "recall": 0.22085890173912048
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0011",
+            "local_cd_squared": 0.004724158905446529,
+            "local_fscore": 0.0966773430609582,
+            "precision": 0.359375,
+            "recall": 0.05585106462240219
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0012",
+            "local_cd_squared": 0.0018109653610736132,
+            "local_fscore": 0.3553638215367889,
+            "precision": 0.578125,
+            "recall": 0.25652173161506653
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0013",
+            "local_cd_squared": 0.003123003290966153,
+            "local_fscore": 0.18593831890895832,
+            "precision": 0.4765625,
+            "recall": 0.1155015230178833
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0014",
+            "local_cd_squared": 0.003273129928857088,
+            "local_fscore": 0.16377170966089247,
+            "precision": 0.2578125,
+            "recall": 0.11999999731779099
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0015",
+            "local_cd_squared": 0.0034601460210978985,
+            "local_fscore": 0.15384615485282072,
+            "precision": 0.421875,
+            "recall": 0.09407665580511093
+          }
+        ]
+      },
+      "unseen_same_object4": {
+        "sample_count": 4,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.004174820089247078,
+        "mean_local_fscore": 0.16211406041667697,
+        "model_macro_cd_squared": 0.004174820089247078,
+        "model_macro_fscore": 0.16211406041667697,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 4,
+            "local_cd_squared": 0.004174820089247078,
+            "local_fscore": 0.16211406041667697
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0016",
+            "local_cd_squared": 0.002714433241635561,
+            "local_fscore": 0.18594542179448867,
+            "precision": 0.4296875,
+            "recall": 0.11864406615495682
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0017",
+            "local_cd_squared": 0.006012479774653912,
+            "local_fscore": 0.09920520052607076,
+            "precision": 0.3515625,
+            "recall": 0.05775076150894165
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0018",
+            "local_cd_squared": 0.00594613142311573,
+            "local_fscore": 0.07059673015218645,
+            "precision": 0.1796875,
+            "recall": 0.043927647173404694
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0019",
+            "local_cd_squared": 0.002026235917583108,
+            "local_fscore": 0.29270888919396204,
+            "precision": 0.390625,
+            "recall": 0.23404255509376526
+          }
+        ]
+      },
+      "cross_object20": {
+        "sample_count": 20,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.006740675086621195,
+        "mean_local_fscore": 0.1347446959953042,
+        "model_macro_cd_squared": 0.006740675086621195,
+        "model_macro_fscore": 0.1347446959953042,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_03": {
+            "samples": 20,
+            "local_cd_squared": 0.006740675086621195,
+            "local_fscore": 0.1347446959953042
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0000",
+            "local_cd_squared": 0.0021103513427078724,
+            "local_fscore": 0.27629489102629673,
+            "precision": 0.4921875,
+            "recall": 0.19205297529697418
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0001",
+            "local_cd_squared": 0.010215042158961296,
+            "local_fscore": 0.08478942058028535,
+            "precision": 0.453125,
+            "recall": 0.0467706024646759
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0002",
+            "local_cd_squared": 0.0045365458354353905,
+            "local_fscore": 0.11597083867880516,
+            "precision": 0.4375,
+            "recall": 0.06684491783380508
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0003",
+            "local_cd_squared": 0.010845299810171127,
+            "local_fscore": 0.06289308112885189,
+            "precision": 0.3125,
+            "recall": 0.03496503457427025
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0004",
+            "local_cd_squared": 0.006194974295794964,
+            "local_fscore": 0.11865864695195953,
+            "precision": 0.5390625,
+            "recall": 0.06666667014360428
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0005",
+            "local_cd_squared": 0.0059656198136508465,
+            "local_fscore": 0.08284191864833403,
+            "precision": 0.4140625,
+            "recall": 0.0460251048207283
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0006",
+            "local_cd_squared": 0.009108984842896461,
+            "local_fscore": 0.0759789601789423,
+            "precision": 0.203125,
+            "recall": 0.04672897234559059
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0007",
+            "local_cd_squared": 0.001564682461321354,
+            "local_fscore": 0.4315574652926949,
+            "precision": 0.5703125,
+            "recall": 0.3471074402332306
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0008",
+            "local_cd_squared": 0.0059211235493421555,
+            "local_fscore": 0.08126842648513234,
+            "precision": 0.3984375,
+            "recall": 0.04524886980652809
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0009",
+            "local_cd_squared": 0.003865044331178069,
+            "local_fscore": 0.23568599739357135,
+            "precision": 0.6015625,
+            "recall": 0.1465517282485962
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0010",
+            "local_cd_squared": 0.0055130040273070335,
+            "local_fscore": 0.10758431791049845,
+            "precision": 0.3671875,
+            "recall": 0.06302521377801895
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0011",
+            "local_cd_squared": 0.005120160058140755,
+            "local_fscore": 0.13254327114216555,
+            "precision": 0.390625,
+            "recall": 0.07981220632791519
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0012",
+            "local_cd_squared": 0.003832195419818163,
+            "local_fscore": 0.11853448497341872,
+            "precision": 0.4296875,
+            "recall": 0.06875000149011612
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0013",
+            "local_cd_squared": 0.008094045333564281,
+            "local_fscore": 0.07231343097217259,
+            "precision": 0.4453125,
+            "recall": 0.039351850748062134
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0014",
+            "local_cd_squared": 0.00684038270264864,
+            "local_fscore": 0.18835840371901996,
+            "precision": 0.28125,
+            "recall": 0.14159291982650757
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0015",
+            "local_cd_squared": 0.012576970271766186,
+            "local_fscore": 0.04656716479327929,
+            "precision": 0.3046875,
+            "recall": 0.02521008439362049
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0016",
+            "local_cd_squared": 0.006522905081510544,
+            "local_fscore": 0.11702544087460788,
+            "precision": 0.359375,
+            "recall": 0.06989247351884842
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0017",
+            "local_cd_squared": 0.014240341261029243,
+            "local_fscore": 0.09683290914513695,
+            "precision": 0.296875,
+            "recall": 0.057851240038871765
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0018",
+            "local_cd_squared": 0.004387904889881611,
+            "local_fscore": 0.17535682896716687,
+            "precision": 0.3359375,
+            "recall": 0.11864406615495682
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0019",
+            "local_cd_squared": 0.007357924245297909,
+            "local_fscore": 0.07383802104374475,
+            "precision": 0.390625,
+            "recall": 0.04077253118157387
+          }
+        ]
+      }
+    },
+    "16_seed44": {
+      "seen_train16": {
+        "sample_count": 16,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.000976087385424762,
+        "mean_local_fscore": 0.6628817965740823,
+        "model_macro_cd_squared": 0.000976087385424762,
+        "model_macro_fscore": 0.6628817965740823,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 16,
+            "local_cd_squared": 0.000976087385424762,
+            "local_fscore": 0.6628817965740823
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0000",
+            "local_cd_squared": 0.0007007384556345642,
+            "local_fscore": 0.7534955887196535,
+            "precision": 0.9375,
+            "recall": 0.6298701167106628
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0001",
+            "local_cd_squared": 0.00031418807338923216,
+            "local_fscore": 0.9272150875064216,
+            "precision": 0.9921875,
+            "recall": 0.8702290058135986
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0002",
+            "local_cd_squared": 0.0007706261822022498,
+            "local_fscore": 0.6795623070985671,
+            "precision": 0.90625,
+            "recall": 0.5435897707939148
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0003",
+            "local_cd_squared": 0.0016309317434206605,
+            "local_fscore": 0.45444734367036566,
+            "precision": 0.765625,
+            "recall": 0.32311978936195374
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0004",
+            "local_cd_squared": 0.00017658359138295054,
+            "local_fscore": 0.9660090344115797,
+            "precision": 0.9921875,
+            "recall": 0.9411764740943909
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0005",
+            "local_cd_squared": 0.00030961009906604886,
+            "local_fscore": 0.9037583497326178,
+            "precision": 0.96875,
+            "recall": 0.8469387888908386
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0006",
+            "local_cd_squared": 0.0017075553769245744,
+            "local_fscore": 0.43373816356259565,
+            "precision": 0.7890625,
+            "recall": 0.29906541109085083
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0007",
+            "local_cd_squared": 0.00016462555504404008,
+            "local_fscore": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0008",
+            "local_cd_squared": 0.000860521337017417,
+            "local_fscore": 0.6752327591854248,
+            "precision": 0.9140625,
+            "recall": 0.5353535413742065
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0009",
+            "local_cd_squared": 0.0006455939146690071,
+            "local_fscore": 0.7228294249636573,
+            "precision": 0.8515625,
+            "recall": 0.6279069781303406
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0010",
+            "local_cd_squared": 0.0005602131132036448,
+            "local_fscore": 0.7567336050273118,
+            "precision": 0.9296875,
+            "recall": 0.6380367875099182
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0011",
+            "local_cd_squared": 0.0021653026342391968,
+            "local_fscore": 0.3908106934897196,
+            "precision": 0.7578125,
+            "recall": 0.2632978856563568
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0012",
+            "local_cd_squared": 0.0007986451382748783,
+            "local_fscore": 0.6716715878091571,
+            "precision": 0.890625,
+            "recall": 0.539130449295044
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0013",
+            "local_cd_squared": 0.0018138419836759567,
+            "local_fscore": 0.4096505891236233,
+            "precision": 0.765625,
+            "recall": 0.2796352505683899
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0014",
+            "local_cd_squared": 0.0013297256082296371,
+            "local_fscore": 0.4485263055850538,
+            "precision": 0.734375,
+            "recall": 0.322857141494751
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0015",
+            "local_cd_squared": 0.0016686953604221344,
+            "local_fscore": 0.4124279052995693,
+            "precision": 0.765625,
+            "recall": 0.2822299599647522
+          }
+        ]
+      },
+      "unseen_same_object4": {
+        "sample_count": 4,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.005761063541285694,
+        "mean_local_fscore": 0.12974243871964522,
+        "model_macro_cd_squared": 0.005761063541285694,
+        "model_macro_fscore": 0.12974243871964522,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 4,
+            "local_cd_squared": 0.005761063541285694,
+            "local_fscore": 0.12974243871964522
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0016",
+            "local_cd_squared": 0.006926162168383598,
+            "local_fscore": 0.1195952182033141,
+            "precision": 0.203125,
+            "recall": 0.08474576473236084
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0017",
+            "local_cd_squared": 0.010283198207616806,
+            "local_fscore": 0.0830014658164466,
+            "precision": 0.171875,
+            "recall": 0.054711245000362396
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0018",
+            "local_cd_squared": 0.003640695009380579,
+            "local_fscore": 0.06779305111257439,
+            "precision": 0.1484375,
+            "recall": 0.043927647173404694
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0019",
+            "local_cd_squared": 0.0021941987797617912,
+            "local_fscore": 0.24858001974624575,
+            "precision": 0.2421875,
+            "recall": 0.25531914830207825
+          }
+        ]
+      },
+      "cross_object20": {
+        "sample_count": 20,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.008295977243687958,
+        "mean_local_fscore": 0.11421698619407938,
+        "model_macro_cd_squared": 0.008295977243687958,
+        "model_macro_fscore": 0.11421698619407938,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_03": {
+            "samples": 20,
+            "local_cd_squared": 0.008295977243687958,
+            "local_fscore": 0.11421698619407938
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0000",
+            "local_cd_squared": 0.0028347992338240147,
+            "local_fscore": 0.22746419305526733,
+            "precision": 0.3125,
+            "recall": 0.17880794405937195
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0001",
+            "local_cd_squared": 0.008768527768552303,
+            "local_fscore": 0.12047282082440855,
+            "precision": 0.2421875,
+            "recall": 0.0801781713962555
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0002",
+            "local_cd_squared": 0.006409061141312122,
+            "local_fscore": 0.08294930897363396,
+            "precision": 0.140625,
+            "recall": 0.05882352963089943
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0003",
+            "local_cd_squared": 0.012179195880889893,
+            "local_fscore": 0.057644797712153396,
+            "precision": 0.1640625,
+            "recall": 0.03496503457427025
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0004",
+            "local_cd_squared": 0.01117994450032711,
+            "local_fscore": 0.0978260894916909,
+            "precision": 0.140625,
+            "recall": 0.07500000298023224
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0005",
+            "local_cd_squared": 0.008137814700603485,
+            "local_fscore": 0.11300107365427835,
+            "precision": 0.1953125,
+            "recall": 0.07949791103601456
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0006",
+            "local_cd_squared": 0.012117858976125717,
+            "local_fscore": 0.1264021877298065,
+            "precision": 0.1640625,
+            "recall": 0.10280373692512512
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0007",
+            "local_cd_squared": 0.0026773426216095686,
+            "local_fscore": 0.2465086436021186,
+            "precision": 0.2890625,
+            "recall": 0.21487602591514587
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0008",
+            "local_cd_squared": 0.009079262614250183,
+            "local_fscore": 0.07444408746471133,
+            "precision": 0.171875,
+            "recall": 0.04751131311058998
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0009",
+            "local_cd_squared": 0.007669318467378616,
+            "local_fscore": 0.17147080522009406,
+            "precision": 0.2265625,
+            "recall": 0.13793103396892548
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0010",
+            "local_cd_squared": 0.009236911311745644,
+            "local_fscore": 0.14653053623022844,
+            "precision": 0.2421875,
+            "recall": 0.10504201799631119
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0011",
+            "local_cd_squared": 0.0045814611949026585,
+            "local_fscore": 0.07834696624087442,
+            "precision": 0.109375,
+            "recall": 0.061032865196466446
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0012",
+            "local_cd_squared": 0.005406612530350685,
+            "local_fscore": 0.09060077648772176,
+            "precision": 0.1328125,
+            "recall": 0.06875000149011612
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0013",
+            "local_cd_squared": 0.011995160020887852,
+            "local_fscore": 0.08327489381070509,
+            "precision": 0.1484375,
+            "recall": 0.05787036940455437
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0014",
+            "local_cd_squared": 0.005904613062739372,
+            "local_fscore": 0.14107883956584594,
+            "precision": 0.1328125,
+            "recall": 0.1504424810409546
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0015",
+            "local_cd_squared": 0.012006710283458233,
+            "local_fscore": 0.07313887790741141,
+            "precision": 0.1640625,
+            "recall": 0.0470588244497776
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0016",
+            "local_cd_squared": 0.008718537166714668,
+            "local_fscore": 0.07698541297159046,
+            "precision": 0.15625,
+            "recall": 0.05107526853680611
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0017",
+            "local_cd_squared": 0.013191250152885914,
+            "local_fscore": 0.04365620737956929,
+            "precision": 0.125,
+            "recall": 0.026446281000971794
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0018",
+            "local_cd_squared": 0.0047501809895038605,
+            "local_fscore": 0.1531275362333414,
+            "precision": 0.203125,
+            "recall": 0.12288135290145874
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0019",
+            "local_cd_squared": 0.00907498225569725,
+            "local_fscore": 0.07941566932613649,
+            "precision": 0.203125,
+            "recall": 0.04935622215270996
+          }
+        ]
+      }
+    },
+    "64_seed44": {
+      "seen_train16": {
+        "sample_count": 16,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.0024105234988383017,
+        "mean_local_fscore": 0.32350230955944526,
+        "model_macro_cd_squared": 0.0024105234988383017,
+        "model_macro_fscore": 0.32350230955944526,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 16,
+            "local_cd_squared": 0.0024105234988383017,
+            "local_fscore": 0.32350230955944526
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0000",
+            "local_cd_squared": 0.001826997147873044,
+            "local_fscore": 0.2389380559727826,
+            "precision": 0.375,
+            "recall": 0.1753246784210205
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0001",
+            "local_cd_squared": 0.0012273716274648905,
+            "local_fscore": 0.4495860030017855,
+            "precision": 0.6796875,
+            "recall": 0.3358778655529022
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0002",
+            "local_cd_squared": 0.0019329260103404522,
+            "local_fscore": 0.29870846910881854,
+            "precision": 0.515625,
+            "recall": 0.2102564126253128
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0003",
+            "local_cd_squared": 0.0038140807300806046,
+            "local_fscore": 0.13710677461998586,
+            "precision": 0.296875,
+            "recall": 0.08913648873567581
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0004",
+            "local_cd_squared": 0.0009968988597393036,
+            "local_fscore": 0.6283662482359396,
+            "precision": 0.875,
+            "recall": 0.4901960790157318
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0005",
+            "local_cd_squared": 0.0013487557880580425,
+            "local_fscore": 0.515587529556121,
+            "precision": 0.625,
+            "recall": 0.43877550959587097
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0006",
+            "local_cd_squared": 0.004851270001381636,
+            "local_fscore": 0.11549037547650925,
+            "precision": 0.4921875,
+            "recall": 0.06542056053876877
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0007",
+            "local_cd_squared": 0.0006705871783196926,
+            "local_fscore": 0.7226909289462146,
+            "precision": 0.8203125,
+            "recall": 0.6458333134651184
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0008",
+            "local_cd_squared": 0.0024735501501709223,
+            "local_fscore": 0.27648351170582236,
+            "precision": 0.53125,
+            "recall": 0.18686868250370026
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0009",
+            "local_cd_squared": 0.0010316618718206882,
+            "local_fscore": 0.5422045646066653,
+            "precision": 0.609375,
+            "recall": 0.4883720874786377
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0010",
+            "local_cd_squared": 0.0019177091307938099,
+            "local_fscore": 0.3247369939392585,
+            "precision": 0.5703125,
+            "recall": 0.2269938588142395
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0011",
+            "local_cd_squared": 0.004530626814812422,
+            "local_fscore": 0.11330003630546923,
+            "precision": 0.3828125,
+            "recall": 0.06648936122655869
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0012",
+            "local_cd_squared": 0.0019315873505547643,
+            "local_fscore": 0.34709778223911436,
+            "precision": 0.6328125,
+            "recall": 0.239130437374115
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0013",
+            "local_cd_squared": 0.003567370818927884,
+            "local_fscore": 0.16199885849627044,
+            "precision": 0.484375,
+            "recall": 0.09726443886756897
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0014",
+            "local_cd_squared": 0.0029365336522459984,
+            "local_fscore": 0.16255003200547732,
+            "precision": 0.3515625,
+            "recall": 0.10571428388357162
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0015",
+            "local_cd_squared": 0.0035104488488286734,
+            "local_fscore": 0.14119078873488902,
+            "precision": 0.453125,
+            "recall": 0.08362369239330292
+          }
+        ]
+      },
+      "unseen_same_object4": {
+        "sample_count": 4,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.0044853026629425585,
+        "mean_local_fscore": 0.11049996316878175,
+        "model_macro_cd_squared": 0.0044853026629425585,
+        "model_macro_fscore": 0.11049996316878175,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 4,
+            "local_cd_squared": 0.0044853026629425585,
+            "local_fscore": 0.11049996316878175
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0016",
+            "local_cd_squared": 0.002938294317573309,
+            "local_fscore": 0.1694868252006863,
+            "precision": 0.3671875,
+            "recall": 0.11016949266195297
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0017",
+            "local_cd_squared": 0.0066526844166219234,
+            "local_fscore": 0.07297657862294672,
+            "precision": 0.4765625,
+            "recall": 0.03951367735862732
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0018",
+            "local_cd_squared": 0.005801874212920666,
+            "local_fscore": 0.07711991659797655,
+            "precision": 0.1796875,
+            "recall": 0.04909560829401016
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0019",
+            "local_cd_squared": 0.002548357704654336,
+            "local_fscore": 0.12241653225351737,
+            "precision": 0.34375,
+            "recall": 0.07446808367967606
+          }
+        ]
+      },
+      "cross_object20": {
+        "sample_count": 20,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.0075205586035735905,
+        "mean_local_fscore": 0.13023664093398069,
+        "model_macro_cd_squared": 0.0075205586035735905,
+        "model_macro_fscore": 0.13023664093398069,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_03": {
+            "samples": 20,
+            "local_cd_squared": 0.0075205586035735905,
+            "local_fscore": 0.13023664093398069
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0000",
+            "local_cd_squared": 0.0023814078886061907,
+            "local_fscore": 0.2421044548131938,
+            "precision": 0.5078125,
+            "recall": 0.1589404046535492
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0001",
+            "local_cd_squared": 0.010745754465460777,
+            "local_fscore": 0.0835388672625692,
+            "precision": 0.390625,
+            "recall": 0.0467706024646759
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0002",
+            "local_cd_squared": 0.005037093535065651,
+            "local_fscore": 0.12483347563022375,
+            "precision": 0.4609375,
+            "recall": 0.07219251245260239
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0003",
+            "local_cd_squared": 0.01196820754557848,
+            "local_fscore": 0.05789312744754235,
+            "precision": 0.2890625,
+            "recall": 0.03216783329844475
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0004",
+            "local_cd_squared": 0.006997117772698402,
+            "local_fscore": 0.17478064127179216,
+            "precision": 0.5078125,
+            "recall": 0.10555555671453476
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0005",
+            "local_cd_squared": 0.00602177157998085,
+            "local_fscore": 0.08356254128958948,
+            "precision": 0.453125,
+            "recall": 0.0460251048207283
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0006",
+            "local_cd_squared": 0.0087975412607193,
+            "local_fscore": 0.0832432423301471,
+            "precision": 0.21875,
+            "recall": 0.05140186846256256
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0007",
+            "local_cd_squared": 0.001930398866534233,
+            "local_fscore": 0.30334098634206974,
+            "precision": 0.515625,
+            "recall": 0.21487602591514587
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0008",
+            "local_cd_squared": 0.007037235423922539,
+            "local_fscore": 0.13084112564068462,
+            "precision": 0.4375,
+            "recall": 0.07692307978868484
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0009",
+            "local_cd_squared": 0.004384499508887529,
+            "local_fscore": 0.26632244331589977,
+            "precision": 0.640625,
+            "recall": 0.1681034415960312
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0010",
+            "local_cd_squared": 0.007049567997455597,
+            "local_fscore": 0.13257047538390274,
+            "precision": 0.390625,
+            "recall": 0.07983193546533585
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0011",
+            "local_cd_squared": 0.007478814572095871,
+            "local_fscore": 0.09111686878706221,
+            "precision": 0.1796875,
+            "recall": 0.061032865196466446
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0012",
+            "local_cd_squared": 0.004322636406868696,
+            "local_fscore": 0.11091549295774648,
+            "precision": 0.4921875,
+            "recall": 0.0625
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0013",
+            "local_cd_squared": 0.009054308757185936,
+            "local_fscore": 0.07673267537300497,
+            "precision": 0.484375,
+            "recall": 0.0416666679084301
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0014",
+            "local_cd_squared": 0.005542346742004156,
+            "local_fscore": 0.1517241420154764,
+            "precision": 0.34375,
+            "recall": 0.09734513610601425
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0015",
+            "local_cd_squared": 0.014362579211592674,
+            "local_fscore": 0.03782123891941095,
+            "precision": 0.140625,
+            "recall": 0.021848740056157112
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0016",
+            "local_cd_squared": 0.007005044724792242,
+            "local_fscore": 0.1009174304344961,
+            "precision": 0.34375,
+            "recall": 0.059139784425497055
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0017",
+            "local_cd_squared": 0.017982855439186096,
+            "local_fscore": 0.05184174420124976,
+            "precision": 0.1484375,
+            "recall": 0.03140495717525482
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0018",
+            "local_cd_squared": 0.004500536248087883,
+            "local_fscore": 0.21192661275637684,
+            "precision": 0.4375,
+            "recall": 0.13983051478862762
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0019",
+            "local_cd_squared": 0.007811454124748707,
+            "local_fscore": 0.08870523250717548,
+            "precision": 0.4375,
+            "recall": 0.04935622215270996
+          }
+        ]
+      }
+    }
+  },
+  "geometry": {
+    "16_seed42": {
+      "seen_train16": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0000",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.019790699429014368
+          },
+          {
+            "path": "train/model_0002_sample_0001",
+            "close_fraction": 0.140625,
+            "mesh_distance_over_R": 0.015247711309466935
+          },
+          {
+            "path": "train/model_0002_sample_0002",
+            "close_fraction": 0.0703125,
+            "mesh_distance_over_R": 0.014552494812277265
+          },
+          {
+            "path": "train/model_0002_sample_0003",
+            "close_fraction": 0.0859375,
+            "mesh_distance_over_R": 0.022852080887027837
+          },
+          {
+            "path": "train/model_0002_sample_0004",
+            "close_fraction": 0.1328125,
+            "mesh_distance_over_R": 0.016422352056385075
+          },
+          {
+            "path": "train/model_0002_sample_0005",
+            "close_fraction": 0.25,
+            "mesh_distance_over_R": 0.017646907186037897
+          },
+          {
+            "path": "train/model_0002_sample_0006",
+            "close_fraction": 0.0546875,
+            "mesh_distance_over_R": 0.01814635087854427
+          },
+          {
+            "path": "train/model_0002_sample_0007",
+            "close_fraction": 0.109375,
+            "mesh_distance_over_R": 0.014931498993415294
+          },
+          {
+            "path": "train/model_0002_sample_0008",
+            "close_fraction": 0.125,
+            "mesh_distance_over_R": 0.015418673122145085
+          },
+          {
+            "path": "train/model_0002_sample_0009",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.013611030816381054
+          },
+          {
+            "path": "train/model_0002_sample_0010",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.01683430042712956
+          },
+          {
+            "path": "train/model_0002_sample_0011",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.019048522771851668
+          },
+          {
+            "path": "train/model_0002_sample_0012",
+            "close_fraction": 0.109375,
+            "mesh_distance_over_R": 0.01395155256943747
+          },
+          {
+            "path": "train/model_0002_sample_0013",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.021033395780313543
+          },
+          {
+            "path": "train/model_0002_sample_0014",
+            "close_fraction": 0.109375,
+            "mesh_distance_over_R": 0.0167745812412151
+          },
+          {
+            "path": "train/model_0002_sample_0015",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.024751092399677137
+          }
+        ],
+        "means": {
+          "close_fraction": 0.10400390625,
+          "mesh_distance_over_R": 0.01756332779251997
+        }
+      },
+      "unseen_same_object4": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0016",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.12128312964155753
+          },
+          {
+            "path": "train/model_0002_sample_0017",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1147788201918993
+          },
+          {
+            "path": "train/model_0002_sample_0018",
+            "close_fraction": 0.1484375,
+            "mesh_distance_over_R": 0.05673639841255812
+          },
+          {
+            "path": "train/model_0002_sample_0019",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.05031480274941043
+          }
+        ],
+        "means": {
+          "close_fraction": 0.056640625,
+          "mesh_distance_over_R": 0.08577828774885635
+        }
+      },
+      "cross_object20": {
+        "samples": [
+          {
+            "path": "val/model_0003_sample_0000",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.12407215058269008
+          },
+          {
+            "path": "val/model_0003_sample_0001",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.15247759743817182
+          },
+          {
+            "path": "val/model_0003_sample_0002",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.10959728504668444
+          },
+          {
+            "path": "val/model_0003_sample_0003",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.11441289373490433
+          },
+          {
+            "path": "val/model_0003_sample_0004",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.13808185323585434
+          },
+          {
+            "path": "val/model_0003_sample_0005",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.15798610680272202
+          },
+          {
+            "path": "val/model_0003_sample_0006",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.1963950586379171
+          },
+          {
+            "path": "val/model_0003_sample_0007",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.13332063071501918
+          },
+          {
+            "path": "val/model_0003_sample_0008",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.11013437274164461
+          },
+          {
+            "path": "val/model_0003_sample_0009",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1556443069540108
+          },
+          {
+            "path": "val/model_0003_sample_0010",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.1723837741706305
+          },
+          {
+            "path": "val/model_0003_sample_0011",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.12730205037014103
+          },
+          {
+            "path": "val/model_0003_sample_0012",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1530102030277138
+          },
+          {
+            "path": "val/model_0003_sample_0013",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.1558722906976943
+          },
+          {
+            "path": "val/model_0003_sample_0014",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.22580141972599085
+          },
+          {
+            "path": "val/model_0003_sample_0015",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.14704216606574075
+          },
+          {
+            "path": "val/model_0003_sample_0016",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1433812870547608
+          },
+          {
+            "path": "val/model_0003_sample_0017",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.189844973291763
+          },
+          {
+            "path": "val/model_0003_sample_0018",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1368693382524308
+          },
+          {
+            "path": "val/model_0003_sample_0019",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.10699943223540159
+          }
+        ],
+        "means": {
+          "close_fraction": 0.0140625,
+          "mesh_distance_over_R": 0.14753145953909433
+        }
+      }
+    },
+    "64_seed42": {
+      "seen_train16": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0000",
+            "close_fraction": 0.1953125,
+            "mesh_distance_over_R": 0.039097306023597324
+          },
+          {
+            "path": "train/model_0002_sample_0001",
+            "close_fraction": 0.2265625,
+            "mesh_distance_over_R": 0.02818908373547742
+          },
+          {
+            "path": "train/model_0002_sample_0002",
+            "close_fraction": 0.078125,
+            "mesh_distance_over_R": 0.03852340493392089
+          },
+          {
+            "path": "train/model_0002_sample_0003",
+            "close_fraction": 0.0546875,
+            "mesh_distance_over_R": 0.042565157915094284
+          },
+          {
+            "path": "train/model_0002_sample_0004",
+            "close_fraction": 0.3359375,
+            "mesh_distance_over_R": 0.03356041804737767
+          },
+          {
+            "path": "train/model_0002_sample_0005",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.05016847630829181
+          },
+          {
+            "path": "train/model_0002_sample_0006",
+            "close_fraction": 0.2734375,
+            "mesh_distance_over_R": 0.04503774749870487
+          },
+          {
+            "path": "train/model_0002_sample_0007",
+            "close_fraction": 0.1953125,
+            "mesh_distance_over_R": 0.03410861791831025
+          },
+          {
+            "path": "train/model_0002_sample_0008",
+            "close_fraction": 0.2421875,
+            "mesh_distance_over_R": 0.031008421271345003
+          },
+          {
+            "path": "train/model_0002_sample_0009",
+            "close_fraction": 0.1171875,
+            "mesh_distance_over_R": 0.03660868934275456
+          },
+          {
+            "path": "train/model_0002_sample_0010",
+            "close_fraction": 0.2421875,
+            "mesh_distance_over_R": 0.031239747109504754
+          },
+          {
+            "path": "train/model_0002_sample_0011",
+            "close_fraction": 0.2734375,
+            "mesh_distance_over_R": 0.04673230628220007
+          },
+          {
+            "path": "train/model_0002_sample_0012",
+            "close_fraction": 0.2265625,
+            "mesh_distance_over_R": 0.03762408261781895
+          },
+          {
+            "path": "train/model_0002_sample_0013",
+            "close_fraction": 0.1640625,
+            "mesh_distance_over_R": 0.028930516209264213
+          },
+          {
+            "path": "train/model_0002_sample_0014",
+            "close_fraction": 0.1171875,
+            "mesh_distance_over_R": 0.037397367262753556
+          },
+          {
+            "path": "train/model_0002_sample_0015",
+            "close_fraction": 0.28125,
+            "mesh_distance_over_R": 0.03413558665573348
+          }
+        ],
+        "means": {
+          "close_fraction": 0.2001953125,
+          "mesh_distance_over_R": 0.03718293307075932
+        }
+      },
+      "unseen_same_object4": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0016",
+            "close_fraction": 0.125,
+            "mesh_distance_over_R": 0.034683386261009884
+          },
+          {
+            "path": "train/model_0002_sample_0017",
+            "close_fraction": 0.28125,
+            "mesh_distance_over_R": 0.046623563080239065
+          },
+          {
+            "path": "train/model_0002_sample_0018",
+            "close_fraction": 0.140625,
+            "mesh_distance_over_R": 0.06401823773599849
+          },
+          {
+            "path": "train/model_0002_sample_0019",
+            "close_fraction": 0.2265625,
+            "mesh_distance_over_R": 0.03832218754313866
+          }
+        ],
+        "means": {
+          "close_fraction": 0.193359375,
+          "mesh_distance_over_R": 0.045911843655096526
+        }
+      },
+      "cross_object20": {
+        "samples": [
+          {
+            "path": "val/model_0003_sample_0000",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.06563405437574035
+          },
+          {
+            "path": "val/model_0003_sample_0001",
+            "close_fraction": 0.2890625,
+            "mesh_distance_over_R": 0.10763467866465691
+          },
+          {
+            "path": "val/model_0003_sample_0002",
+            "close_fraction": 0.234375,
+            "mesh_distance_over_R": 0.09568060466915176
+          },
+          {
+            "path": "val/model_0003_sample_0003",
+            "close_fraction": 0.2109375,
+            "mesh_distance_over_R": 0.11748528577141984
+          },
+          {
+            "path": "val/model_0003_sample_0004",
+            "close_fraction": 0.25,
+            "mesh_distance_over_R": 0.11197608459979808
+          },
+          {
+            "path": "val/model_0003_sample_0005",
+            "close_fraction": 0.203125,
+            "mesh_distance_over_R": 0.11225227863834016
+          },
+          {
+            "path": "val/model_0003_sample_0006",
+            "close_fraction": 0.0625,
+            "mesh_distance_over_R": 0.14957927979464433
+          },
+          {
+            "path": "val/model_0003_sample_0007",
+            "close_fraction": 0.171875,
+            "mesh_distance_over_R": 0.06688953173227483
+          },
+          {
+            "path": "val/model_0003_sample_0008",
+            "close_fraction": 0.140625,
+            "mesh_distance_over_R": 0.07482446710465937
+          },
+          {
+            "path": "val/model_0003_sample_0009",
+            "close_fraction": 0.2890625,
+            "mesh_distance_over_R": 0.10757053633350801
+          },
+          {
+            "path": "val/model_0003_sample_0010",
+            "close_fraction": 0.2578125,
+            "mesh_distance_over_R": 0.0889634454067587
+          },
+          {
+            "path": "val/model_0003_sample_0011",
+            "close_fraction": 0.1875,
+            "mesh_distance_over_R": 0.10346920124648051
+          },
+          {
+            "path": "val/model_0003_sample_0012",
+            "close_fraction": 0.203125,
+            "mesh_distance_over_R": 0.12513046929950053
+          },
+          {
+            "path": "val/model_0003_sample_0013",
+            "close_fraction": 0.2734375,
+            "mesh_distance_over_R": 0.10556235850946653
+          },
+          {
+            "path": "val/model_0003_sample_0014",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.18568695254648926
+          },
+          {
+            "path": "val/model_0003_sample_0015",
+            "close_fraction": 0.0703125,
+            "mesh_distance_over_R": 0.1294753153553473
+          },
+          {
+            "path": "val/model_0003_sample_0016",
+            "close_fraction": 0.1953125,
+            "mesh_distance_over_R": 0.09942053177162892
+          },
+          {
+            "path": "val/model_0003_sample_0017",
+            "close_fraction": 0.1015625,
+            "mesh_distance_over_R": 0.13419350365807933
+          },
+          {
+            "path": "val/model_0003_sample_0018",
+            "close_fraction": 0.1171875,
+            "mesh_distance_over_R": 0.09494609975086202
+          },
+          {
+            "path": "val/model_0003_sample_0019",
+            "close_fraction": 0.21875,
+            "mesh_distance_over_R": 0.09901764384929725
+          }
+        ],
+        "means": {
+          "close_fraction": 0.1875,
+          "mesh_distance_over_R": 0.10876961615390521
+        }
+      }
+    },
+    "16_seed43": {
+      "seen_train16": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0000",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.01753964047753495
+          },
+          {
+            "path": "train/model_0002_sample_0001",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.021114340112772117
+          },
+          {
+            "path": "train/model_0002_sample_0002",
+            "close_fraction": 0.0390625,
+            "mesh_distance_over_R": 0.014069642817500524
+          },
+          {
+            "path": "train/model_0002_sample_0003",
+            "close_fraction": 0.109375,
+            "mesh_distance_over_R": 0.019623571759839774
+          },
+          {
+            "path": "train/model_0002_sample_0004",
+            "close_fraction": 0.0703125,
+            "mesh_distance_over_R": 0.019465831578705975
+          },
+          {
+            "path": "train/model_0002_sample_0005",
+            "close_fraction": 0.1875,
+            "mesh_distance_over_R": 0.016724668524595757
+          },
+          {
+            "path": "train/model_0002_sample_0006",
+            "close_fraction": 0.125,
+            "mesh_distance_over_R": 0.019795773319987286
+          },
+          {
+            "path": "train/model_0002_sample_0007",
+            "close_fraction": 0.078125,
+            "mesh_distance_over_R": 0.02654062794204134
+          },
+          {
+            "path": "train/model_0002_sample_0008",
+            "close_fraction": 0.109375,
+            "mesh_distance_over_R": 0.013954440561923246
+          },
+          {
+            "path": "train/model_0002_sample_0009",
+            "close_fraction": 0.0625,
+            "mesh_distance_over_R": 0.018378853592505233
+          },
+          {
+            "path": "train/model_0002_sample_0010",
+            "close_fraction": 0.1015625,
+            "mesh_distance_over_R": 0.01344499000655496
+          },
+          {
+            "path": "train/model_0002_sample_0011",
+            "close_fraction": 0.1171875,
+            "mesh_distance_over_R": 0.01387753355140564
+          },
+          {
+            "path": "train/model_0002_sample_0012",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.015505835218470179
+          },
+          {
+            "path": "train/model_0002_sample_0013",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.020457156773690307
+          },
+          {
+            "path": "train/model_0002_sample_0014",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.01750785739080642
+          },
+          {
+            "path": "train/model_0002_sample_0015",
+            "close_fraction": 0.125,
+            "mesh_distance_over_R": 0.016426860133443483
+          }
+        ],
+        "means": {
+          "close_fraction": 0.087890625,
+          "mesh_distance_over_R": 0.017776726485111076
+        }
+      },
+      "unseen_same_object4": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0016",
+            "close_fraction": 0.0625,
+            "mesh_distance_over_R": 0.12326894468694191
+          },
+          {
+            "path": "train/model_0002_sample_0017",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.11763095568568799
+          },
+          {
+            "path": "train/model_0002_sample_0018",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.055380103334854366
+          },
+          {
+            "path": "train/model_0002_sample_0019",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.046934977094631465
+          }
+        ],
+        "means": {
+          "close_fraction": 0.02734375,
+          "mesh_distance_over_R": 0.08580374520052893
+        }
+      },
+      "cross_object20": {
+        "samples": [
+          {
+            "path": "val/model_0003_sample_0000",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.12506814411882358
+          },
+          {
+            "path": "val/model_0003_sample_0001",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.16235070290848824
+          },
+          {
+            "path": "val/model_0003_sample_0002",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.12281737614247047
+          },
+          {
+            "path": "val/model_0003_sample_0003",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.11759339244869407
+          },
+          {
+            "path": "val/model_0003_sample_0004",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1465055991828188
+          },
+          {
+            "path": "val/model_0003_sample_0005",
+            "close_fraction": 0.0703125,
+            "mesh_distance_over_R": 0.1602977409081954
+          },
+          {
+            "path": "val/model_0003_sample_0006",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.2246564936660483
+          },
+          {
+            "path": "val/model_0003_sample_0007",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1316067048539214
+          },
+          {
+            "path": "val/model_0003_sample_0008",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.10517340247726373
+          },
+          {
+            "path": "val/model_0003_sample_0009",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.16111506398344944
+          },
+          {
+            "path": "val/model_0003_sample_0010",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.1730909113700487
+          },
+          {
+            "path": "val/model_0003_sample_0011",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.13982920983865169
+          },
+          {
+            "path": "val/model_0003_sample_0012",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.1551712502251846
+          },
+          {
+            "path": "val/model_0003_sample_0013",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1645174368746226
+          },
+          {
+            "path": "val/model_0003_sample_0014",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.21750631465610298
+          },
+          {
+            "path": "val/model_0003_sample_0015",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.13250453608475293
+          },
+          {
+            "path": "val/model_0003_sample_0016",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1342412538404994
+          },
+          {
+            "path": "val/model_0003_sample_0017",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.16926247808156336
+          },
+          {
+            "path": "val/model_0003_sample_0018",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.13129842083571883
+          },
+          {
+            "path": "val/model_0003_sample_0019",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.12965043605597276
+          }
+        ],
+        "means": {
+          "close_fraction": 0.012890625,
+          "mesh_distance_over_R": 0.15021284342766458
+        }
+      }
+    },
+    "64_seed43": {
+      "seen_train16": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0000",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.06138774143422089
+          },
+          {
+            "path": "train/model_0002_sample_0001",
+            "close_fraction": 0.3203125,
+            "mesh_distance_over_R": 0.025104258430442415
+          },
+          {
+            "path": "train/model_0002_sample_0002",
+            "close_fraction": 0.1015625,
+            "mesh_distance_over_R": 0.04486174229378936
+          },
+          {
+            "path": "train/model_0002_sample_0003",
+            "close_fraction": 0.1484375,
+            "mesh_distance_over_R": 0.041158396316164886
+          },
+          {
+            "path": "train/model_0002_sample_0004",
+            "close_fraction": 0.25,
+            "mesh_distance_over_R": 0.04016217180752733
+          },
+          {
+            "path": "train/model_0002_sample_0005",
+            "close_fraction": 0.140625,
+            "mesh_distance_over_R": 0.04844317031926192
+          },
+          {
+            "path": "train/model_0002_sample_0006",
+            "close_fraction": 0.1875,
+            "mesh_distance_over_R": 0.05468221894828364
+          },
+          {
+            "path": "train/model_0002_sample_0007",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.03227876369815427
+          },
+          {
+            "path": "train/model_0002_sample_0008",
+            "close_fraction": 0.21875,
+            "mesh_distance_over_R": 0.03013989938970715
+          },
+          {
+            "path": "train/model_0002_sample_0009",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.0406899714492333
+          },
+          {
+            "path": "train/model_0002_sample_0010",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.03441348978446566
+          },
+          {
+            "path": "train/model_0002_sample_0011",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.053220916251284875
+          },
+          {
+            "path": "train/model_0002_sample_0012",
+            "close_fraction": 0.0859375,
+            "mesh_distance_over_R": 0.033844094669365644
+          },
+          {
+            "path": "train/model_0002_sample_0013",
+            "close_fraction": 0.1484375,
+            "mesh_distance_over_R": 0.031336683333562584
+          },
+          {
+            "path": "train/model_0002_sample_0014",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.03749628580698144
+          },
+          {
+            "path": "train/model_0002_sample_0015",
+            "close_fraction": 0.1875,
+            "mesh_distance_over_R": 0.045193405563575394
+          }
+        ],
+        "means": {
+          "close_fraction": 0.1533203125,
+          "mesh_distance_over_R": 0.0409008255935013
+        }
+      },
+      "unseen_same_object4": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0016",
+            "close_fraction": 0.1484375,
+            "mesh_distance_over_R": 0.0398613653531057
+          },
+          {
+            "path": "train/model_0002_sample_0017",
+            "close_fraction": 0.25,
+            "mesh_distance_over_R": 0.04904559345589184
+          },
+          {
+            "path": "train/model_0002_sample_0018",
+            "close_fraction": 0.078125,
+            "mesh_distance_over_R": 0.05691834292163531
+          },
+          {
+            "path": "train/model_0002_sample_0019",
+            "close_fraction": 0.171875,
+            "mesh_distance_over_R": 0.03210944570266843
+          }
+        ],
+        "means": {
+          "close_fraction": 0.162109375,
+          "mesh_distance_over_R": 0.04448368685832532
+        }
+      },
+      "cross_object20": {
+        "samples": [
+          {
+            "path": "val/model_0003_sample_0000",
+            "close_fraction": 0.2109375,
+            "mesh_distance_over_R": 0.07322835414170485
+          },
+          {
+            "path": "val/model_0003_sample_0001",
+            "close_fraction": 0.25,
+            "mesh_distance_over_R": 0.09985677331668404
+          },
+          {
+            "path": "val/model_0003_sample_0002",
+            "close_fraction": 0.140625,
+            "mesh_distance_over_R": 0.07338037031466875
+          },
+          {
+            "path": "val/model_0003_sample_0003",
+            "close_fraction": 0.171875,
+            "mesh_distance_over_R": 0.08133177347141311
+          },
+          {
+            "path": "val/model_0003_sample_0004",
+            "close_fraction": 0.25,
+            "mesh_distance_over_R": 0.0896282785039705
+          },
+          {
+            "path": "val/model_0003_sample_0005",
+            "close_fraction": 0.2421875,
+            "mesh_distance_over_R": 0.114847809961568
+          },
+          {
+            "path": "val/model_0003_sample_0006",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.15524497778925583
+          },
+          {
+            "path": "val/model_0003_sample_0007",
+            "close_fraction": 0.125,
+            "mesh_distance_over_R": 0.06999246212471211
+          },
+          {
+            "path": "val/model_0003_sample_0008",
+            "close_fraction": 0.109375,
+            "mesh_distance_over_R": 0.0746000016707015
+          },
+          {
+            "path": "val/model_0003_sample_0009",
+            "close_fraction": 0.2734375,
+            "mesh_distance_over_R": 0.0955701961193344
+          },
+          {
+            "path": "val/model_0003_sample_0010",
+            "close_fraction": 0.2890625,
+            "mesh_distance_over_R": 0.08538502020185408
+          },
+          {
+            "path": "val/model_0003_sample_0011",
+            "close_fraction": 0.1953125,
+            "mesh_distance_over_R": 0.09493644505942442
+          },
+          {
+            "path": "val/model_0003_sample_0012",
+            "close_fraction": 0.078125,
+            "mesh_distance_over_R": 0.11820040359791768
+          },
+          {
+            "path": "val/model_0003_sample_0013",
+            "close_fraction": 0.3046875,
+            "mesh_distance_over_R": 0.10329685480796152
+          },
+          {
+            "path": "val/model_0003_sample_0014",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.1739283626323692
+          },
+          {
+            "path": "val/model_0003_sample_0015",
+            "close_fraction": 0.1640625,
+            "mesh_distance_over_R": 0.11532995545512507
+          },
+          {
+            "path": "val/model_0003_sample_0016",
+            "close_fraction": 0.1171875,
+            "mesh_distance_over_R": 0.07444962094223653
+          },
+          {
+            "path": "val/model_0003_sample_0017",
+            "close_fraction": 0.1015625,
+            "mesh_distance_over_R": 0.1168729626043959
+          },
+          {
+            "path": "val/model_0003_sample_0018",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.09943299186350744
+          },
+          {
+            "path": "val/model_0003_sample_0019",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.09183090221611198
+          }
+        ],
+        "means": {
+          "close_fraction": 0.16796875,
+          "mesh_distance_over_R": 0.10006722583974585
+        }
+      }
+    },
+    "16_seed44": {
+      "seen_train16": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0000",
+            "close_fraction": 0.0703125,
+            "mesh_distance_over_R": 0.018838450619631502
+          },
+          {
+            "path": "train/model_0002_sample_0001",
+            "close_fraction": 0.0703125,
+            "mesh_distance_over_R": 0.01704773337556569
+          },
+          {
+            "path": "train/model_0002_sample_0002",
+            "close_fraction": 0.078125,
+            "mesh_distance_over_R": 0.01845391718697022
+          },
+          {
+            "path": "train/model_0002_sample_0003",
+            "close_fraction": 0.078125,
+            "mesh_distance_over_R": 0.01574512910456686
+          },
+          {
+            "path": "train/model_0002_sample_0004",
+            "close_fraction": 0.140625,
+            "mesh_distance_over_R": 0.014610227270861592
+          },
+          {
+            "path": "train/model_0002_sample_0005",
+            "close_fraction": 0.2421875,
+            "mesh_distance_over_R": 0.015768247841102475
+          },
+          {
+            "path": "train/model_0002_sample_0006",
+            "close_fraction": 0.1953125,
+            "mesh_distance_over_R": 0.016171704316436025
+          },
+          {
+            "path": "train/model_0002_sample_0007",
+            "close_fraction": 0.0859375,
+            "mesh_distance_over_R": 0.018963481835483915
+          },
+          {
+            "path": "train/model_0002_sample_0008",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.01148026093944647
+          },
+          {
+            "path": "train/model_0002_sample_0009",
+            "close_fraction": 0.3125,
+            "mesh_distance_over_R": 0.015934791646847326
+          },
+          {
+            "path": "train/model_0002_sample_0010",
+            "close_fraction": 0.171875,
+            "mesh_distance_over_R": 0.013283969844493669
+          },
+          {
+            "path": "train/model_0002_sample_0011",
+            "close_fraction": 0.140625,
+            "mesh_distance_over_R": 0.014921215502913778
+          },
+          {
+            "path": "train/model_0002_sample_0012",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.01808494598993928
+          },
+          {
+            "path": "train/model_0002_sample_0013",
+            "close_fraction": 0.1328125,
+            "mesh_distance_over_R": 0.017938741945205058
+          },
+          {
+            "path": "train/model_0002_sample_0014",
+            "close_fraction": 0.0390625,
+            "mesh_distance_over_R": 0.01680584365764798
+          },
+          {
+            "path": "train/model_0002_sample_0015",
+            "close_fraction": 0.15625,
+            "mesh_distance_over_R": 0.01577748476688385
+          }
+        ],
+        "means": {
+          "close_fraction": 0.14208984375,
+          "mesh_distance_over_R": 0.01623913411524973
+        }
+      },
+      "unseen_same_object4": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0016",
+            "close_fraction": 0.078125,
+            "mesh_distance_over_R": 0.11226203332052577
+          },
+          {
+            "path": "train/model_0002_sample_0017",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1053670273581158
+          },
+          {
+            "path": "train/model_0002_sample_0018",
+            "close_fraction": 0.078125,
+            "mesh_distance_over_R": 0.05781184707543212
+          },
+          {
+            "path": "train/model_0002_sample_0019",
+            "close_fraction": 0.0625,
+            "mesh_distance_over_R": 0.04970329126980159
+          }
+        ],
+        "means": {
+          "close_fraction": 0.0546875,
+          "mesh_distance_over_R": 0.08128604975596883
+        }
+      },
+      "cross_object20": {
+        "samples": [
+          {
+            "path": "val/model_0003_sample_0000",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.11305623402092006
+          },
+          {
+            "path": "val/model_0003_sample_0001",
+            "close_fraction": 0.0625,
+            "mesh_distance_over_R": 0.13906970315385622
+          },
+          {
+            "path": "val/model_0003_sample_0002",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.11302552047650889
+          },
+          {
+            "path": "val/model_0003_sample_0003",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.1127303156416573
+          },
+          {
+            "path": "val/model_0003_sample_0004",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1551837802602857
+          },
+          {
+            "path": "val/model_0003_sample_0005",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.1533717538033474
+          },
+          {
+            "path": "val/model_0003_sample_0006",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1909605900013272
+          },
+          {
+            "path": "val/model_0003_sample_0007",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.12905961341515726
+          },
+          {
+            "path": "val/model_0003_sample_0008",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.12849873343186766
+          },
+          {
+            "path": "val/model_0003_sample_0009",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.16525260203419467
+          },
+          {
+            "path": "val/model_0003_sample_0010",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.1901152922154077
+          },
+          {
+            "path": "val/model_0003_sample_0011",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.11226594770931111
+          },
+          {
+            "path": "val/model_0003_sample_0012",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.16819109680201869
+          },
+          {
+            "path": "val/model_0003_sample_0013",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.16706783603250014
+          },
+          {
+            "path": "val/model_0003_sample_0014",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.19961317135975
+          },
+          {
+            "path": "val/model_0003_sample_0015",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.15457801440057384
+          },
+          {
+            "path": "val/model_0003_sample_0016",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.12809795175285393
+          },
+          {
+            "path": "val/model_0003_sample_0017",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.14777845426487418
+          },
+          {
+            "path": "val/model_0003_sample_0018",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.13817061007474252
+          },
+          {
+            "path": "val/model_0003_sample_0019",
+            "close_fraction": 0.0625,
+            "mesh_distance_over_R": 0.11569205519493991
+          }
+        ],
+        "means": {
+          "close_fraction": 0.01875,
+          "mesh_distance_over_R": 0.1460889638023047
+        }
+      }
+    },
+    "64_seed44": {
+      "seen_train16": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0000",
+            "close_fraction": 0.1171875,
+            "mesh_distance_over_R": 0.04887101280225704
+          },
+          {
+            "path": "train/model_0002_sample_0001",
+            "close_fraction": 0.2578125,
+            "mesh_distance_over_R": 0.031811629410812975
+          },
+          {
+            "path": "train/model_0002_sample_0002",
+            "close_fraction": 0.1328125,
+            "mesh_distance_over_R": 0.04364128806353896
+          },
+          {
+            "path": "train/model_0002_sample_0003",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.043273480605979214
+          },
+          {
+            "path": "train/model_0002_sample_0004",
+            "close_fraction": 0.265625,
+            "mesh_distance_over_R": 0.029934771693879716
+          },
+          {
+            "path": "train/model_0002_sample_0005",
+            "close_fraction": 0.28125,
+            "mesh_distance_over_R": 0.04526501395298625
+          },
+          {
+            "path": "train/model_0002_sample_0006",
+            "close_fraction": 0.2578125,
+            "mesh_distance_over_R": 0.048590307786970995
+          },
+          {
+            "path": "train/model_0002_sample_0007",
+            "close_fraction": 0.203125,
+            "mesh_distance_over_R": 0.024999504877002338
+          },
+          {
+            "path": "train/model_0002_sample_0008",
+            "close_fraction": 0.25,
+            "mesh_distance_over_R": 0.03930458511768015
+          },
+          {
+            "path": "train/model_0002_sample_0009",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.02611419493561433
+          },
+          {
+            "path": "train/model_0002_sample_0010",
+            "close_fraction": 0.28125,
+            "mesh_distance_over_R": 0.03786660072535432
+          },
+          {
+            "path": "train/model_0002_sample_0011",
+            "close_fraction": 0.2421875,
+            "mesh_distance_over_R": 0.04038471685339941
+          },
+          {
+            "path": "train/model_0002_sample_0012",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.03202360926837155
+          },
+          {
+            "path": "train/model_0002_sample_0013",
+            "close_fraction": 0.1875,
+            "mesh_distance_over_R": 0.032762370072461536
+          },
+          {
+            "path": "train/model_0002_sample_0014",
+            "close_fraction": 0.1171875,
+            "mesh_distance_over_R": 0.03706926665619751
+          },
+          {
+            "path": "train/model_0002_sample_0015",
+            "close_fraction": 0.28125,
+            "mesh_distance_over_R": 0.037223810416919384
+          }
+        ],
+        "means": {
+          "close_fraction": 0.2080078125,
+          "mesh_distance_over_R": 0.0374460102024641
+        }
+      },
+      "unseen_same_object4": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0016",
+            "close_fraction": 0.1484375,
+            "mesh_distance_over_R": 0.04283014643771931
+          },
+          {
+            "path": "train/model_0002_sample_0017",
+            "close_fraction": 0.3359375,
+            "mesh_distance_over_R": 0.0496837525275818
+          },
+          {
+            "path": "train/model_0002_sample_0018",
+            "close_fraction": 0.1328125,
+            "mesh_distance_over_R": 0.059932333231896916
+          },
+          {
+            "path": "train/model_0002_sample_0019",
+            "close_fraction": 0.1875,
+            "mesh_distance_over_R": 0.04925738643766481
+          }
+        ],
+        "means": {
+          "close_fraction": 0.201171875,
+          "mesh_distance_over_R": 0.05042590465871571
+        }
+      },
+      "cross_object20": {
+        "samples": [
+          {
+            "path": "val/model_0003_sample_0000",
+            "close_fraction": 0.2421875,
+            "mesh_distance_over_R": 0.06589170344693929
+          },
+          {
+            "path": "val/model_0003_sample_0001",
+            "close_fraction": 0.234375,
+            "mesh_distance_over_R": 0.11149162606276115
+          },
+          {
+            "path": "val/model_0003_sample_0002",
+            "close_fraction": 0.28125,
+            "mesh_distance_over_R": 0.07872741135670791
+          },
+          {
+            "path": "val/model_0003_sample_0003",
+            "close_fraction": 0.15625,
+            "mesh_distance_over_R": 0.09411482850610811
+          },
+          {
+            "path": "val/model_0003_sample_0004",
+            "close_fraction": 0.25,
+            "mesh_distance_over_R": 0.09838560882867729
+          },
+          {
+            "path": "val/model_0003_sample_0005",
+            "close_fraction": 0.2890625,
+            "mesh_distance_over_R": 0.10843844106841095
+          },
+          {
+            "path": "val/model_0003_sample_0006",
+            "close_fraction": 0.15625,
+            "mesh_distance_over_R": 0.12723852829446836
+          },
+          {
+            "path": "val/model_0003_sample_0007",
+            "close_fraction": 0.2578125,
+            "mesh_distance_over_R": 0.07419452454945279
+          },
+          {
+            "path": "val/model_0003_sample_0008",
+            "close_fraction": 0.1953125,
+            "mesh_distance_over_R": 0.07788352246608632
+          },
+          {
+            "path": "val/model_0003_sample_0009",
+            "close_fraction": 0.3359375,
+            "mesh_distance_over_R": 0.09770577122869573
+          },
+          {
+            "path": "val/model_0003_sample_0010",
+            "close_fraction": 0.25,
+            "mesh_distance_over_R": 0.10886641712516973
+          },
+          {
+            "path": "val/model_0003_sample_0011",
+            "close_fraction": 0.15625,
+            "mesh_distance_over_R": 0.11266425894788468
+          },
+          {
+            "path": "val/model_0003_sample_0012",
+            "close_fraction": 0.234375,
+            "mesh_distance_over_R": 0.10983485287508392
+          },
+          {
+            "path": "val/model_0003_sample_0013",
+            "close_fraction": 0.3125,
+            "mesh_distance_over_R": 0.11143725824105558
+          },
+          {
+            "path": "val/model_0003_sample_0014",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.15118703664137895
+          },
+          {
+            "path": "val/model_0003_sample_0015",
+            "close_fraction": 0.1328125,
+            "mesh_distance_over_R": 0.14187285171211292
+          },
+          {
+            "path": "val/model_0003_sample_0016",
+            "close_fraction": 0.203125,
+            "mesh_distance_over_R": 0.08975477697936438
+          },
+          {
+            "path": "val/model_0003_sample_0017",
+            "close_fraction": 0.1640625,
+            "mesh_distance_over_R": 0.1439321389843191
+          },
+          {
+            "path": "val/model_0003_sample_0018",
+            "close_fraction": 0.109375,
+            "mesh_distance_over_R": 0.1047393254893044
+          },
+          {
+            "path": "val/model_0003_sample_0019",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.09434370915512215
+          }
+        ],
+        "means": {
+          "close_fraction": 0.21171875,
+          "mesh_distance_over_R": 0.10513522959795518
+        }
+      }
+    }
+  },
+  "aggregates": {
+    "confirmation_only": {
+      "seen_train16": {
+        "16": {
+          "mean_local_cd_squared": {
+            "mean": 0.0009670998833826161,
+            "std_population": 8.987502042145934e-06,
+            "values": [
+              0.0009581123813404702,
+              0.000976087385424762
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.6623354397321017,
+            "std_population": 0.0005463568419805109,
+            "values": [
+              0.6617890828901213,
+              0.6628817965740823
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.114990234375,
+            "std_population": 0.027099609375,
+            "values": [
+              0.087890625,
+              0.14208984375
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.017007930300180402,
+            "std_population": 0.0007687961849306736,
+            "values": [
+              0.017776726485111076,
+              0.01623913411524973
+            ]
+          }
+        },
+        "64": {
+          "mean_local_cd_squared": {
+            "mean": 0.0024400711517955642,
+            "std_population": 2.954765295726247e-05,
+            "values": [
+              0.0024696188047528267,
+              0.0024105234988383017
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.31349104340815437,
+            "std_population": 0.010011266151290915,
+            "values": [
+              0.3034797772568634,
+              0.32350230955944526
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.1806640625,
+            "std_population": 0.02734375,
+            "values": [
+              0.1533203125,
+              0.2080078125
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.039173417897982704,
+            "std_population": 0.0017274076955185978,
+            "values": [
+              0.0409008255935013,
+              0.0374460102024641
+            ]
+          }
+        }
+      },
+      "unseen_same_object4": {
+        "16": {
+          "mean_local_cd_squared": {
+            "mean": 0.0059117942582815886,
+            "std_population": 0.0001507307169958949,
+            "values": [
+              0.0060625249752774835,
+              0.005761063541285694
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.1314405245252825,
+            "std_population": 0.001698085805637281,
+            "values": [
+              0.13313861033091978,
+              0.12974243871964522
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.041015625,
+            "std_population": 0.013671875,
+            "values": [
+              0.02734375,
+              0.0546875
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.08354489747824888,
+            "std_population": 0.0022588477222800496,
+            "values": [
+              0.08580374520052893,
+              0.08128604975596883
+            ]
+          }
+        },
+        "64": {
+          "mean_local_cd_squared": {
+            "mean": 0.004330061376094818,
+            "std_population": 0.0001552412868477404,
+            "values": [
+              0.004174820089247078,
+              0.0044853026629425585
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.13630701179272936,
+            "std_population": 0.025807048623947615,
+            "values": [
+              0.16211406041667697,
+              0.11049996316878175
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.181640625,
+            "std_population": 0.01953125,
+            "values": [
+              0.162109375,
+              0.201171875
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.04745479575852052,
+            "std_population": 0.0029711089001951928,
+            "values": [
+              0.04448368685832532,
+              0.05042590465871571
+            ]
+          }
+        }
+      },
+      "cross_object20": {
+        "16": {
+          "mean_local_cd_squared": {
+            "mean": 0.00845359250670299,
+            "std_population": 0.00015761526301503147,
+            "values": [
+              0.008611207769718021,
+              0.008295977243687958
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.11175012557992442,
+            "std_population": 0.0024668606141549643,
+            "values": [
+              0.10928326496576946,
+              0.11421698619407938
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.0158203125,
+            "std_population": 0.0029296875,
+            "values": [
+              0.012890625,
+              0.01875
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.14815090361498465,
+            "std_population": 0.002061939812679936,
+            "values": [
+              0.15021284342766458,
+              0.1460889638023047
+            ]
+          }
+        },
+        "64": {
+          "mean_local_cd_squared": {
+            "mean": 0.0071306168450973925,
+            "std_population": 0.00038994175847619763,
+            "values": [
+              0.006740675086621195,
+              0.0075205586035735905
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.13249066846464244,
+            "std_population": 0.0022540275306617563,
+            "values": [
+              0.1347446959953042,
+              0.13023664093398069
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.18984375,
+            "std_population": 0.021875000000000006,
+            "values": [
+              0.16796875,
+              0.21171875
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.10260122771885052,
+            "std_population": 0.002534001879104665,
+            "values": [
+              0.10006722583974585,
+              0.10513522959795518
+            ]
+          }
+        }
+      }
+    },
+    "all_three": {
+      "seen_train16": {
+        "16": {
+          "mean_local_cd_squared": {
+            "mean": 0.000976572728783746,
+            "std_population": 1.527480699144177e-05,
+            "values": [
+              0.0009955184195860056,
+              0.0009581123813404702,
+              0.000976087385424762
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.6621910809900774,
+            "std_population": 0.0004905942912940839,
+            "values": [
+              0.6619023635060286,
+              0.6617890828901213,
+              0.6628817965740823
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.111328125,
+            "std_population": 0.022724758355898624,
+            "values": [
+              0.10400390625,
+              0.087890625,
+              0.14208984375
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.017193062797626925,
+            "std_population": 0.0006801321924431644,
+            "values": [
+              0.01756332779251997,
+              0.017776726485111076,
+              0.01623913411524973
+            ]
+          }
+        },
+        "64": {
+          "mean_local_cd_squared": {
+            "mean": 0.002422317828556212,
+            "std_population": 3.481958503874471e-05,
+            "values": [
+              0.0023868111820775084,
+              0.0024696188047528267,
+              0.0024105234988383017
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.3196144169876124,
+            "std_population": 0.01190833215113963,
+            "values": [
+              0.33186116414652855,
+              0.3034797772568634,
+              0.32350230955944526
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.18717447916666666,
+            "std_population": 0.024150048165353395,
+            "values": [
+              0.2001953125,
+              0.1533203125,
+              0.2080078125
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.038509922955574906,
+            "std_population": 0.0016940314759647634,
+            "values": [
+              0.03718293307075932,
+              0.0409008255935013,
+              0.0374460102024641
+            ]
+          }
+        }
+      },
+      "unseen_same_object4": {
+        "16": {
+          "mean_local_cd_squared": {
+            "mean": 0.005903820138579856,
+            "std_population": 0.00012358670047419955,
+            "values": [
+              0.005887871899176389,
+              0.0060625249752774835,
+              0.005761063541285694
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.13437020518035733,
+            "std_population": 0.004369025949832569,
+            "values": [
+              0.14022956649050694,
+              0.13313861033091978,
+              0.12974243871964522
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.046223958333333336,
+            "std_population": 0.013374113661571704,
+            "values": [
+              0.056640625,
+              0.02734375,
+              0.0546875
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.0842893609017847,
+            "std_population": 0.0021236871080580278,
+            "values": [
+              0.08577828774885635,
+              0.08580374520052893,
+              0.08128604975596883
+            ]
+          }
+        },
+        "64": {
+          "mean_local_cd_squared": {
+            "mean": 0.004232981688498209,
+            "std_population": 0.00018685690491872494,
+            "values": [
+              0.0040388223133049905,
+              0.004174820089247078,
+              0.0044853026629425585
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.1453130078316908,
+            "std_population": 0.024621503510010162,
+            "values": [
+              0.1633249999096137,
+              0.16211406041667697,
+              0.11049996316878175
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.185546875,
+            "std_population": 0.016876928902103804,
+            "values": [
+              0.193359375,
+              0.162109375,
+              0.201171875
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.04694047839071252,
+            "std_population": 0.002532594869734192,
+            "values": [
+              0.045911843655096526,
+              0.04448368685832532,
+              0.05042590465871571
+            ]
+          }
+        }
+      },
+      "cross_object20": {
+        "16": {
+          "mean_local_cd_squared": {
+            "mean": 0.008407224462522815,
+            "std_population": 0.00014443581665358378,
+            "values": [
+              0.008314488374162465,
+              0.008611207769718021,
+              0.008295977243687958
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.11332691965367857,
+            "std_population": 0.0030049115286751816,
+            "values": [
+              0.11648050780118684,
+              0.10928326496576946,
+              0.11421698619407938
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.015234375,
+            "std_population": 0.00253153933531557,
+            "values": [
+              0.0140625,
+              0.012890625,
+              0.01875
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.14794442225635454,
+            "std_population": 0.0017087031038187555,
+            "values": [
+              0.14753145953909433,
+              0.15021284342766458,
+              0.1460889638023047
+            ]
+          }
+        },
+        "64": {
+          "mean_local_cd_squared": {
+            "mean": 0.0071959226644442735,
+            "std_population": 0.0003315108094016556,
+            "values": [
+              0.007326534303138033,
+              0.006740675086621195,
+              0.0075205586035735905
+            ]
+          },
+          "mean_local_fscore": {
+            "mean": 0.1302076818974066,
+            "std_population": 0.0037163353909928374,
+            "values": [
+              0.12564170876293496,
+              0.1347446959953042,
+              0.13023664093398069
+            ]
+          },
+          "close_fraction": {
+            "mean": 0.1890625,
+            "std_population": 0.017895002648551546,
+            "values": [
+              0.1875,
+              0.16796875,
+              0.21171875
+            ]
+          },
+          "mesh_distance_over_R": {
+            "mean": 0.10465735719720208,
+            "std_population": 0.0035687692386913816,
+            "values": [
+              0.10876961615390521,
+              0.10006722583974585,
+              0.10513522959795518
+            ]
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "seed": 43,
+      "role": "unseen_same_object4",
+      "path": "train/model_0002_sample_0016",
+      "figure": "bronze_basic_fit_quantity_confirmation_seed43_unseen_same_object4.png"
+    },
+    {
+      "seed": 43,
+      "role": "cross_object20",
+      "path": "val/model_0003_sample_0000",
+      "figure": "bronze_basic_fit_quantity_confirmation_seed43_cross_object20.png"
+    },
+    {
+      "seed": 44,
+      "role": "unseen_same_object4",
+      "path": "train/model_0002_sample_0016",
+      "figure": "bronze_basic_fit_quantity_confirmation_seed44_unseen_same_object4.png"
+    },
+    {
+      "seed": 44,
+      "role": "cross_object20",
+      "path": "val/model_0003_sample_0000",
+      "figure": "bronze_basic_fit_quantity_confirmation_seed44_cross_object20.png"
+    }
+  ]
+}

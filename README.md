@@ -5,9 +5,21 @@
 
 ## 当前交付入口
 
+最新结果：[64缺口配对复验](docs/experiments/2026-10-13/reports/bronze_quantity_confirmation/README.md) · [训练覆盖数量对照](docs/experiments/2026-10-13/reports/quantity_fit/README.md)。
+
 [GitHub可查看的实验报告、指标与配图](docs/experiments/2026-10-13/README.md)。以下outputs/链接为本地运行产物，不随Git上传。
 
 研究进度更新：[分层解码与三种子容量对照](outputs/repeats/bronze_hierarchy_confirmation/README.md)。这是交付原型之后的验证实验，原型冻结模型保持原样。
+
+新增研究：[排斥项三种子对照](docs/experiments/2026-10-13/reports/bronze_repulsion_confirmation/README.md)、[同缺口五方案图](docs/experiments/2026-10-13/reports/matched_cases_seed42/README.md)、[邻域编码同参数对照](docs/experiments/2026-10-13/reports/bronze_neighborhood_confirmation/README.md)。邻域改造在固定20轮预算下表现更差，已保留负结果和文献/工程改动说明。
+
+[20/40/60轮同步预算复验](docs/experiments/2026-10-13/reports/bronze_neighborhood_convergence/README.md)：逐点对照获得改善，邻域方案验证误差仍较高；已保存完整曲线、各预算模型与同缺口图。原型继续冻结。
+
+[12器物四折交叉验证](docs/experiments/2026-10-13/reports/bronze_object_cv4/README.md)：每折9训练/3留出、固定60轮last.pt评价，邻域改造在12器物上均未改善CD²；已保存每折名单、折外指标、网格诊断及固定案例图。属于单种子开发池复验。
+
+[基础排查与单器物拟合](docs/experiments/2026-10-13/reports/basic_fit/README.md)：240样本不变量通过；固定缺口有序诊断可拟合，CD仍有平台；单器物16缺口可学习，但4个新缺口成绩明显下降。该诊断帮助区分匹配优化与泛化问题，不作为正式模型替换。
+
+[精确一对一匹配对照](docs/experiments/2026-10-13/reports/assignment_fit/README.md)：借鉴PCN的等点数匹配，固定拟合明显改善，但新缺口与换器物结果未改善，保留负结果；训练依赖可使用`requirements-experiments.txt`安装。
 
 - [原型实验报告与运行说明](outputs/prototype/bronze_completion/README.md)
 - [离线HTML报告](outputs/prototype/bronze_completion/report.html)
@@ -242,6 +254,10 @@ HTML 包含绘图库，可离线使用；程序不会自动启动浏览器。
 它是定位收缩和覆盖问题的工具，不是表面连续性的证明，也不是官方论文评价指标。
 输出含全部验证样本记录、低/中/高 CD 案例 HTML 和静态局部多视角图。
 静态图的 PCA 只用于统一观察角度，完整目标不参与预测。
+
+2026-10-13新增缺口覆盖对照：运行 `run_quantity_experiment.py`，比较司母戊鼎16/64/128个嵌套训练缺口，各固定800次参数更新；报告与图见 `outputs/diagnostics/quantity_fit/README.md`。新增损坏样本不等于新增器物，原4个评价缺口与训练目标表面存在重叠，不能当作不重叠区域或新器物验证。
+
+64缺口配对复验：新增训练seed43/44，各比较16与64缺口、固定800更新。新增种子的同器物新缺口CD²均值下降26.76%，但seed44的F-score下降，聚集均值由4.10%升至18.16%；表面距离改善未解决薄壁结构。报告 `outputs/repeats/bronze_quantity_confirmation/README.md`，脚本 `run_quantity_confirmation.py`；保留冻结原型，候选仅用于后续多器物覆盖实验。
 
 公开器皿数据下载和导入见 [公开数据说明](PUBLIC_DATA.md)。
 

@@ -79,3 +79,21 @@ seed42质量诊断中，分层近邻距小于0.02R的点比例为45.86%，宽MLP
 完整[研究依据与计划](../../../LITERATURE_PLAN.md)。原始模型、点云数据、训练权重和运行输出在本地models/、outputs/，未随Git上传；本目录提供可直接在GitHub查看的报告、图片与JSON证据。JSON中的PROJECT_ROOT为本地项目目录占位符。
 
 原型部署包和旧冻结模型继续保留。当前只是小规模方法研究，验证/测试各2个器物；后续研究需新的独立器物确认，不能反复根据已使用测试集调参。
+
+## 当日后续实验与汇总报告
+
+[带图Word实验日报](2026年10月13日青铜器局部补全实验报告.docx)。
+
+- [PU-Net借鉴排斥项：固定预算对照](reports/bronze_repulsion_confirmation/README.md)
+- [邻域几何编码：参数相同的消融](reports/bronze_neighborhood_confirmation/README.md)
+- [邻域编码收敛对照：20→40→60轮](reports/bronze_neighborhood_convergence/README.md)
+- [器物级四折交叉验证](reports/bronze_object_cv4/README.md)
+- [64缺口方案的训练种子配对复验](reports/bronze_quantity_confirmation/README.md)
+- [同一缺口五方案对照](reports/matched_cases_seed42/README.md)
+- [同一缺口方案对照](reports/neighborhood_cases_seed42/README.md)
+- [同一缺口方案对照](reports/neighborhood60_cases_seed42/README.md)
+- [基础排查与单器物拟合](reports/basic_fit/README.md)
+- [一对一点匹配损失对照](reports/assignment_fit/README.md)
+- [固定更新次数的训练缺口数量对照](reports/quantity_fit/README.md)
+
+最新64缺口配对确认：新增seed43/44的同器物新缺口CD²均值下降26.76%，换器物下降15.65%；但聚集增加，seed44同器物F-score下降。评价区域与训练目标存在表面重叠，属于固定开发样本复验，不能称为独立盲测。原型继续冻结。

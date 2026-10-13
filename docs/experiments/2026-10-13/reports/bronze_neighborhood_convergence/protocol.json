@@ -1,0 +1,29 @@
+{
+  "purpose": "Separate additional training-budget effects from the observed poor 20-epoch local encoder result",
+  "training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "architectures": [
+    "local",
+    "pointwise_xyz"
+  ],
+  "budgets": [
+    20,
+    40,
+    60
+  ],
+  "resume": "Copy original 20-epoch best.pt,last.pt,history.json into new run directories; resume optimizer and RNG; preserve 40-epoch checkpoints",
+  "evaluation_seed": 43,
+  "selection": "per-run best validation CD squared over each budget prefix; also evaluate exact milestone last.pt",
+  "learning_rate": 0.001,
+  "schedule": "unchanged constant Adam learning rate, no selective stopping, no architecture or loss changes",
+  "parameters": 615236,
+  "dataset": "outputs/datasets/bronze_20261013_seed42",
+  "geometry_reference": "PointNet++ NeurIPS2017 section3.2; lightweight adaptation from prior round",
+  "quality_scope": "seed42, all40 validation holes, best.pt at60 budget; compare archived20 diagnostic",
+  "test_access": false,
+  "interpretation": "Engineering convergence check, not a new literature method or proof of asymptotic convergence; only2 fixed validation objects",
+  "fixed_configuration": "input512 output128 target128 batch8 tanh decoder1140 FPS32 kNN16 CD/R2 no auxiliary losses"
+}

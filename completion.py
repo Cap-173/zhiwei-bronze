@@ -21,7 +21,7 @@ class LocalCompletion(nn.Module):
     def forward(self, points, region):
         center, radius = region[:, :3], region[:, 3:4]
         relative = (points - center[:, None, :]) / radius[:, None, :]
-        features = self.encoder(relative).amax(dim=1)
+        features = self.encode(relative)
         raw = self.decoder(torch.cat((features, region), dim=1)).reshape(-1, self.output_points, 3)
         # 输出被限制在指定球内；保留区域由拼接原始点保证。
         norm = torch.linalg.vector_norm(raw, dim=-1, keepdim=True)
@@ -32,6 +32,9 @@ class LocalCompletion(nn.Module):
             safe_norm = norm.clamp_min(1e-6)
             local = raw * (torch.tanh(safe_norm) / safe_norm)
         return center[:, None, :] + radius[:, None, :] * local
+
+    def encode(self, relative):
+        return self.encoder(relative).amax(dim=1)
 
 
 def chamfer_per_sample(prediction, target):
@@ -72,7 +75,8 @@ def load_checkpoint(path):
     model = make_model(checkpoint['output_points'], checkpoint.get('output_mode', 'soft'),
                        checkpoint.get('architecture', config.get('architecture', 'mlp')),
                        checkpoint.get('coarse_points', config.get('coarse_points', 32)),
-                       checkpoint.get('decoder_width', config.get('decoder_width', 256)))
+                       checkpoint.get('decoder_width', config.get('decoder_width', 256)),
+                       config.get('encoder_anchors', 32), config.get('encoder_neighbors', 16))
     model.load_state_dict(checkpoint['state_dict'])
     model.eval()
     return model, checkpoint
@@ -121,11 +125,27 @@ class HierarchicalCompletion(LocalCompletion):
         return self.forward_stages(points, region)[1]
 
 
-def make_model(output_points, output_mode, architecture='mlp', coarse_points=32, decoder_width=256):
+class GeometryCompletion(LocalCompletion):
+    """Single local set abstraction inspired by PointNet++, or matched pointwise control."""
+    def __init__(self, output_points=128, output_mode='tanh', decoder_width=1140,
+                 architecture='local', encoder_anchors=32, encoder_neighbors=16):
+        super().__init__(output_points, output_mode, decoder_width)
+        from neighborhood_encoder import NeighborhoodEncoder
+        self.encoder = NeighborhoodEncoder(architecture, encoder_anchors, encoder_neighbors)
+
+    def encode(self, relative):
+        return self.encoder(relative)
+
+
+def make_model(output_points, output_mode, architecture='mlp', coarse_points=32, decoder_width=256,
+               encoder_anchors=32, encoder_neighbors=16):
     if architecture == 'mlp':
         return LocalCompletion(output_points, output_mode, decoder_width)
     if architecture == 'hierarchical':
         return HierarchicalCompletion(output_points, output_mode, coarse_points)
+    if architecture in ('local', 'pointwise_xyz'):
+        return GeometryCompletion(output_points, output_mode, decoder_width, architecture,
+                                  encoder_anchors, encoder_neighbors)
     raise ValueError('未知补全架构。')
 
 

@@ -1,0 +1,60 @@
+{
+  "history": [
+    {
+      "step": 0,
+      "ordered_mse_over_R2": 0.5541167855262756,
+      "cd_over_R2": 0.30048826336860657
+    },
+    {
+      "step": 100,
+      "ordered_mse_over_R2": 2.64552600128809e-05,
+      "cd_over_R2": 4.997345604351722e-05
+    },
+    {
+      "step": 200,
+      "ordered_mse_over_R2": 1.536777176625037e-06,
+      "cd_over_R2": 3.2962429941107985e-06
+    },
+    {
+      "step": 300,
+      "ordered_mse_over_R2": 2.1214988521478517e-07,
+      "cd_over_R2": 6.259926976781571e-07
+    },
+    {
+      "step": 400,
+      "ordered_mse_over_R2": 8.08492899295743e-08,
+      "cd_over_R2": 3.814643037003407e-07
+    },
+    {
+      "step": 500,
+      "ordered_mse_over_R2": 1.3678929988714117e-08,
+      "cd_over_R2": 2.510491583507246e-07
+    },
+    {
+      "step": 600,
+      "ordered_mse_over_R2": 6.571557520373972e-09,
+      "cd_over_R2": 2.771321874206478e-07
+    },
+    {
+      "step": 700,
+      "ordered_mse_over_R2": 4.271485387619123e-09,
+      "cd_over_R2": 2.4778879037512525e-07
+    },
+    {
+      "step": 800,
+      "ordered_mse_over_R2": 1.3264744858076938e-09,
+      "cd_over_R2": 2.3474727584016364e-07
+    },
+    {
+      "step": 900,
+      "ordered_mse_over_R2": 2.266434595554756e-09,
+      "cd_over_R2": 2.0540386458378634e-07
+    },
+    {
+      "step": 1000,
+      "ordered_mse_over_R2": 1.804223437318342e-08,
+      "cd_over_R2": 2.83652951793556e-07
+    }
+  ],
+  "reason": "Added after CD plateau; matched model initialization, context, target, Adam lr and1000 steps; fixed arbitrary target order. Diagnostic only; not usable for unordered completion targets."
+}

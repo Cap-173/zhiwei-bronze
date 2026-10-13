@@ -1,0 +1,26 @@
+[
+  {
+    "model": "pointwise_xyz",
+    "objective": "CD",
+    "distinct_target_sites_matched_by_prediction": 60,
+    "target_points": 128
+  },
+  {
+    "model": "pointwise_xyz",
+    "objective": "ordered MSE",
+    "distinct_target_sites_matched_by_prediction": 128,
+    "target_points": 128
+  },
+  {
+    "model": "local",
+    "objective": "CD",
+    "distinct_target_sites_matched_by_prediction": 39,
+    "target_points": 128
+  },
+  {
+    "model": "local",
+    "objective": "ordered MSE",
+    "distinct_target_sites_matched_by_prediction": 128,
+    "target_points": 128
+  }
+]

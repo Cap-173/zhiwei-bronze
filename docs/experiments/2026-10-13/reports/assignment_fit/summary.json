@@ -1,0 +1,1596 @@
+{
+  "protocol": {
+    "object_id": "bronze_02",
+    "object_name": "司母戊鼎",
+    "source_dataset": "PROJECT_ROOT\\outputs\\datasets\\bronze_20261013_seed42",
+    "single_object_dataset": "PROJECT_ROOT\\outputs\\datasets\\bronze_single_object_fit",
+    "single_hole": {
+      "model_id": "bronze_02",
+      "split": "train",
+      "path": "train/model_0002_sample_0000",
+      "input_points": 3942,
+      "target_points": 154
+    },
+    "training_holes": [
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0000",
+        "input_points": 3942,
+        "target_points": 154
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0001",
+        "input_points": 3965,
+        "target_points": 131
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0002",
+        "input_points": 3901,
+        "target_points": 195
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0003",
+        "input_points": 3737,
+        "target_points": 359
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0004",
+        "input_points": 3994,
+        "target_points": 102
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0005",
+        "input_points": 3998,
+        "target_points": 98
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0006",
+        "input_points": 3775,
+        "target_points": 321
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0007",
+        "input_points": 4000,
+        "target_points": 96
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0008",
+        "input_points": 3898,
+        "target_points": 198
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0009",
+        "input_points": 3967,
+        "target_points": 129
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0010",
+        "input_points": 3933,
+        "target_points": 163
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0011",
+        "input_points": 3720,
+        "target_points": 376
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0012",
+        "input_points": 3866,
+        "target_points": 230
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0013",
+        "input_points": 3767,
+        "target_points": 329
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0014",
+        "input_points": 3746,
+        "target_points": 350
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0015",
+        "input_points": 3809,
+        "target_points": 287
+      }
+    ],
+    "unseen_same_object_holes": [
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0016",
+        "input_points": 3860,
+        "target_points": 236
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0017",
+        "input_points": 3767,
+        "target_points": 329
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0018",
+        "input_points": 3709,
+        "target_points": 387
+      },
+      {
+        "model_id": "bronze_02",
+        "split": "train",
+        "path": "train/model_0002_sample_0019",
+        "input_points": 4002,
+        "target_points": 94
+      }
+    ],
+    "cross_object_evaluation": [
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0000",
+        "input_points": 3945,
+        "target_points": 151
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0001",
+        "input_points": 3647,
+        "target_points": 449
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0002",
+        "input_points": 3722,
+        "target_points": 374
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0003",
+        "input_points": 3381,
+        "target_points": 715
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0004",
+        "input_points": 3736,
+        "target_points": 360
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0005",
+        "input_points": 3857,
+        "target_points": 239
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0006",
+        "input_points": 3882,
+        "target_points": 214
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0007",
+        "input_points": 3975,
+        "target_points": 121
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0008",
+        "input_points": 3654,
+        "target_points": 442
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0009",
+        "input_points": 3864,
+        "target_points": 232
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0010",
+        "input_points": 3858,
+        "target_points": 238
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0011",
+        "input_points": 3883,
+        "target_points": 213
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0012",
+        "input_points": 3936,
+        "target_points": 160
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0013",
+        "input_points": 3664,
+        "target_points": 432
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0014",
+        "input_points": 3983,
+        "target_points": 113
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0015",
+        "input_points": 3501,
+        "target_points": 595
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0016",
+        "input_points": 3724,
+        "target_points": 372
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0017",
+        "input_points": 3491,
+        "target_points": 605
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0018",
+        "input_points": 3860,
+        "target_points": 236
+      },
+      {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0019",
+        "input_points": 3630,
+        "target_points": 466
+      }
+    ],
+    "architectures": [
+      "pointwise_xyz",
+      "local"
+    ],
+    "training_seed": 42,
+    "evaluation_seed": 43,
+    "single_hole_steps": 1000,
+    "single_object_epochs": 200,
+    "batch_size": 4,
+    "learning_rate": 0.001,
+    "input_points": 512,
+    "output_points": 128,
+    "target_points": 128,
+    "decoder_width": 1140,
+    "encoder_anchors": 32,
+    "encoder_neighbors": 16,
+    "output_mode": "tanh",
+    "loss": "CD squared divided by R squared; no auxiliary loss",
+    "primary_checkpoint": "final fixed step/epoch, not training-loss best or unseen-hole selected",
+    "target_floor": "FPS128 and fixed5 random128 draws from full missing target; reference only, not a learned prediction",
+    "purpose": "Engineering fit sanity check, not a new method or generalized bronze completion score",
+    "excluded_original_test_models": [
+      "bronze_06",
+      "bronze_07"
+    ],
+    "architecture": "pointwise_xyz",
+    "loss_mode": "emd_exact",
+    "dataset_fingerprint": "7442da94a2103a0bc484614366e0954c6ee94ab8895179eb70973dfe0b8d3f50",
+    "seed": 42,
+    "reference_paper": "https://arxiv.org/pdf/1808.00671 section4.3",
+    "reference_code": "https://github.com/wentaoyuan/pcn/blob/master/tf_util.py",
+    "adaptation": "Exact SciPy Jonker-Volgenant instead of PCN approximate CUDA matching; mean Euclidean/R;128 local missing points instead of1024 coarse full-object points; no fine decoder or fine CD term",
+    "scipy_version": "1.18.1",
+    "torch_version": "2.14.1+cpu",
+    "baseline_checkpoint_sha256": "181d00b33893ff31f3f33a48884ba298b5dd087153ccbcb4ba6587c7e8026e58",
+    "baseline_fixed_result_sha256": "aab27bba40ac036e2641bda0c626055d24d8b223e2d768ea3b7e5971a23505d1",
+    "selection": "fixed1000 steps and finalepoch200; no unseen-hole early stopping or tuning"
+  },
+  "fixed_hole": {
+    "CD": {
+      "cd": 0.0007739936700090766,
+      "cd_over_R2": 0.010838404107378205,
+      "fscore": 0.6777138157894737,
+      "exact_distance_over_R": 0.36956486105918884,
+      "nearest_distinct_target_sites": 60,
+      "full_target": {
+        "cd": 0.0012152043636888266,
+        "cd_over_R2": 0.01701677478390029,
+        "fscore": 0.5989534185472252
+      }
+    },
+    "Exact matching": {
+      "cd": 4.47325874119997e-06,
+      "cd_over_R2": 6.264002897261247e-05,
+      "fscore": 1.0,
+      "exact_distance_over_R": 0.004973618313670158,
+      "nearest_distinct_target_sites": 127,
+      "full_target": {
+        "cd": 0.0003115335712209344,
+        "cd_over_R2": 0.004362473323415655,
+        "fscore": 0.9154929600225935
+      }
+    }
+  },
+  "evaluations": {
+    "CD": {
+      "seen_train16": {
+        "sample_count": 16,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.0009955184195860056,
+        "mean_local_fscore": 0.6619023635060286,
+        "model_macro_cd_squared": 0.0009955184195860056,
+        "model_macro_fscore": 0.6619023635060286,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 16,
+            "local_cd_squared": 0.0009955184195860056,
+            "local_fscore": 0.6619023635060286
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0000",
+            "local_cd_squared": 0.0007041100179776549,
+            "local_fscore": 0.7319800188062572,
+            "precision": 0.9140625,
+            "recall": 0.6103895902633667
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0001",
+            "local_cd_squared": 0.0004366696812212467,
+            "local_fscore": 0.8579617273332215,
+            "precision": 0.9921875,
+            "recall": 0.7557252049446106
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0002",
+            "local_cd_squared": 0.0006805077427998185,
+            "local_fscore": 0.7231232678806745,
+            "precision": 0.921875,
+            "recall": 0.5948718190193176
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0003",
+            "local_cd_squared": 0.0018410353222861886,
+            "local_fscore": 0.32745266464359574,
+            "precision": 0.6171875,
+            "recall": 0.22284123301506042
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0004",
+            "local_cd_squared": 0.00027922220760956407,
+            "local_fscore": 0.9375000039581209,
+            "precision": 1.0,
+            "recall": 0.8823529481887817
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0005",
+            "local_cd_squared": 0.00022784125758334994,
+            "local_fscore": 0.9428860992733076,
+            "precision": 0.96875,
+            "recall": 0.918367326259613
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0006",
+            "local_cd_squared": 0.0019349157810211182,
+            "local_fscore": 0.3824697260643352,
+            "precision": 0.734375,
+            "recall": 0.2585669755935669
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0007",
+            "local_cd_squared": 0.00016539866919629276,
+            "local_fscore": 0.9947643878673572,
+            "precision": 1.0,
+            "recall": 0.9895833134651184
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0008",
+            "local_cd_squared": 0.0007829597452655435,
+            "local_fscore": 0.6875301043916231,
+            "precision": 0.9296875,
+            "recall": 0.5454545617103577
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0009",
+            "local_cd_squared": 0.0005878455704078078,
+            "local_fscore": 0.842396905479823,
+            "precision": 0.9453125,
+            "recall": 0.7596899271011353
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0010",
+            "local_cd_squared": 0.0005935847293585539,
+            "local_fscore": 0.7774402748802698,
+            "precision": 0.953125,
+            "recall": 0.6564416885375977
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0011",
+            "local_cd_squared": 0.001767531968653202,
+            "local_fscore": 0.44481202282536,
+            "precision": 0.796875,
+            "recall": 0.3085106313228607
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0012",
+            "local_cd_squared": 0.0007457708707079291,
+            "local_fscore": 0.7209105896311281,
+            "precision": 0.9453125,
+            "recall": 0.582608699798584
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0013",
+            "local_cd_squared": 0.0020526337902992964,
+            "local_fscore": 0.3663785169119804,
+            "precision": 0.6484375,
+            "recall": 0.25531914830207825
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0014",
+            "local_cd_squared": 0.0013653390342369676,
+            "local_fscore": 0.48222566614233375,
+            "precision": 0.8125,
+            "recall": 0.34285715222358704
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0015",
+            "local_cd_squared": 0.001762928324751556,
+            "local_fscore": 0.3706058400070688,
+            "precision": 0.6171875,
+            "recall": 0.2648083567619324
+          }
+        ]
+      },
+      "unseen_same_object4": {
+        "sample_count": 4,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.005887871899176389,
+        "mean_local_fscore": 0.14022956649050694,
+        "model_macro_cd_squared": 0.005887871899176389,
+        "model_macro_fscore": 0.14022956649050694,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 4,
+            "local_cd_squared": 0.005887871899176389,
+            "local_fscore": 0.14022956649050694
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0016",
+            "local_cd_squared": 0.006690335460007191,
+            "local_fscore": 0.10065425278134758,
+            "precision": 0.1953125,
+            "recall": 0.06779661029577255
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0017",
+            "local_cd_squared": 0.010970490984618664,
+            "local_fscore": 0.051212415566230796,
+            "precision": 0.0859375,
+            "recall": 0.036474164575338364
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0018",
+            "local_cd_squared": 0.0037958715111017227,
+            "local_fscore": 0.06930020207522827,
+            "precision": 0.1640625,
+            "recall": 0.043927647173404694
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0019",
+            "local_cd_squared": 0.0020947896409779787,
+            "local_fscore": 0.33975139553922107,
+            "precision": 0.3203125,
+            "recall": 0.3617021143436432
+          }
+        ]
+      },
+      "cross_object20": {
+        "sample_count": 20,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.008314488374162465,
+        "mean_local_fscore": 0.11648050780118684,
+        "model_macro_cd_squared": 0.008314488374162465,
+        "model_macro_fscore": 0.11648050780118684,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_03": {
+            "samples": 20,
+            "local_cd_squared": 0.008314488374162465,
+            "local_fscore": 0.11648050780118684
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0000",
+            "local_cd_squared": 0.0030572665855288506,
+            "local_fscore": 0.20310200455102842,
+            "precision": 0.3046875,
+            "recall": 0.15231788158416748
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0001",
+            "local_cd_squared": 0.009759431704878807,
+            "local_fscore": 0.07965482873314957,
+            "precision": 0.15625,
+            "recall": 0.05345211550593376
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0002",
+            "local_cd_squared": 0.006385869346559048,
+            "local_fscore": 0.09363295688620486,
+            "precision": 0.15625,
+            "recall": 0.06684491783380508
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0003",
+            "local_cd_squared": 0.012476576492190361,
+            "local_fscore": 0.07096094694076194,
+            "precision": 0.1953125,
+            "recall": 0.04335664212703705
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0004",
+            "local_cd_squared": 0.009338311851024628,
+            "local_fscore": 0.13047186074868708,
+            "precision": 0.2109375,
+            "recall": 0.09444444626569748
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0005",
+            "local_cd_squared": 0.008790601044893265,
+            "local_fscore": 0.1035422369501323,
+            "precision": 0.1484375,
+            "recall": 0.07949791103601456
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0006",
+            "local_cd_squared": 0.013421904295682907,
+            "local_fscore": 0.07121057973382516,
+            "precision": 0.078125,
+            "recall": 0.06542056053876877
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0007",
+            "local_cd_squared": 0.002675217343494296,
+            "local_fscore": 0.3074670497263572,
+            "precision": 0.328125,
+            "recall": 0.28925618529319763
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0008",
+            "local_cd_squared": 0.006136089563369751,
+            "local_fscore": 0.08305647878696863,
+            "precision": 0.15625,
+            "recall": 0.05656108632683754
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0009",
+            "local_cd_squared": 0.007137948181480169,
+            "local_fscore": 0.16360438188702814,
+            "precision": 0.2109375,
+            "recall": 0.13362069427967072
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0010",
+            "local_cd_squared": 0.008257164619863033,
+            "local_fscore": 0.1103202885059755,
+            "precision": 0.2421875,
+            "recall": 0.0714285746216774
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0011",
+            "local_cd_squared": 0.004946325905621052,
+            "local_fscore": 0.11556842623824637,
+            "precision": 0.1640625,
+            "recall": 0.08920187503099442
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0012",
+            "local_cd_squared": 0.0050035566091537476,
+            "local_fscore": 0.15625,
+            "precision": 0.15625,
+            "recall": 0.15625
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0013",
+            "local_cd_squared": 0.010755850002169609,
+            "local_fscore": 0.08564493898366632,
+            "precision": 0.1484375,
+            "recall": 0.06018518656492233
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0014",
+            "local_cd_squared": 0.007138999179005623,
+            "local_fscore": 0.08298755172226449,
+            "precision": 0.078125,
+            "recall": 0.08849557489156723
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0015",
+            "local_cd_squared": 0.012301027774810791,
+            "local_fscore": 0.06470165493424644,
+            "precision": 0.140625,
+            "recall": 0.042016807943582535
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0016",
+            "local_cd_squared": 0.008447349071502686,
+            "local_fscore": 0.08589211680102173,
+            "precision": 0.140625,
+            "recall": 0.06182795763015747
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0017",
+            "local_cd_squared": 0.016971461474895477,
+            "local_fscore": 0.048798383803561184,
+            "precision": 0.109375,
+            "recall": 0.03140495717525482
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0018",
+            "local_cd_squared": 0.004342278465628624,
+            "local_fscore": 0.18947368011910493,
+            "precision": 0.25,
+            "recall": 0.1525423675775528
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0019",
+            "local_cd_squared": 0.008946537971496582,
+            "local_fscore": 0.08326978997150632,
+            "precision": 0.1640625,
+            "recall": 0.055793993175029755
+          }
+        ]
+      }
+    },
+    "Exact matching": {
+      "seen_train16": {
+        "sample_count": 16,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.000774519063270418,
+        "mean_local_fscore": 0.7176736509906596,
+        "model_macro_cd_squared": 0.000774519063270418,
+        "model_macro_fscore": 0.7176736509906596,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 16,
+            "local_cd_squared": 0.000774519063270418,
+            "local_fscore": 0.7176736509906596
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0000",
+            "local_cd_squared": 0.0005147075280547142,
+            "local_fscore": 0.8066478386938277,
+            "precision": 0.8515625,
+            "recall": 0.7662337422370911
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0001",
+            "local_cd_squared": 0.00039378367364406586,
+            "local_fscore": 0.8879411641204151,
+            "precision": 0.8828125,
+            "recall": 0.8931297659873962
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0002",
+            "local_cd_squared": 0.0008636331185698509,
+            "local_fscore": 0.619718325537742,
+            "precision": 0.6875,
+            "recall": 0.5641025900840759
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0003",
+            "local_cd_squared": 0.0013057671021670103,
+            "local_fscore": 0.4405635272683869,
+            "precision": 0.6796875,
+            "recall": 0.32590529322624207
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0004",
+            "local_cd_squared": 0.0002597738348413259,
+            "local_fscore": 0.9274213541916828,
+            "precision": 0.9140625,
+            "recall": 0.9411764740943909
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0005",
+            "local_cd_squared": 0.0001876074238680303,
+            "local_fscore": 0.9661772032154339,
+            "precision": 0.953125,
+            "recall": 0.9795918464660645
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0006",
+            "local_cd_squared": 0.0012613271828740835,
+            "local_fscore": 0.5134833583659651,
+            "precision": 0.7109375,
+            "recall": 0.40186914801597595
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0007",
+            "local_cd_squared": 0.0002588489733170718,
+            "local_fscore": 0.9537858211583863,
+            "precision": 0.9296875,
+            "recall": 0.9791666865348816
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0008",
+            "local_cd_squared": 0.0006365471635945141,
+            "local_fscore": 0.7756245129460299,
+            "precision": 0.8515625,
+            "recall": 0.7121211886405945
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0009",
+            "local_cd_squared": 0.0003875487018376589,
+            "local_fscore": 0.9066132340706455,
+            "precision": 0.90625,
+            "recall": 0.9069767594337463
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0010",
+            "local_cd_squared": 0.00035422254586592317,
+            "local_fscore": 0.9067257651865046,
+            "precision": 0.9453125,
+            "recall": 0.8711656332015991
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0011",
+            "local_cd_squared": 0.0013520679203793406,
+            "local_fscore": 0.5170267681356051,
+            "precision": 0.7734375,
+            "recall": 0.3882978856563568
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0012",
+            "local_cd_squared": 0.0006966127548366785,
+            "local_fscore": 0.7554275701034489,
+            "precision": 0.859375,
+            "recall": 0.6739130616188049
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0013",
+            "local_cd_squared": 0.001381534500978887,
+            "local_fscore": 0.46437385771095335,
+            "precision": 0.6484375,
+            "recall": 0.3617021143436432
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0014",
+            "local_cd_squared": 0.0013570819282904267,
+            "local_fscore": 0.4779609061362637,
+            "precision": 0.6796875,
+            "recall": 0.3685714304447174
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0015",
+            "local_cd_squared": 0.0011812406592071056,
+            "local_fscore": 0.5632872090092628,
+            "precision": 0.7265625,
+            "recall": 0.45993030071258545
+          }
+        ]
+      },
+      "unseen_same_object4": {
+        "sample_count": 4,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.006060224492102861,
+        "mean_local_fscore": 0.1217527971744213,
+        "model_macro_cd_squared": 0.006060224492102861,
+        "model_macro_fscore": 0.1217527971744213,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_02": {
+            "samples": 4,
+            "local_cd_squared": 0.006060224492102861,
+            "local_fscore": 0.1217527971744213
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0016",
+            "local_cd_squared": 0.007030447944998741,
+            "local_fscore": 0.11242093014156677,
+            "precision": 0.1328125,
+            "recall": 0.09745762497186661
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0017",
+            "local_cd_squared": 0.011805369518697262,
+            "local_fscore": 0.08049844395160521,
+            "precision": 0.1328125,
+            "recall": 0.05775076150894165
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0018",
+            "local_cd_squared": 0.0029710782691836357,
+            "local_fscore": 0.10831403441627066,
+            "precision": 0.1953125,
+            "recall": 0.07493539899587631
+          },
+          {
+            "model_id": "bronze_02",
+            "path": "train/model_0002_sample_0019",
+            "local_cd_squared": 0.002434002235531807,
+            "local_fscore": 0.18577778018824256,
+            "precision": 0.171875,
+            "recall": 0.20212766528129578
+          }
+        ]
+      },
+      "cross_object20": {
+        "sample_count": 20,
+        "model_count": 1,
+        "mean_local_cd_squared": 0.010244310763664544,
+        "mean_local_fscore": 0.0834296653939475,
+        "model_macro_cd_squared": 0.010244310763664544,
+        "model_macro_fscore": 0.0834296653939475,
+        "fscore_threshold": 0.02,
+        "coordinate_space": "normalized input coordinates",
+        "models": {
+          "bronze_03": {
+            "samples": 20,
+            "local_cd_squared": 0.010244310763664544,
+            "local_fscore": 0.0834296653939475
+          }
+        },
+        "samples": [
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0000",
+            "local_cd_squared": 0.0032433178275823593,
+            "local_fscore": 0.19164090555636837,
+            "precision": 0.1796875,
+            "recall": 0.20529800653457642
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0001",
+            "local_cd_squared": 0.012076669372618198,
+            "local_fscore": 0.046801872343562374,
+            "precision": 0.078125,
+            "recall": 0.03340757265686989
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0002",
+            "local_cd_squared": 0.006952958181500435,
+            "local_fscore": 0.08557255135434731,
+            "precision": 0.140625,
+            "recall": 0.06149732694029808
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0003",
+            "local_cd_squared": 0.017999114468693733,
+            "local_fscore": 0.025245441814522183,
+            "precision": 0.0703125,
+            "recall": 0.015384615398943424
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0004",
+            "local_cd_squared": 0.015782911330461502,
+            "local_fscore": 0.05858854953695001,
+            "precision": 0.0859375,
+            "recall": 0.04444444552063942
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0005",
+            "local_cd_squared": 0.00887370202690363,
+            "local_fscore": 0.07758106352607629,
+            "precision": 0.1015625,
+            "recall": 0.06276150792837143
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0006",
+            "local_cd_squared": 0.01568582095205784,
+            "local_fscore": 0.0683491067549213,
+            "precision": 0.078125,
+            "recall": 0.0607476644217968
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0007",
+            "local_cd_squared": 0.003667075652629137,
+            "local_fscore": 0.2088353379920856,
+            "precision": 0.203125,
+            "recall": 0.21487602591514587
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0008",
+            "local_cd_squared": 0.00660724239423871,
+            "local_fscore": 0.10473815726980418,
+            "precision": 0.1640625,
+            "recall": 0.07692307978868484
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0009",
+            "local_cd_squared": 0.010594097897410393,
+            "local_fscore": 0.0851309721112835,
+            "precision": 0.1015625,
+            "recall": 0.0732758641242981
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0010",
+            "local_cd_squared": 0.011654224246740341,
+            "local_fscore": 0.06557377110072678,
+            "precision": 0.09375,
+            "recall": 0.05042016878724098
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0011",
+            "local_cd_squared": 0.006876347586512566,
+            "local_fscore": 0.06451612925062201,
+            "precision": 0.0859375,
+            "recall": 0.051643192768096924
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0012",
+            "local_cd_squared": 0.005424707196652889,
+            "local_fscore": 0.11409396070141785,
+            "precision": 0.1328125,
+            "recall": 0.10000000149011612
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0013",
+            "local_cd_squared": 0.01477011013776064,
+            "local_fscore": 0.03738670665119121,
+            "precision": 0.0703125,
+            "recall": 0.025462962687015533
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0014",
+            "local_cd_squared": 0.007754880003631115,
+            "local_fscore": 0.10989010844416,
+            "precision": 0.09375,
+            "recall": 0.13274335861206055
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0015",
+            "local_cd_squared": 0.012864867225289345,
+            "local_fscore": 0.029276949053826544,
+            "precision": 0.0703125,
+            "recall": 0.018487395718693733
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0016",
+            "local_cd_squared": 0.009648216888308525,
+            "local_fscore": 0.10569246804035279,
+            "precision": 0.1640625,
+            "recall": 0.07795698940753937
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0017",
+            "local_cd_squared": 0.020053260028362274,
+            "local_fscore": 0.020627417281080935,
+            "precision": 0.046875,
+            "recall": 0.013223140500485897
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0018",
+            "local_cd_squared": 0.004637113306671381,
+            "local_fscore": 0.12354804717717356,
+            "precision": 0.140625,
+            "recall": 0.11016949266195297
+          },
+          {
+            "model_id": "bronze_03",
+            "path": "val/model_0003_sample_0019",
+            "local_cd_squared": 0.009719578549265862,
+            "local_fscore": 0.04550379191847732,
+            "precision": 0.09375,
+            "recall": 0.030042918398976326
+          }
+        ]
+      }
+    }
+  },
+  "geometry": {
+    "CD": {
+      "seen_train16": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0000",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.0197906892773776
+          },
+          {
+            "path": "train/model_0002_sample_0001",
+            "close_fraction": 0.140625,
+            "mesh_distance_over_R": 0.015247710089339218
+          },
+          {
+            "path": "train/model_0002_sample_0002",
+            "close_fraction": 0.0703125,
+            "mesh_distance_over_R": 0.014552574290964224
+          },
+          {
+            "path": "train/model_0002_sample_0003",
+            "close_fraction": 0.0859375,
+            "mesh_distance_over_R": 0.022852070524728468
+          },
+          {
+            "path": "train/model_0002_sample_0004",
+            "close_fraction": 0.1328125,
+            "mesh_distance_over_R": 0.016422321646536328
+          },
+          {
+            "path": "train/model_0002_sample_0005",
+            "close_fraction": 0.25,
+            "mesh_distance_over_R": 0.01764689144128442
+          },
+          {
+            "path": "train/model_0002_sample_0006",
+            "close_fraction": 0.0546875,
+            "mesh_distance_over_R": 0.01814634686355834
+          },
+          {
+            "path": "train/model_0002_sample_0007",
+            "close_fraction": 0.109375,
+            "mesh_distance_over_R": 0.014931487358341116
+          },
+          {
+            "path": "train/model_0002_sample_0008",
+            "close_fraction": 0.125,
+            "mesh_distance_over_R": 0.01541866023270771
+          },
+          {
+            "path": "train/model_0002_sample_0009",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.013611030521748842
+          },
+          {
+            "path": "train/model_0002_sample_0010",
+            "close_fraction": 0.1796875,
+            "mesh_distance_over_R": 0.01683428813242451
+          },
+          {
+            "path": "train/model_0002_sample_0011",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.019048519282731182
+          },
+          {
+            "path": "train/model_0002_sample_0012",
+            "close_fraction": 0.109375,
+            "mesh_distance_over_R": 0.013951552682345268
+          },
+          {
+            "path": "train/model_0002_sample_0013",
+            "close_fraction": 0.09375,
+            "mesh_distance_over_R": 0.021033368716895564
+          },
+          {
+            "path": "train/model_0002_sample_0014",
+            "close_fraction": 0.109375,
+            "mesh_distance_over_R": 0.016774575653876328
+          },
+          {
+            "path": "train/model_0002_sample_0015",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.02475108351806838
+          }
+        ],
+        "means": {
+          "close_fraction": 0.10400390625,
+          "mesh_distance_over_R": 0.017563323139557968
+        }
+      },
+      "unseen_same_object4": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0016",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.1212831438635851
+          },
+          {
+            "path": "train/model_0002_sample_0017",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1147788155493587
+          },
+          {
+            "path": "train/model_0002_sample_0018",
+            "close_fraction": 0.1484375,
+            "mesh_distance_over_R": 0.0567363678579579
+          },
+          {
+            "path": "train/model_0002_sample_0019",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.050314779138948135
+          }
+        ],
+        "means": {
+          "close_fraction": 0.056640625,
+          "mesh_distance_over_R": 0.08577827660246246
+        }
+      },
+      "cross_object20": {
+        "samples": [
+          {
+            "path": "val/model_0003_sample_0000",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.12407214193620993
+          },
+          {
+            "path": "val/model_0003_sample_0001",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.15247759486461682
+          },
+          {
+            "path": "val/model_0003_sample_0002",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.10959728450820298
+          },
+          {
+            "path": "val/model_0003_sample_0003",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.11441289143564762
+          },
+          {
+            "path": "val/model_0003_sample_0004",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.1380816486378666
+          },
+          {
+            "path": "val/model_0003_sample_0005",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.15798625705168107
+          },
+          {
+            "path": "val/model_0003_sample_0006",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.19639504844936997
+          },
+          {
+            "path": "val/model_0003_sample_0007",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.13332062200299075
+          },
+          {
+            "path": "val/model_0003_sample_0008",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.11013437243549394
+          },
+          {
+            "path": "val/model_0003_sample_0009",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.15564430573648474
+          },
+          {
+            "path": "val/model_0003_sample_0010",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.17238376093869168
+          },
+          {
+            "path": "val/model_0003_sample_0011",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.12730205312516363
+          },
+          {
+            "path": "val/model_0003_sample_0012",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.15301003449336548
+          },
+          {
+            "path": "val/model_0003_sample_0013",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.15587228436436062
+          },
+          {
+            "path": "val/model_0003_sample_0014",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.22580142458306368
+          },
+          {
+            "path": "val/model_0003_sample_0015",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1470421597606859
+          },
+          {
+            "path": "val/model_0003_sample_0016",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.14338128097621333
+          },
+          {
+            "path": "val/model_0003_sample_0017",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1898449650473357
+          },
+          {
+            "path": "val/model_0003_sample_0018",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.13686933543380936
+          },
+          {
+            "path": "val/model_0003_sample_0019",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.10699942751964465
+          }
+        ],
+        "means": {
+          "close_fraction": 0.0140625,
+          "mesh_distance_over_R": 0.14753144466504492
+        }
+      }
+    },
+    "Exact matching": {
+      "seen_train16": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0000",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.02550571951312673
+          },
+          {
+            "path": "train/model_0002_sample_0001",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.03155341680770991
+          },
+          {
+            "path": "train/model_0002_sample_0002",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.031473075841963294
+          },
+          {
+            "path": "train/model_0002_sample_0003",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.021015416862054805
+          },
+          {
+            "path": "train/model_0002_sample_0004",
+            "close_fraction": 0.046875,
+            "mesh_distance_over_R": 0.017038035543072115
+          },
+          {
+            "path": "train/model_0002_sample_0005",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.019173274493339863
+          },
+          {
+            "path": "train/model_0002_sample_0006",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.02200093438865714
+          },
+          {
+            "path": "train/model_0002_sample_0007",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.028975688727274403
+          },
+          {
+            "path": "train/model_0002_sample_0008",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.01997011561211355
+          },
+          {
+            "path": "train/model_0002_sample_0009",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.014632126288884311
+          },
+          {
+            "path": "train/model_0002_sample_0010",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.018496708979843582
+          },
+          {
+            "path": "train/model_0002_sample_0011",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.022372947181126958
+          },
+          {
+            "path": "train/model_0002_sample_0012",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.017486490609885483
+          },
+          {
+            "path": "train/model_0002_sample_0013",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.021432147171533297
+          },
+          {
+            "path": "train/model_0002_sample_0014",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.019648969232125578
+          },
+          {
+            "path": "train/model_0002_sample_0015",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.02510837652977666
+          }
+        ],
+        "means": {
+          "close_fraction": 0.0078125,
+          "mesh_distance_over_R": 0.022242715236405478
+        }
+      },
+      "unseen_same_object4": {
+        "samples": [
+          {
+            "path": "train/model_0002_sample_0016",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1425629369193364
+          },
+          {
+            "path": "train/model_0002_sample_0017",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.15043781358115157
+          },
+          {
+            "path": "train/model_0002_sample_0018",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.05496392269749966
+          },
+          {
+            "path": "train/model_0002_sample_0019",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.06993998996085464
+          }
+        ],
+        "means": {
+          "close_fraction": 0.0,
+          "mesh_distance_over_R": 0.10447616578971058
+        }
+      },
+      "cross_object20": {
+        "samples": [
+          {
+            "path": "val/model_0003_sample_0000",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1417202655544541
+          },
+          {
+            "path": "val/model_0003_sample_0001",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.20179849976078365
+          },
+          {
+            "path": "val/model_0003_sample_0002",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1446781620025408
+          },
+          {
+            "path": "val/model_0003_sample_0003",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.2010856094958057
+          },
+          {
+            "path": "val/model_0003_sample_0004",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.24233679841735162
+          },
+          {
+            "path": "val/model_0003_sample_0005",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.21412696166365658
+          },
+          {
+            "path": "val/model_0003_sample_0006",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.25275053270643366
+          },
+          {
+            "path": "val/model_0003_sample_0007",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.18408420542775392
+          },
+          {
+            "path": "val/model_0003_sample_0008",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.13472150147910694
+          },
+          {
+            "path": "val/model_0003_sample_0009",
+            "close_fraction": 0.03125,
+            "mesh_distance_over_R": 0.23879449131100552
+          },
+          {
+            "path": "val/model_0003_sample_0010",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.2457554291336391
+          },
+          {
+            "path": "val/model_0003_sample_0011",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.177059518585768
+          },
+          {
+            "path": "val/model_0003_sample_0012",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.19493690154955476
+          },
+          {
+            "path": "val/model_0003_sample_0013",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.23342007155193698
+          },
+          {
+            "path": "val/model_0003_sample_0014",
+            "close_fraction": 0.015625,
+            "mesh_distance_over_R": 0.2668403853735168
+          },
+          {
+            "path": "val/model_0003_sample_0015",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.16655904967522897
+          },
+          {
+            "path": "val/model_0003_sample_0016",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.18239444982922257
+          },
+          {
+            "path": "val/model_0003_sample_0017",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.23103593485313112
+          },
+          {
+            "path": "val/model_0003_sample_0018",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.14938962010229478
+          },
+          {
+            "path": "val/model_0003_sample_0019",
+            "close_fraction": 0.0,
+            "mesh_distance_over_R": 0.1563884183869816
+          }
+        ],
+        "means": {
+          "close_fraction": 0.003125,
+          "mesh_distance_over_R": 0.19799384034300838
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "role": "seen_train16",
+      "path": "train/model_0002_sample_0000",
+      "figure": "bronze_basic_fit_assignment_seen_train16.png"
+    },
+    {
+      "role": "unseen_same_object4",
+      "path": "train/model_0002_sample_0016",
+      "figure": "bronze_basic_fit_assignment_unseen_same_object4.png"
+    },
+    {
+      "role": "cross_object20",
+      "path": "val/model_0003_sample_0000",
+      "figure": "bronze_basic_fit_assignment_cross_object20.png"
+    }
+  ],
+  "interpretation": "Single object/seed, fixed final epoch; no model selected using unseen holes. Exact Euclidean bijection in hole units, not a full PCN reproduction. Target replacement can repeat geometric coordinates despite unique indices."
+}

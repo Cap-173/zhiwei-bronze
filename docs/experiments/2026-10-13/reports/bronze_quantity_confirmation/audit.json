@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "checkpoints": 6,
+  "updates_per_checkpoint": 800,
+  "metric_sample_rows": 240,
+  "finite_geometry_sample_rows": 240,
+  "checked_report_images": 5,
+  "scope": "Numerical and artifact consistency; not a guarantee of surface correctness"
+}

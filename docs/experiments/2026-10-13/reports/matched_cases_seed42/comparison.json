@@ -1,0 +1,2849 @@
+{
+  "selection": "per validation object median (rank11/20) and highest wide-CD error; all methods use identical cases",
+  "dataset_fingerprint": "6a84e03555c803c58f6802520831db307af9a4cff4579796d0232ac8eccebf03",
+  "evaluation_seed": 43,
+  "provenance": {
+    "CD small": {
+      "checkpoint": "PROJECT_ROOT\\outputs\\runs\\bronze_cd128_seed42\\best.pt",
+      "sha256": "8779747b3fc0033b96b0bdb3750314bc30418400c6a4b2933212ee874fcb9963",
+      "epoch": 20,
+      "parameters": 157824,
+      "config": {
+        "input_points": 512,
+        "output_points": 128,
+        "seed": 42,
+        "lr": 0.001,
+        "batch_size": 8,
+        "target_points": 128,
+        "amp": false,
+        "output_mode": "tanh",
+        "boundary_weight": 0.0
+      }
+    },
+    "CD wide": {
+      "checkpoint": "PROJECT_ROOT\\outputs\\runs\\bronze_wide1140_seed42\\best.pt",
+      "sha256": "8475f7607c0cd7fea9404d673c06e5202773735a93add5bcde03c91f230dacec",
+      "epoch": 20,
+      "parameters": 614852,
+      "config": {
+        "input_points": 512,
+        "output_points": 128,
+        "seed": 42,
+        "lr": 0.001,
+        "batch_size": 8,
+        "target_points": 128,
+        "amp": false,
+        "output_mode": "tanh",
+        "boundary_weight": 0.0,
+        "decoder_width": 1140
+      }
+    },
+    "DCD": {
+      "checkpoint": "PROJECT_ROOT\\outputs\\runs\\bronze_dcd128_seed42\\best.pt",
+      "sha256": "3a09980946c75484866e77213ced57ed23330e3d185911135ea9359982ab84df",
+      "epoch": 20,
+      "parameters": 157824,
+      "config": {
+        "input_points": 512,
+        "output_points": 128,
+        "seed": 42,
+        "lr": 0.001,
+        "batch_size": 8,
+        "target_points": 128,
+        "amp": false,
+        "output_mode": "tanh",
+        "boundary_weight": 0.0,
+        "loss_mode": "dcd",
+        "dcd_alpha": 50.0,
+        "dcd_exponent": 0.5,
+        "dcd_coordinate_space": "normalized visible-input coordinates; no radius rescaling"
+      }
+    },
+    "Hierarchical": {
+      "checkpoint": "PROJECT_ROOT\\outputs\\runs\\bronze_hier32_aux01_seed42\\best.pt",
+      "sha256": "726a652e5e9c5538918990d032235459fcaa7cc0f3a481d5e6adf4a25efdc3e6",
+      "epoch": 20,
+      "parameters": 615084,
+      "config": {
+        "input_points": 512,
+        "output_points": 128,
+        "seed": 42,
+        "lr": 0.001,
+        "batch_size": 8,
+        "target_points": 128,
+        "amp": false,
+        "output_mode": "tanh",
+        "boundary_weight": 0.0,
+        "architecture": "hierarchical",
+        "coarse_points": 32,
+        "coarse_weight": 0.01,
+        "child_offset_bound": 0.25,
+        "coarse_target": "FPS of sampled training target"
+      }
+    },
+    "Repulsion": {
+      "checkpoint": "PROJECT_ROOT\\outputs\\runs\\bronze_repulsion01_seed42\\best.pt",
+      "sha256": "8fe96cca55f98c878ab95b30b2cf67835e3231f247549a7efaf7d1502747fbb2",
+      "epoch": 20,
+      "parameters": 614852,
+      "config": {
+        "input_points": 512,
+        "output_points": 128,
+        "seed": 42,
+        "lr": 0.001,
+        "batch_size": 8,
+        "target_points": 128,
+        "amp": false,
+        "output_mode": "tanh",
+        "boundary_weight": 0.0,
+        "decoder_width": 1140,
+        "repulsion_weight": 0.01,
+        "repulsion_bandwidth": 0.03,
+        "repulsion_neighbors": 4,
+        "repulsion_coordinates": "hole-local coordinates divided by radius",
+        "repulsion_method": "exact nonself kNN; PU-Net energy, no ball-query padding"
+      }
+    }
+  },
+  "cases": [
+    {
+      "name": "bronze_03_median",
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0005",
+        "input_points": 3857,
+        "target_points": 239
+      },
+      "validation_index": 5,
+      "figure": "bronze_matched_bronze_03_median.png",
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.004935211967676878,
+          "predicted_outer_fraction": 0.0390625,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.7954301834106445,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.23556770384311676,
+          "boundary_coverage_at_0_1_radius": 0.03773584961891174,
+          "close_fraction_0_02R": 0.4375,
+          "mesh_distance_over_radius": 0.08992508378015907
+        },
+        "CD wide": {
+          "local_cd_squared": 0.00517615769058466,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.7994710206985474,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.233455628156662,
+          "boundary_coverage_at_0_1_radius": 0.056603774428367615,
+          "close_fraction_0_02R": 0.4140625,
+          "mesh_distance_over_radius": 0.09173329193619198
+        },
+        "DCD": {
+          "local_cd_squared": 0.0062495144084095955,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.8408755660057068,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.26145803928375244,
+          "boundary_coverage_at_0_1_radius": 0.028301887214183807,
+          "close_fraction_0_02R": 0.03125,
+          "mesh_distance_over_radius": 0.13529604010402865
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.005090603604912758,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.867651641368866,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.24161455035209656,
+          "boundary_coverage_at_0_1_radius": 0.009433962404727936,
+          "close_fraction_0_02R": 0.4921875,
+          "mesh_distance_over_radius": 0.0968644672443368
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004990162327885628,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.8315441608428955,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.22587774693965912,
+          "boundary_coverage_at_0_1_radius": 0.1037735864520073,
+          "close_fraction_0_02R": 0.359375,
+          "mesh_distance_over_radius": 0.08911670384326305
+        }
+      }
+    },
+    {
+      "name": "bronze_03_highest",
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0015",
+        "input_points": 3501,
+        "target_points": 595
+      },
+      "validation_index": 15,
+      "figure": "bronze_matched_bronze_03_highest.png",
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.009113249368965626,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8273956179618835,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.23522241413593292,
+          "boundary_coverage_at_0_1_radius": 0.04845815151929855,
+          "close_fraction_0_02R": 0.28125,
+          "mesh_distance_over_radius": 0.07438890568577623
+        },
+        "CD wide": {
+          "local_cd_squared": 0.010858187451958656,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8475838303565979,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.25073006749153137,
+          "boundary_coverage_at_0_1_radius": 0.08370044082403183,
+          "close_fraction_0_02R": 0.2734375,
+          "mesh_distance_over_radius": 0.08104060431716811
+        },
+        "DCD": {
+          "local_cd_squared": 0.010377143509685993,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8748959302902222,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.22299756109714508,
+          "boundary_coverage_at_0_1_radius": 0.026431718841195107,
+          "close_fraction_0_02R": 0.0,
+          "mesh_distance_over_radius": 0.1327980964150397
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.008289134129881859,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8399267792701721,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.218392476439476,
+          "boundary_coverage_at_0_1_radius": 0.06167401000857353,
+          "close_fraction_0_02R": 0.4765625,
+          "mesh_distance_over_radius": 0.0785288149486654
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.010938501916825771,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8293657302856445,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.26431992650032043,
+          "boundary_coverage_at_0_1_radius": 0.06607929617166519,
+          "close_fraction_0_02R": 0.3046875,
+          "mesh_distance_over_radius": 0.07311424628740833
+        }
+      }
+    },
+    {
+      "name": "bronze_09_median",
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0003",
+        "input_points": 3857,
+        "target_points": 239
+      },
+      "validation_index": 23,
+      "figure": "bronze_matched_bronze_09_median.png",
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.006256536580622196,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.7956478595733643,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.2605890929698944,
+          "boundary_coverage_at_0_1_radius": 0.03529411926865578,
+          "close_fraction_0_02R": 0.375,
+          "mesh_distance_over_radius": 0.06810134244005756
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0065714335069060326,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.8124287724494934,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.2599627375602722,
+          "boundary_coverage_at_0_1_radius": 0.0235294122248888,
+          "close_fraction_0_02R": 0.3359375,
+          "mesh_distance_over_radius": 0.07178620159969311
+        },
+        "DCD": {
+          "local_cd_squared": 0.007806266658008099,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.8304476737976074,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.30144238471984863,
+          "boundary_coverage_at_0_1_radius": 0.0235294122248888,
+          "close_fraction_0_02R": 0.0,
+          "mesh_distance_over_radius": 0.09828545355879424
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.005968818906694651,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.8335071206092834,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.24982422590255737,
+          "boundary_coverage_at_0_1_radius": 0.03529411926865578,
+          "close_fraction_0_02R": 0.46875,
+          "mesh_distance_over_radius": 0.07281436417896509
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.006214069202542305,
+          "predicted_outer_fraction": 0.0703125,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.8106750845909119,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.24077057838439941,
+          "boundary_coverage_at_0_1_radius": 0.0470588244497776,
+          "close_fraction_0_02R": 0.25,
+          "mesh_distance_over_radius": 0.07427688913998683
+        }
+      }
+    },
+    {
+      "name": "bronze_09_highest",
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0010",
+        "input_points": 3824,
+        "target_points": 272
+      },
+      "validation_index": 30,
+      "figure": "bronze_matched_bronze_09_highest.png",
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.008813668042421341,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8092531561851501,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.24574372172355652,
+          "boundary_coverage_at_0_1_radius": 0.017699114978313446,
+          "close_fraction_0_02R": 0.2265625,
+          "mesh_distance_over_radius": 0.08655705256223327
+        },
+        "CD wide": {
+          "local_cd_squared": 0.00974652636796236,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8332545161247253,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.2343781590461731,
+          "boundary_coverage_at_0_1_radius": 0.08849557489156723,
+          "close_fraction_0_02R": 0.2109375,
+          "mesh_distance_over_radius": 0.08799577288537912
+        },
+        "DCD": {
+          "local_cd_squared": 0.01217571645975113,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8363574147224426,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.2368067502975464,
+          "boundary_coverage_at_0_1_radius": 0.044247787445783615,
+          "close_fraction_0_02R": 0.0,
+          "mesh_distance_over_radius": 0.16097025726187136
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.008182534016668797,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8302826285362244,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.1966395378112793,
+          "boundary_coverage_at_0_1_radius": 0.03539822995662689,
+          "close_fraction_0_02R": 0.40625,
+          "mesh_distance_over_radius": 0.09371063743969961
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.008997841738164425,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8169456720352173,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.22594010829925537,
+          "boundary_coverage_at_0_1_radius": 0.07079645991325378,
+          "close_fraction_0_02R": 0.2734375,
+          "mesh_distance_over_radius": 0.08981991314871399
+        }
+      }
+    }
+  ],
+  "all_validation_metrics": [
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0000",
+        "input_points": 3945,
+        "target_points": 151
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.003543066093698144,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.3907284736633301,
+          "target_boundary_points": 59,
+          "predicted_radius_p95": 0.7923141717910767,
+          "target_radius_p95": 0.9790786504745483,
+          "boundary_mean_distance_over_radius": 0.2542039155960083,
+          "boundary_coverage_at_0_1_radius": 0.06779661029577255
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0031041947659105062,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3907284736633301,
+          "target_boundary_points": 59,
+          "predicted_radius_p95": 0.8194096684455872,
+          "target_radius_p95": 0.9790786504745483,
+          "boundary_mean_distance_over_radius": 0.22803327441215515,
+          "boundary_coverage_at_0_1_radius": 0.06779661029577255
+        },
+        "DCD": {
+          "local_cd_squared": 0.005045573692768812,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3907284736633301,
+          "target_boundary_points": 59,
+          "predicted_radius_p95": 0.8292573094367981,
+          "target_radius_p95": 0.9790786504745483,
+          "boundary_mean_distance_over_radius": 0.28008833527565,
+          "boundary_coverage_at_0_1_radius": 0.016949152573943138
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.003587168175727129,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.3907284736633301,
+          "target_boundary_points": 59,
+          "predicted_radius_p95": 0.8863081336021423,
+          "target_radius_p95": 0.9790786504745483,
+          "boundary_mean_distance_over_radius": 0.24949277937412262,
+          "boundary_coverage_at_0_1_radius": 0.050847455859184265
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.0028333524242043495,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3907284736633301,
+          "target_boundary_points": 59,
+          "predicted_radius_p95": 0.8192771673202515,
+          "target_radius_p95": 0.9790786504745483,
+          "boundary_mean_distance_over_radius": 0.2294636219739914,
+          "boundary_coverage_at_0_1_radius": 0.016949152573943138
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0001",
+        "input_points": 3647,
+        "target_points": 449
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.005765967536717653,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.28953230381011963,
+          "target_boundary_points": 130,
+          "predicted_radius_p95": 0.812022864818573,
+          "target_radius_p95": 0.9591849446296692,
+          "boundary_mean_distance_over_radius": 0.22344085574150085,
+          "boundary_coverage_at_0_1_radius": 0.03076923079788685
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0049561867490410805,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.28953230381011963,
+          "target_boundary_points": 130,
+          "predicted_radius_p95": 0.8286733627319336,
+          "target_radius_p95": 0.9591849446296692,
+          "boundary_mean_distance_over_radius": 0.19112969934940338,
+          "boundary_coverage_at_0_1_radius": 0.07692307978868484
+        },
+        "DCD": {
+          "local_cd_squared": 0.005577936302870512,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.28953230381011963,
+          "target_boundary_points": 130,
+          "predicted_radius_p95": 0.8396264314651489,
+          "target_radius_p95": 0.9591849446296692,
+          "boundary_mean_distance_over_radius": 0.19509877264499664,
+          "boundary_coverage_at_0_1_radius": 0.07692307978868484
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.00579382199794054,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.28953230381011963,
+          "target_boundary_points": 130,
+          "predicted_radius_p95": 0.8605511784553528,
+          "target_radius_p95": 0.9591849446296692,
+          "boundary_mean_distance_over_radius": 0.19069568812847137,
+          "boundary_coverage_at_0_1_radius": 0.10000000149011612
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004931507632136345,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.28953230381011963,
+          "target_boundary_points": 130,
+          "predicted_radius_p95": 0.8219900131225586,
+          "target_radius_p95": 0.9591849446296692,
+          "boundary_mean_distance_over_radius": 0.18805453181266785,
+          "boundary_coverage_at_0_1_radius": 0.11538461595773697
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0002",
+        "input_points": 3722,
+        "target_points": 374
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.004823409486562014,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3288770020008087,
+          "target_boundary_points": 123,
+          "predicted_radius_p95": 0.8145095705986023,
+          "target_radius_p95": 0.9716244339942932,
+          "boundary_mean_distance_over_radius": 0.23492571711540222,
+          "boundary_coverage_at_0_1_radius": 0.08130080997943878
+        },
+        "CD wide": {
+          "local_cd_squared": 0.005628546234220266,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3288770020008087,
+          "target_boundary_points": 123,
+          "predicted_radius_p95": 0.8126693367958069,
+          "target_radius_p95": 0.9716244339942932,
+          "boundary_mean_distance_over_radius": 0.25716525316238403,
+          "boundary_coverage_at_0_1_radius": 0.04065040498971939
+        },
+        "DCD": {
+          "local_cd_squared": 0.005154475104063749,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3288770020008087,
+          "target_boundary_points": 123,
+          "predicted_radius_p95": 0.8260085582733154,
+          "target_radius_p95": 0.9716244339942932,
+          "boundary_mean_distance_over_radius": 0.250004380941391,
+          "boundary_coverage_at_0_1_radius": 0.03252032399177551
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.004178856033831835,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3288770020008087,
+          "target_boundary_points": 123,
+          "predicted_radius_p95": 0.8417478799819946,
+          "target_radius_p95": 0.9716244339942932,
+          "boundary_mean_distance_over_radius": 0.21839654445648193,
+          "boundary_coverage_at_0_1_radius": 0.03252032399177551
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004514326341450214,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3288770020008087,
+          "target_boundary_points": 123,
+          "predicted_radius_p95": 0.8234307765960693,
+          "target_radius_p95": 0.9716244339942932,
+          "boundary_mean_distance_over_radius": 0.22406992316246033,
+          "boundary_coverage_at_0_1_radius": 0.03252032399177551
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0003",
+        "input_points": 3381,
+        "target_points": 715
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.008397389203310013,
+          "predicted_outer_fraction": 0.0703125,
+          "target_outer_fraction": 0.3524475395679474,
+          "target_boundary_points": 252,
+          "predicted_radius_p95": 0.8054826259613037,
+          "target_radius_p95": 0.9735366106033325,
+          "boundary_mean_distance_over_radius": 0.21144098043441772,
+          "boundary_coverage_at_0_1_radius": 0.0873015895485878
+        },
+        "CD wide": {
+          "local_cd_squared": 0.00863802433013916,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3524475395679474,
+          "target_boundary_points": 252,
+          "predicted_radius_p95": 0.8381795883178711,
+          "target_radius_p95": 0.9735366106033325,
+          "boundary_mean_distance_over_radius": 0.2087060958147049,
+          "boundary_coverage_at_0_1_radius": 0.0595238097012043
+        },
+        "DCD": {
+          "local_cd_squared": 0.008208278566598892,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.3524475395679474,
+          "target_boundary_points": 252,
+          "predicted_radius_p95": 0.8414809703826904,
+          "target_radius_p95": 0.9735366106033325,
+          "boundary_mean_distance_over_radius": 0.1937795728445053,
+          "boundary_coverage_at_0_1_radius": 0.1269841343164444
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.007462282665073872,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3524475395679474,
+          "target_boundary_points": 252,
+          "predicted_radius_p95": 0.8406071066856384,
+          "target_radius_p95": 0.9735366106033325,
+          "boundary_mean_distance_over_radius": 0.18768244981765747,
+          "boundary_coverage_at_0_1_radius": 0.1111111119389534
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.00798308290541172,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3524475395679474,
+          "target_boundary_points": 252,
+          "predicted_radius_p95": 0.8309736847877502,
+          "target_radius_p95": 0.9735366106033325,
+          "boundary_mean_distance_over_radius": 0.19803063571453094,
+          "boundary_coverage_at_0_1_radius": 0.0992063507437706
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0004",
+        "input_points": 3736,
+        "target_points": 360
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.0054944418370723724,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.375,
+          "target_boundary_points": 135,
+          "predicted_radius_p95": 0.8190194368362427,
+          "target_radius_p95": 0.9740853905677795,
+          "boundary_mean_distance_over_radius": 0.21671034395694733,
+          "boundary_coverage_at_0_1_radius": 0.07407407462596893
+        },
+        "CD wide": {
+          "local_cd_squared": 0.00459701893851161,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.375,
+          "target_boundary_points": 135,
+          "predicted_radius_p95": 0.8302896618843079,
+          "target_radius_p95": 0.9740853905677795,
+          "boundary_mean_distance_over_radius": 0.2098107486963272,
+          "boundary_coverage_at_0_1_radius": 0.10370370000600815
+        },
+        "DCD": {
+          "local_cd_squared": 0.005348287522792816,
+          "predicted_outer_fraction": 0.15625,
+          "target_outer_fraction": 0.375,
+          "target_boundary_points": 135,
+          "predicted_radius_p95": 0.8556504249572754,
+          "target_radius_p95": 0.9740853905677795,
+          "boundary_mean_distance_over_radius": 0.1889447271823883,
+          "boundary_coverage_at_0_1_radius": 0.10370370000600815
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.004999070428311825,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.375,
+          "target_boundary_points": 135,
+          "predicted_radius_p95": 0.8518438339233398,
+          "target_radius_p95": 0.9740853905677795,
+          "boundary_mean_distance_over_radius": 0.21036219596862793,
+          "boundary_coverage_at_0_1_radius": 0.03703703731298447
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004241699352860451,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.375,
+          "target_boundary_points": 135,
+          "predicted_radius_p95": 0.836348295211792,
+          "target_radius_p95": 0.9740853905677795,
+          "boundary_mean_distance_over_radius": 0.19765181839466095,
+          "boundary_coverage_at_0_1_radius": 0.051851850003004074
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0005",
+        "input_points": 3857,
+        "target_points": 239
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.004935211967676878,
+          "predicted_outer_fraction": 0.0390625,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.7954301834106445,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.23556770384311676,
+          "boundary_coverage_at_0_1_radius": 0.03773584961891174
+        },
+        "CD wide": {
+          "local_cd_squared": 0.00517615769058466,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.7994710206985474,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.233455628156662,
+          "boundary_coverage_at_0_1_radius": 0.056603774428367615
+        },
+        "DCD": {
+          "local_cd_squared": 0.0062495144084095955,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.8408755660057068,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.26145803928375244,
+          "boundary_coverage_at_0_1_radius": 0.028301887214183807
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.005090603604912758,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.867651641368866,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.24161455035209656,
+          "boundary_coverage_at_0_1_radius": 0.009433962404727936
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004990162327885628,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.4435146450996399,
+          "target_boundary_points": 106,
+          "predicted_radius_p95": 0.8315441608428955,
+          "target_radius_p95": 0.9851588010787964,
+          "boundary_mean_distance_over_radius": 0.22587774693965912,
+          "boundary_coverage_at_0_1_radius": 0.1037735864520073
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0006",
+        "input_points": 3882,
+        "target_points": 214
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.00456677470356226,
+          "predicted_outer_fraction": 0.0703125,
+          "target_outer_fraction": 0.3177570104598999,
+          "target_boundary_points": 68,
+          "predicted_radius_p95": 0.8457288146018982,
+          "target_radius_p95": 0.9731767177581787,
+          "boundary_mean_distance_over_radius": 0.22881777584552765,
+          "boundary_coverage_at_0_1_radius": 0.04411764815449715
+        },
+        "CD wide": {
+          "local_cd_squared": 0.004286292940378189,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.3177570104598999,
+          "target_boundary_points": 68,
+          "predicted_radius_p95": 0.8012582063674927,
+          "target_radius_p95": 0.9731767177581787,
+          "boundary_mean_distance_over_radius": 0.23650555312633514,
+          "boundary_coverage_at_0_1_radius": 0.029411764815449715
+        },
+        "DCD": {
+          "local_cd_squared": 0.004113493021577597,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3177570104598999,
+          "target_boundary_points": 68,
+          "predicted_radius_p95": 0.8293441534042358,
+          "target_radius_p95": 0.9731767177581787,
+          "boundary_mean_distance_over_radius": 0.2009458690881729,
+          "boundary_coverage_at_0_1_radius": 0.10294117778539658
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.00382136064581573,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3177570104598999,
+          "target_boundary_points": 68,
+          "predicted_radius_p95": 0.8242842555046082,
+          "target_radius_p95": 0.9731767177581787,
+          "boundary_mean_distance_over_radius": 0.20108270645141602,
+          "boundary_coverage_at_0_1_radius": 0.05882352963089943
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.00428619422018528,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3177570104598999,
+          "target_boundary_points": 68,
+          "predicted_radius_p95": 0.8454301357269287,
+          "target_radius_p95": 0.9731767177581787,
+          "boundary_mean_distance_over_radius": 0.2178100347518921,
+          "boundary_coverage_at_0_1_radius": 0.04411764815449715
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0007",
+        "input_points": 3975,
+        "target_points": 121
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.002175944857299328,
+          "predicted_outer_fraction": 0.0390625,
+          "target_outer_fraction": 0.3636363744735718,
+          "target_boundary_points": 44,
+          "predicted_radius_p95": 0.7973511815071106,
+          "target_radius_p95": 0.969841480255127,
+          "boundary_mean_distance_over_radius": 0.20007583498954773,
+          "boundary_coverage_at_0_1_radius": 0.13636364042758942
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0018514723051339388,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3636363744735718,
+          "target_boundary_points": 44,
+          "predicted_radius_p95": 0.8207648992538452,
+          "target_radius_p95": 0.969841480255127,
+          "boundary_mean_distance_over_radius": 0.19034041464328766,
+          "boundary_coverage_at_0_1_radius": 0.06818182021379471
+        },
+        "DCD": {
+          "local_cd_squared": 0.0030674946028739214,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.3636363744735718,
+          "target_boundary_points": 44,
+          "predicted_radius_p95": 0.7741422057151794,
+          "target_radius_p95": 0.969841480255127,
+          "boundary_mean_distance_over_radius": 0.23753564059734344,
+          "boundary_coverage_at_0_1_radius": 0.06818182021379471
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.0020371279679238796,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3636363744735718,
+          "target_boundary_points": 44,
+          "predicted_radius_p95": 0.8564683198928833,
+          "target_radius_p95": 0.969841480255127,
+          "boundary_mean_distance_over_radius": 0.20850464701652527,
+          "boundary_coverage_at_0_1_radius": 0.04545454680919647
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.0018520352896302938,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3636363744735718,
+          "target_boundary_points": 44,
+          "predicted_radius_p95": 0.8087674379348755,
+          "target_radius_p95": 0.969841480255127,
+          "boundary_mean_distance_over_radius": 0.1852637231349945,
+          "boundary_coverage_at_0_1_radius": 0.11363636702299118
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0008",
+        "input_points": 3654,
+        "target_points": 442
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.007204286754131317,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.418552041053772,
+          "target_boundary_points": 185,
+          "predicted_radius_p95": 0.8158835768699646,
+          "target_radius_p95": 0.9807806015014648,
+          "boundary_mean_distance_over_radius": 0.25443270802497864,
+          "boundary_coverage_at_0_1_radius": 0.04324324429035187
+        },
+        "CD wide": {
+          "local_cd_squared": 0.005764725152403116,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.418552041053772,
+          "target_boundary_points": 185,
+          "predicted_radius_p95": 0.807806670665741,
+          "target_radius_p95": 0.9807806015014648,
+          "boundary_mean_distance_over_radius": 0.23534654080867767,
+          "boundary_coverage_at_0_1_radius": 0.05945945903658867
+        },
+        "DCD": {
+          "local_cd_squared": 0.008469905704259872,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.418552041053772,
+          "target_boundary_points": 185,
+          "predicted_radius_p95": 0.8311831951141357,
+          "target_radius_p95": 0.9807806015014648,
+          "boundary_mean_distance_over_radius": 0.26877227425575256,
+          "boundary_coverage_at_0_1_radius": 0.04324324429035187
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.005450802855193615,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.418552041053772,
+          "target_boundary_points": 185,
+          "predicted_radius_p95": 0.8539170026779175,
+          "target_radius_p95": 0.9807806015014648,
+          "boundary_mean_distance_over_radius": 0.2108800709247589,
+          "boundary_coverage_at_0_1_radius": 0.0648648664355278
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.0058176880702376366,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.418552041053772,
+          "target_boundary_points": 185,
+          "predicted_radius_p95": 0.7987977266311646,
+          "target_radius_p95": 0.9807806015014648,
+          "boundary_mean_distance_over_radius": 0.23852618038654327,
+          "boundary_coverage_at_0_1_radius": 0.037837836891412735
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0009",
+        "input_points": 3864,
+        "target_points": 232
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.0038964073173701763,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.36206895112991333,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8167860507965088,
+          "target_radius_p95": 0.9745315909385681,
+          "boundary_mean_distance_over_radius": 0.23500049114227295,
+          "boundary_coverage_at_0_1_radius": 0.0357142873108387
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0030350969173014164,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.36206895112991333,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8200724720954895,
+          "target_radius_p95": 0.9745315909385681,
+          "boundary_mean_distance_over_radius": 0.20199459791183472,
+          "boundary_coverage_at_0_1_radius": 0.0714285746216774
+        },
+        "DCD": {
+          "local_cd_squared": 0.0041700731962919235,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.36206895112991333,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8397766947746277,
+          "target_radius_p95": 0.9745315909385681,
+          "boundary_mean_distance_over_radius": 0.20949600636959076,
+          "boundary_coverage_at_0_1_radius": 0.0833333358168602
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.003499625949189067,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.36206895112991333,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8230240941047668,
+          "target_radius_p95": 0.9745315909385681,
+          "boundary_mean_distance_over_radius": 0.21503636240959167,
+          "boundary_coverage_at_0_1_radius": 0.0714285746216774
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.003020262811332941,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.36206895112991333,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8448954820632935,
+          "target_radius_p95": 0.9745315909385681,
+          "boundary_mean_distance_over_radius": 0.19845323264598846,
+          "boundary_coverage_at_0_1_radius": 0.095238097012043
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0010",
+        "input_points": 3858,
+        "target_points": 238
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.006350658368319273,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.3529411852359772,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8103597164154053,
+          "target_radius_p95": 0.9702329635620117,
+          "boundary_mean_distance_over_radius": 0.22968168556690216,
+          "boundary_coverage_at_0_1_radius": 0.0595238097012043
+        },
+        "CD wide": {
+          "local_cd_squared": 0.005491348914802074,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.3529411852359772,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8077108860015869,
+          "target_radius_p95": 0.9702329635620117,
+          "boundary_mean_distance_over_radius": 0.2217148095369339,
+          "boundary_coverage_at_0_1_radius": 0.0833333358168602
+        },
+        "DCD": {
+          "local_cd_squared": 0.006247447803616524,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3529411852359772,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8529862761497498,
+          "target_radius_p95": 0.9702329635620117,
+          "boundary_mean_distance_over_radius": 0.19471929967403412,
+          "boundary_coverage_at_0_1_radius": 0.130952388048172
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.005190127529203892,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.3529411852359772,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8053185939788818,
+          "target_radius_p95": 0.9702329635620117,
+          "boundary_mean_distance_over_radius": 0.21533100306987762,
+          "boundary_coverage_at_0_1_radius": 0.0357142873108387
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.005258216522634029,
+          "predicted_outer_fraction": 0.0390625,
+          "target_outer_fraction": 0.3529411852359772,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.7802349925041199,
+          "target_radius_p95": 0.9702329635620117,
+          "boundary_mean_distance_over_radius": 0.22054564952850342,
+          "boundary_coverage_at_0_1_radius": 0.0476190485060215
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0011",
+        "input_points": 3883,
+        "target_points": 213
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.0040760706178843975,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.4178403615951538,
+          "target_boundary_points": 89,
+          "predicted_radius_p95": 0.8426408171653748,
+          "target_radius_p95": 0.9778649210929871,
+          "boundary_mean_distance_over_radius": 0.20251266658306122,
+          "boundary_coverage_at_0_1_radius": 0.07865168899297714
+        },
+        "CD wide": {
+          "local_cd_squared": 0.003723098197951913,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.4178403615951538,
+          "target_boundary_points": 89,
+          "predicted_radius_p95": 0.8291118741035461,
+          "target_radius_p95": 0.9778649210929871,
+          "boundary_mean_distance_over_radius": 0.20097586512565613,
+          "boundary_coverage_at_0_1_radius": 0.04494382068514824
+        },
+        "DCD": {
+          "local_cd_squared": 0.004062558524310589,
+          "predicted_outer_fraction": 0.1640625,
+          "target_outer_fraction": 0.4178403615951538,
+          "target_boundary_points": 89,
+          "predicted_radius_p95": 0.887739360332489,
+          "target_radius_p95": 0.9778649210929871,
+          "boundary_mean_distance_over_radius": 0.17387953400611877,
+          "boundary_coverage_at_0_1_radius": 0.11235955357551575
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.003509372938424349,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.4178403615951538,
+          "target_boundary_points": 89,
+          "predicted_radius_p95": 0.8185084462165833,
+          "target_radius_p95": 0.9778649210929871,
+          "boundary_mean_distance_over_radius": 0.17903222143650055,
+          "boundary_coverage_at_0_1_radius": 0.13483145833015442
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004005715250968933,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.4178403615951538,
+          "target_boundary_points": 89,
+          "predicted_radius_p95": 0.825404942035675,
+          "target_radius_p95": 0.9778649210929871,
+          "boundary_mean_distance_over_radius": 0.1990375816822052,
+          "boundary_coverage_at_0_1_radius": 0.08988764137029648
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0012",
+        "input_points": 3936,
+        "target_points": 160
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.003155013080686331,
+          "predicted_outer_fraction": 0.0703125,
+          "target_outer_fraction": 0.48124998807907104,
+          "target_boundary_points": 77,
+          "predicted_radius_p95": 0.8068408370018005,
+          "target_radius_p95": 0.9834602475166321,
+          "boundary_mean_distance_over_radius": 0.2388003170490265,
+          "boundary_coverage_at_0_1_radius": 0.03896103799343109
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0030809256713837385,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.48124998807907104,
+          "target_boundary_points": 77,
+          "predicted_radius_p95": 0.8150510787963867,
+          "target_radius_p95": 0.9834602475166321,
+          "boundary_mean_distance_over_radius": 0.22828567028045654,
+          "boundary_coverage_at_0_1_radius": 0.06493506580591202
+        },
+        "DCD": {
+          "local_cd_squared": 0.0038163454737514257,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.48124998807907104,
+          "target_boundary_points": 77,
+          "predicted_radius_p95": 0.8400840163230896,
+          "target_radius_p95": 0.9834602475166321,
+          "boundary_mean_distance_over_radius": 0.24458631873130798,
+          "boundary_coverage_at_0_1_radius": 0.03896103799343109
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.002623708453029394,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.48124998807907104,
+          "target_boundary_points": 77,
+          "predicted_radius_p95": 0.8719866275787354,
+          "target_radius_p95": 0.9834602475166321,
+          "boundary_mean_distance_over_radius": 0.21220333874225616,
+          "boundary_coverage_at_0_1_radius": 0.07792207598686218
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.002832279307767749,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.48124998807907104,
+          "target_boundary_points": 77,
+          "predicted_radius_p95": 0.8356784582138062,
+          "target_radius_p95": 0.9834602475166321,
+          "boundary_mean_distance_over_radius": 0.21529226005077362,
+          "boundary_coverage_at_0_1_radius": 0.07792207598686218
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0013",
+        "input_points": 3664,
+        "target_points": 432
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.007153649814426899,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.4027777910232544,
+          "target_boundary_points": 174,
+          "predicted_radius_p95": 0.8364792466163635,
+          "target_radius_p95": 0.9800962209701538,
+          "boundary_mean_distance_over_radius": 0.2507803440093994,
+          "boundary_coverage_at_0_1_radius": 0.01149425283074379
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0059608216397464275,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.4027777910232544,
+          "target_boundary_points": 174,
+          "predicted_radius_p95": 0.8572720885276794,
+          "target_radius_p95": 0.9800962209701538,
+          "boundary_mean_distance_over_radius": 0.21358400583267212,
+          "boundary_coverage_at_0_1_radius": 0.06321839243173599
+        },
+        "DCD": {
+          "local_cd_squared": 0.008361016400158405,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.4027777910232544,
+          "target_boundary_points": 174,
+          "predicted_radius_p95": 0.8664284348487854,
+          "target_radius_p95": 0.9800962209701538,
+          "boundary_mean_distance_over_radius": 0.2352672964334488,
+          "boundary_coverage_at_0_1_radius": 0.0517241396009922
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.006084197200834751,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.4027777910232544,
+          "target_boundary_points": 174,
+          "predicted_radius_p95": 0.8814491033554077,
+          "target_radius_p95": 0.9800962209701538,
+          "boundary_mean_distance_over_radius": 0.2117784172296524,
+          "boundary_coverage_at_0_1_radius": 0.028735632076859474
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.006230323575437069,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.4027777910232544,
+          "target_boundary_points": 174,
+          "predicted_radius_p95": 0.8346696496009827,
+          "target_radius_p95": 0.9800962209701538,
+          "boundary_mean_distance_over_radius": 0.21725744009017944,
+          "boundary_coverage_at_0_1_radius": 0.0517241396009922
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0014",
+        "input_points": 3983,
+        "target_points": 113
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.002779007889330387,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.39823007583618164,
+          "target_boundary_points": 45,
+          "predicted_radius_p95": 0.8261253833770752,
+          "target_radius_p95": 0.942774772644043,
+          "boundary_mean_distance_over_radius": 0.258167564868927,
+          "boundary_coverage_at_0_1_radius": 0.02222222276031971
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0025064684450626373,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.39823007583618164,
+          "target_boundary_points": 45,
+          "predicted_radius_p95": 0.8332365155220032,
+          "target_radius_p95": 0.942774772644043,
+          "boundary_mean_distance_over_radius": 0.2319442331790924,
+          "boundary_coverage_at_0_1_radius": 0.13333334028720856
+        },
+        "DCD": {
+          "local_cd_squared": 0.0031277795787900686,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.39823007583618164,
+          "target_boundary_points": 45,
+          "predicted_radius_p95": 0.8203368186950684,
+          "target_radius_p95": 0.942774772644043,
+          "boundary_mean_distance_over_radius": 0.2761405408382416,
+          "boundary_coverage_at_0_1_radius": 0.02222222276031971
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.002250290010124445,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.39823007583618164,
+          "target_boundary_points": 45,
+          "predicted_radius_p95": 0.8883059024810791,
+          "target_radius_p95": 0.942774772644043,
+          "boundary_mean_distance_over_radius": 0.20542073249816895,
+          "boundary_coverage_at_0_1_radius": 0.15555556118488312
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.0028000324964523315,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.39823007583618164,
+          "target_boundary_points": 45,
+          "predicted_radius_p95": 0.8301377892494202,
+          "target_radius_p95": 0.942774772644043,
+          "boundary_mean_distance_over_radius": 0.23050393164157867,
+          "boundary_coverage_at_0_1_radius": 0.08888889104127884
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0015",
+        "input_points": 3501,
+        "target_points": 595
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.009113249368965626,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8273956179618835,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.23522241413593292,
+          "boundary_coverage_at_0_1_radius": 0.04845815151929855
+        },
+        "CD wide": {
+          "local_cd_squared": 0.010858187451958656,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8475838303565979,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.25073006749153137,
+          "boundary_coverage_at_0_1_radius": 0.08370044082403183
+        },
+        "DCD": {
+          "local_cd_squared": 0.010377143509685993,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8748959302902222,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.22299756109714508,
+          "boundary_coverage_at_0_1_radius": 0.026431718841195107
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.008289134129881859,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8399267792701721,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.218392476439476,
+          "boundary_coverage_at_0_1_radius": 0.06167401000857353
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.010938501916825771,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.3815126121044159,
+          "target_boundary_points": 227,
+          "predicted_radius_p95": 0.8293657302856445,
+          "target_radius_p95": 0.9737396836280823,
+          "boundary_mean_distance_over_radius": 0.26431992650032043,
+          "boundary_coverage_at_0_1_radius": 0.06607929617166519
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0016",
+        "input_points": 3724,
+        "target_points": 372
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.007499382831156254,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.4462365508079529,
+          "target_boundary_points": 166,
+          "predicted_radius_p95": 0.8086652755737305,
+          "target_radius_p95": 0.9865362048149109,
+          "boundary_mean_distance_over_radius": 0.24052032828330994,
+          "boundary_coverage_at_0_1_radius": 0.0301204826682806
+        },
+        "CD wide": {
+          "local_cd_squared": 0.006273144856095314,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.4462365508079529,
+          "target_boundary_points": 166,
+          "predicted_radius_p95": 0.8002722859382629,
+          "target_radius_p95": 0.9865362048149109,
+          "boundary_mean_distance_over_radius": 0.24055449664592743,
+          "boundary_coverage_at_0_1_radius": 0.05421686917543411
+        },
+        "DCD": {
+          "local_cd_squared": 0.00852109957486391,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.4462365508079529,
+          "target_boundary_points": 166,
+          "predicted_radius_p95": 0.8313390016555786,
+          "target_radius_p95": 0.9865362048149109,
+          "boundary_mean_distance_over_radius": 0.24107880890369415,
+          "boundary_coverage_at_0_1_radius": 0.0662650614976883
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.0066624595783650875,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.4462365508079529,
+          "target_boundary_points": 166,
+          "predicted_radius_p95": 0.8587567210197449,
+          "target_radius_p95": 0.9865362048149109,
+          "boundary_mean_distance_over_radius": 0.20421554148197174,
+          "boundary_coverage_at_0_1_radius": 0.07831325381994247
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.006695580668747425,
+          "predicted_outer_fraction": 0.0234375,
+          "target_outer_fraction": 0.4462365508079529,
+          "target_boundary_points": 166,
+          "predicted_radius_p95": 0.7914488911628723,
+          "target_radius_p95": 0.9865362048149109,
+          "boundary_mean_distance_over_radius": 0.24678365886211395,
+          "boundary_coverage_at_0_1_radius": 0.04216867312788963
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0017",
+        "input_points": 3491,
+        "target_points": 605
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.007039363961666822,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.36859503388404846,
+          "target_boundary_points": 223,
+          "predicted_radius_p95": 0.8438768982887268,
+          "target_radius_p95": 0.9769948720932007,
+          "boundary_mean_distance_over_radius": 0.20256395637989044,
+          "boundary_coverage_at_0_1_radius": 0.07174888253211975
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0075311982072889805,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.36859503388404846,
+          "target_boundary_points": 223,
+          "predicted_radius_p95": 0.8501423001289368,
+          "target_radius_p95": 0.9769948720932007,
+          "boundary_mean_distance_over_radius": 0.20552678406238556,
+          "boundary_coverage_at_0_1_radius": 0.08071748912334442
+        },
+        "DCD": {
+          "local_cd_squared": 0.007412570528686047,
+          "predicted_outer_fraction": 0.15625,
+          "target_outer_fraction": 0.36859503388404846,
+          "target_boundary_points": 223,
+          "predicted_radius_p95": 0.8718262910842896,
+          "target_radius_p95": 0.9769948720932007,
+          "boundary_mean_distance_over_radius": 0.18236646056175232,
+          "boundary_coverage_at_0_1_radius": 0.12107623368501663
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.007105420343577862,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.36859503388404846,
+          "target_boundary_points": 223,
+          "predicted_radius_p95": 0.8603143692016602,
+          "target_radius_p95": 0.9769948720932007,
+          "boundary_mean_distance_over_radius": 0.20218898355960846,
+          "boundary_coverage_at_0_1_radius": 0.08520179241895676
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.006527269259095192,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.36859503388404846,
+          "target_boundary_points": 223,
+          "predicted_radius_p95": 0.8395456075668335,
+          "target_radius_p95": 0.9769948720932007,
+          "boundary_mean_distance_over_radius": 0.19619368016719818,
+          "boundary_coverage_at_0_1_radius": 0.10762331634759903
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0018",
+        "input_points": 3860,
+        "target_points": 236
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.003028418868780136,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.35593220591545105,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8415491580963135,
+          "target_radius_p95": 0.979104220867157,
+          "boundary_mean_distance_over_radius": 0.2247903198003769,
+          "boundary_coverage_at_0_1_radius": 0.0833333358168602
+        },
+        "CD wide": {
+          "local_cd_squared": 0.002802724950015545,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.35593220591545105,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8433265089988708,
+          "target_radius_p95": 0.979104220867157,
+          "boundary_mean_distance_over_radius": 0.19876296818256378,
+          "boundary_coverage_at_0_1_radius": 0.095238097012043
+        },
+        "DCD": {
+          "local_cd_squared": 0.003022498916834593,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.35593220591545105,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8597577214241028,
+          "target_radius_p95": 0.979104220867157,
+          "boundary_mean_distance_over_radius": 0.2076275497674942,
+          "boundary_coverage_at_0_1_radius": 0.0714285746216774
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.0027457524556666613,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.35593220591545105,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8624889850616455,
+          "target_radius_p95": 0.979104220867157,
+          "boundary_mean_distance_over_radius": 0.20903323590755463,
+          "boundary_coverage_at_0_1_radius": 0.0357142873108387
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.002841544570401311,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.35593220591545105,
+          "target_boundary_points": 84,
+          "predicted_radius_p95": 0.8114849328994751,
+          "target_radius_p95": 0.979104220867157,
+          "boundary_mean_distance_over_radius": 0.2171311229467392,
+          "boundary_coverage_at_0_1_radius": 0.0714285746216774
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_03",
+        "split": "val",
+        "path": "val/model_0003_sample_0019",
+        "input_points": 3630,
+        "target_points": 466
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.007464983966201544,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.41416308283805847,
+          "target_boundary_points": 193,
+          "predicted_radius_p95": 0.8045855760574341,
+          "target_radius_p95": 0.9787494540214539,
+          "boundary_mean_distance_over_radius": 0.2682751715183258,
+          "boundary_coverage_at_0_1_radius": 0.005181347019970417
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0071517047472298145,
+          "predicted_outer_fraction": 0.0703125,
+          "target_outer_fraction": 0.41416308283805847,
+          "target_boundary_points": 193,
+          "predicted_radius_p95": 0.8116278648376465,
+          "target_radius_p95": 0.9787494540214539,
+          "boundary_mean_distance_over_radius": 0.25178012251853943,
+          "boundary_coverage_at_0_1_radius": 0.015544041059911251
+        },
+        "DCD": {
+          "local_cd_squared": 0.008164436556398869,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.41416308283805847,
+          "target_boundary_points": 193,
+          "predicted_radius_p95": 0.8315582871437073,
+          "target_radius_p95": 0.9787494540214539,
+          "boundary_mean_distance_over_radius": 0.26967087388038635,
+          "boundary_coverage_at_0_1_radius": 0.031088082119822502
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.006508636754006147,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.41416308283805847,
+          "target_boundary_points": 193,
+          "predicted_radius_p95": 0.8572062253952026,
+          "target_radius_p95": 0.9787494540214539,
+          "boundary_mean_distance_over_radius": 0.2457645833492279,
+          "boundary_coverage_at_0_1_radius": 0.05699481815099716
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.0068826209753751755,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.41416308283805847,
+          "target_boundary_points": 193,
+          "predicted_radius_p95": 0.8142430782318115,
+          "target_radius_p95": 0.9787494540214539,
+          "boundary_mean_distance_over_radius": 0.2485199272632599,
+          "boundary_coverage_at_0_1_radius": 0.02590673603117466
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0000",
+        "input_points": 4009,
+        "target_points": 87
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.003446551039814949,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.29885056614875793,
+          "target_boundary_points": 26,
+          "predicted_radius_p95": 0.8338385820388794,
+          "target_radius_p95": 0.9560888409614563,
+          "boundary_mean_distance_over_radius": 0.2571752369403839,
+          "boundary_coverage_at_0_1_radius": 0.0
+        },
+        "CD wide": {
+          "local_cd_squared": 0.00364513136446476,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.29885056614875793,
+          "target_boundary_points": 26,
+          "predicted_radius_p95": 0.8657944798469543,
+          "target_radius_p95": 0.9560888409614563,
+          "boundary_mean_distance_over_radius": 0.25111183524131775,
+          "boundary_coverage_at_0_1_radius": 0.11538461595773697
+        },
+        "DCD": {
+          "local_cd_squared": 0.004428016021847725,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.29885056614875793,
+          "target_boundary_points": 26,
+          "predicted_radius_p95": 0.8497023582458496,
+          "target_radius_p95": 0.9560888409614563,
+          "boundary_mean_distance_over_radius": 0.22213104367256165,
+          "boundary_coverage_at_0_1_radius": 0.0
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.003172097960487008,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.29885056614875793,
+          "target_boundary_points": 26,
+          "predicted_radius_p95": 0.8587406277656555,
+          "target_radius_p95": 0.9560888409614563,
+          "boundary_mean_distance_over_radius": 0.22393390536308289,
+          "boundary_coverage_at_0_1_radius": 0.11538461595773697
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004262108821421862,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.29885056614875793,
+          "target_boundary_points": 26,
+          "predicted_radius_p95": 0.8551375269889832,
+          "target_radius_p95": 0.9560888409614563,
+          "boundary_mean_distance_over_radius": 0.2786123752593994,
+          "boundary_coverage_at_0_1_radius": 0.07692307978868484
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0001",
+        "input_points": 3944,
+        "target_points": 152
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.006654628086835146,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3684210479259491,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8457650542259216,
+          "target_radius_p95": 0.9833866357803345,
+          "boundary_mean_distance_over_radius": 0.23428748548030853,
+          "boundary_coverage_at_0_1_radius": 0.01785714365541935
+        },
+        "CD wide": {
+          "local_cd_squared": 0.005330306477844715,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3684210479259491,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8351904153823853,
+          "target_radius_p95": 0.9833866357803345,
+          "boundary_mean_distance_over_radius": 0.2007323056459427,
+          "boundary_coverage_at_0_1_radius": 0.0535714291036129
+        },
+        "DCD": {
+          "local_cd_squared": 0.008245976641774178,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3684210479259491,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8458806276321411,
+          "target_radius_p95": 0.9833866357803345,
+          "boundary_mean_distance_over_radius": 0.2558974623680115,
+          "boundary_coverage_at_0_1_radius": 0.0
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.005512542091310024,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.3684210479259491,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8843080401420593,
+          "target_radius_p95": 0.9833866357803345,
+          "boundary_mean_distance_over_radius": 0.20857912302017212,
+          "boundary_coverage_at_0_1_radius": 0.125
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.005296601448208094,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3684210479259491,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8581894636154175,
+          "target_radius_p95": 0.9833866357803345,
+          "boundary_mean_distance_over_radius": 0.20874938368797302,
+          "boundary_coverage_at_0_1_radius": 0.0535714291036129
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0002",
+        "input_points": 3923,
+        "target_points": 173
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.0053044152446091175,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.34682080149650574,
+          "target_boundary_points": 60,
+          "predicted_radius_p95": 0.811238169670105,
+          "target_radius_p95": 0.9685534834861755,
+          "boundary_mean_distance_over_radius": 0.26707297563552856,
+          "boundary_coverage_at_0_1_radius": 0.01666666753590107
+        },
+        "CD wide": {
+          "local_cd_squared": 0.004635804332792759,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.34682080149650574,
+          "target_boundary_points": 60,
+          "predicted_radius_p95": 0.8002195358276367,
+          "target_radius_p95": 0.9685534834861755,
+          "boundary_mean_distance_over_radius": 0.24126657843589783,
+          "boundary_coverage_at_0_1_radius": 0.05000000074505806
+        },
+        "DCD": {
+          "local_cd_squared": 0.006861263420432806,
+          "predicted_outer_fraction": 0.1484375,
+          "target_outer_fraction": 0.34682080149650574,
+          "target_boundary_points": 60,
+          "predicted_radius_p95": 0.8547150492668152,
+          "target_radius_p95": 0.9685534834861755,
+          "boundary_mean_distance_over_radius": 0.2725723385810852,
+          "boundary_coverage_at_0_1_radius": 0.01666666753590107
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.0037221875973045826,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.34682080149650574,
+          "target_boundary_points": 60,
+          "predicted_radius_p95": 0.819911003112793,
+          "target_radius_p95": 0.9685534834861755,
+          "boundary_mean_distance_over_radius": 0.205497145652771,
+          "boundary_coverage_at_0_1_radius": 0.0833333358168602
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004134630784392357,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.34682080149650574,
+          "target_boundary_points": 60,
+          "predicted_radius_p95": 0.8352670073509216,
+          "target_radius_p95": 0.9685534834861755,
+          "boundary_mean_distance_over_radius": 0.20926713943481445,
+          "boundary_coverage_at_0_1_radius": 0.11666666716337204
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0003",
+        "input_points": 3857,
+        "target_points": 239
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.006256536580622196,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.7956478595733643,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.2605890929698944,
+          "boundary_coverage_at_0_1_radius": 0.03529411926865578
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0065714335069060326,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.8124287724494934,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.2599627375602722,
+          "boundary_coverage_at_0_1_radius": 0.0235294122248888
+        },
+        "DCD": {
+          "local_cd_squared": 0.007806266658008099,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.8304476737976074,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.30144238471984863,
+          "boundary_coverage_at_0_1_radius": 0.0235294122248888
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.005968818906694651,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.8335071206092834,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.24982422590255737,
+          "boundary_coverage_at_0_1_radius": 0.03529411926865578
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.006214069202542305,
+          "predicted_outer_fraction": 0.0703125,
+          "target_outer_fraction": 0.35564854741096497,
+          "target_boundary_points": 85,
+          "predicted_radius_p95": 0.8106750845909119,
+          "target_radius_p95": 0.964331328868866,
+          "boundary_mean_distance_over_radius": 0.24077057838439941,
+          "boundary_coverage_at_0_1_radius": 0.0470588244497776
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0004",
+        "input_points": 3926,
+        "target_points": 170
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.007285851053893566,
+          "predicted_outer_fraction": 0.0703125,
+          "target_outer_fraction": 0.3294117748737335,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8370943069458008,
+          "target_radius_p95": 0.9680007100105286,
+          "boundary_mean_distance_over_radius": 0.20252029597759247,
+          "boundary_coverage_at_0_1_radius": 0.0535714291036129
+        },
+        "CD wide": {
+          "local_cd_squared": 0.007532967254519463,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3294117748737335,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.838270366191864,
+          "target_radius_p95": 0.9680007100105286,
+          "boundary_mean_distance_over_radius": 0.1966647356748581,
+          "boundary_coverage_at_0_1_radius": 0.125
+        },
+        "DCD": {
+          "local_cd_squared": 0.01068362407386303,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3294117748737335,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8448657989501953,
+          "target_radius_p95": 0.9680007100105286,
+          "boundary_mean_distance_over_radius": 0.2393302172422409,
+          "boundary_coverage_at_0_1_radius": 0.0
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.006805790588259697,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3294117748737335,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8951801657676697,
+          "target_radius_p95": 0.9680007100105286,
+          "boundary_mean_distance_over_radius": 0.191629096865654,
+          "boundary_coverage_at_0_1_radius": 0.1785714328289032
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.007640305906534195,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3294117748737335,
+          "target_boundary_points": 56,
+          "predicted_radius_p95": 0.8733426928520203,
+          "target_radius_p95": 0.9680007100105286,
+          "boundary_mean_distance_over_radius": 0.193887859582901,
+          "boundary_coverage_at_0_1_radius": 0.0892857164144516
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0005",
+        "input_points": 3845,
+        "target_points": 251
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.006926846690475941,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.3187251091003418,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8179543018341064,
+          "target_radius_p95": 0.9572210311889648,
+          "boundary_mean_distance_over_radius": 0.22322748601436615,
+          "boundary_coverage_at_0_1_radius": 0.02500000037252903
+        },
+        "CD wide": {
+          "local_cd_squared": 0.007284955121576786,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3187251091003418,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8427332043647766,
+          "target_radius_p95": 0.9572210311889648,
+          "boundary_mean_distance_over_radius": 0.19867844879627228,
+          "boundary_coverage_at_0_1_radius": 0.0625
+        },
+        "DCD": {
+          "local_cd_squared": 0.008408663794398308,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.3187251091003418,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8236086368560791,
+          "target_radius_p95": 0.9572210311889648,
+          "boundary_mean_distance_over_radius": 0.2325112670660019,
+          "boundary_coverage_at_0_1_radius": 0.05000000074505806
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.00785230752080679,
+          "predicted_outer_fraction": 0.0703125,
+          "target_outer_fraction": 0.3187251091003418,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8354166150093079,
+          "target_radius_p95": 0.9572210311889648,
+          "boundary_mean_distance_over_radius": 0.21995477378368378,
+          "boundary_coverage_at_0_1_radius": 0.05000000074505806
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.007471406366676092,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.3187251091003418,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8376635909080505,
+          "target_radius_p95": 0.9572210311889648,
+          "boundary_mean_distance_over_radius": 0.21175725758075714,
+          "boundary_coverage_at_0_1_radius": 0.03750000149011612
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0006",
+        "input_points": 3932,
+        "target_points": 164
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.0047033135779201984,
+          "predicted_outer_fraction": 0.0390625,
+          "target_outer_fraction": 0.31707316637039185,
+          "target_boundary_points": 52,
+          "predicted_radius_p95": 0.793607771396637,
+          "target_radius_p95": 0.9747485518455505,
+          "boundary_mean_distance_over_radius": 0.2750362753868103,
+          "boundary_coverage_at_0_1_radius": 0.057692307978868484
+        },
+        "CD wide": {
+          "local_cd_squared": 0.0038319246377795935,
+          "predicted_outer_fraction": 0.0234375,
+          "target_outer_fraction": 0.31707316637039185,
+          "target_boundary_points": 52,
+          "predicted_radius_p95": 0.7890052199363708,
+          "target_radius_p95": 0.9747485518455505,
+          "boundary_mean_distance_over_radius": 0.2554776966571808,
+          "boundary_coverage_at_0_1_radius": 0.03846153989434242
+        },
+        "DCD": {
+          "local_cd_squared": 0.0054406095296144485,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.31707316637039185,
+          "target_boundary_points": 52,
+          "predicted_radius_p95": 0.841112494468689,
+          "target_radius_p95": 0.9747485518455505,
+          "boundary_mean_distance_over_radius": 0.2574586570262909,
+          "boundary_coverage_at_0_1_radius": 0.09615384787321091
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.004221626091748476,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.31707316637039185,
+          "target_boundary_points": 52,
+          "predicted_radius_p95": 0.8189348578453064,
+          "target_radius_p95": 0.9747485518455505,
+          "boundary_mean_distance_over_radius": 0.25042304396629333,
+          "boundary_coverage_at_0_1_radius": 0.07692307978868484
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004003583453595638,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.31707316637039185,
+          "target_boundary_points": 52,
+          "predicted_radius_p95": 0.8314765095710754,
+          "target_radius_p95": 0.9747485518455505,
+          "boundary_mean_distance_over_radius": 0.24606890976428986,
+          "boundary_coverage_at_0_1_radius": 0.03846153989434242
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0007",
+        "input_points": 3907,
+        "target_points": 189
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.007593410089612007,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.4021163880825043,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.8029165863990784,
+          "target_radius_p95": 0.9684669375419617,
+          "boundary_mean_distance_over_radius": 0.24644134938716888,
+          "boundary_coverage_at_0_1_radius": 0.07894736528396606
+        },
+        "CD wide": {
+          "local_cd_squared": 0.006684710271656513,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.4021163880825043,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.8267849683761597,
+          "target_radius_p95": 0.9684669375419617,
+          "boundary_mean_distance_over_radius": 0.20877684652805328,
+          "boundary_coverage_at_0_1_radius": 0.06578947603702545
+        },
+        "DCD": {
+          "local_cd_squared": 0.010462542995810509,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.4021163880825043,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.8281021118164062,
+          "target_radius_p95": 0.9684669375419617,
+          "boundary_mean_distance_over_radius": 0.24334508180618286,
+          "boundary_coverage_at_0_1_radius": 0.06578947603702545
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.006493017077445984,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.4021163880825043,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.8177803754806519,
+          "target_radius_p95": 0.9684669375419617,
+          "boundary_mean_distance_over_radius": 0.19781593978405,
+          "boundary_coverage_at_0_1_radius": 0.05263157933950424
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.006943509913980961,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.4021163880825043,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.8276378512382507,
+          "target_radius_p95": 0.9684669375419617,
+          "boundary_mean_distance_over_radius": 0.21608765423297882,
+          "boundary_coverage_at_0_1_radius": 0.09210526198148727
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0008",
+        "input_points": 3996,
+        "target_points": 100
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.00494906771928072,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.3499999940395355,
+          "target_boundary_points": 35,
+          "predicted_radius_p95": 0.8155974745750427,
+          "target_radius_p95": 0.9756636619567871,
+          "boundary_mean_distance_over_radius": 0.25192970037460327,
+          "boundary_coverage_at_0_1_radius": 0.0
+        },
+        "CD wide": {
+          "local_cd_squared": 0.005037108901888132,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3499999940395355,
+          "target_boundary_points": 35,
+          "predicted_radius_p95": 0.8187422752380371,
+          "target_radius_p95": 0.9756636619567871,
+          "boundary_mean_distance_over_radius": 0.25800201296806335,
+          "boundary_coverage_at_0_1_radius": 0.08571428805589676
+        },
+        "DCD": {
+          "local_cd_squared": 0.005076420493423939,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.3499999940395355,
+          "target_boundary_points": 35,
+          "predicted_radius_p95": 0.8545179963111877,
+          "target_radius_p95": 0.9756636619567871,
+          "boundary_mean_distance_over_radius": 0.21176327764987946,
+          "boundary_coverage_at_0_1_radius": 0.1428571492433548
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.0044443849474191666,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3499999940395355,
+          "target_boundary_points": 35,
+          "predicted_radius_p95": 0.8869970440864563,
+          "target_radius_p95": 0.9756636619567871,
+          "boundary_mean_distance_over_radius": 0.23575177788734436,
+          "boundary_coverage_at_0_1_radius": 0.1428571492433548
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004626460373401642,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3499999940395355,
+          "target_boundary_points": 35,
+          "predicted_radius_p95": 0.812592625617981,
+          "target_radius_p95": 0.9756636619567871,
+          "boundary_mean_distance_over_radius": 0.24135977029800415,
+          "boundary_coverage_at_0_1_radius": 0.05714285746216774
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0009",
+        "input_points": 3724,
+        "target_points": 372
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.009179324842989445,
+          "predicted_outer_fraction": 0.0703125,
+          "target_outer_fraction": 0.4139784872531891,
+          "target_boundary_points": 154,
+          "predicted_radius_p95": 0.8151283264160156,
+          "target_radius_p95": 0.9739745259284973,
+          "boundary_mean_distance_over_radius": 0.2338080257177353,
+          "boundary_coverage_at_0_1_radius": 0.03896103799343109
+        },
+        "CD wide": {
+          "local_cd_squared": 0.008899612352252007,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.4139784872531891,
+          "target_boundary_points": 154,
+          "predicted_radius_p95": 0.8318337798118591,
+          "target_radius_p95": 0.9739745259284973,
+          "boundary_mean_distance_over_radius": 0.21485605835914612,
+          "boundary_coverage_at_0_1_radius": 0.05844155699014664
+        },
+        "DCD": {
+          "local_cd_squared": 0.01149597205221653,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.4139784872531891,
+          "target_boundary_points": 154,
+          "predicted_radius_p95": 0.8348545432090759,
+          "target_radius_p95": 0.9739745259284973,
+          "boundary_mean_distance_over_radius": 0.23313136398792267,
+          "boundary_coverage_at_0_1_radius": 0.03896103799343109
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.010078005492687225,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.4139784872531891,
+          "target_boundary_points": 154,
+          "predicted_radius_p95": 0.822190523147583,
+          "target_radius_p95": 0.9739745259284973,
+          "boundary_mean_distance_over_radius": 0.2260790467262268,
+          "boundary_coverage_at_0_1_radius": 0.051948051899671555
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.009676134213805199,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.4139784872531891,
+          "target_boundary_points": 154,
+          "predicted_radius_p95": 0.8265857100486755,
+          "target_radius_p95": 0.9739745259284973,
+          "boundary_mean_distance_over_radius": 0.23177172243595123,
+          "boundary_coverage_at_0_1_radius": 0.0714285746216774
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0010",
+        "input_points": 3824,
+        "target_points": 272
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.008813668042421341,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8092531561851501,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.24574372172355652,
+          "boundary_coverage_at_0_1_radius": 0.017699114978313446
+        },
+        "CD wide": {
+          "local_cd_squared": 0.00974652636796236,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8332545161247253,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.2343781590461731,
+          "boundary_coverage_at_0_1_radius": 0.08849557489156723
+        },
+        "DCD": {
+          "local_cd_squared": 0.01217571645975113,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8363574147224426,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.2368067502975464,
+          "boundary_coverage_at_0_1_radius": 0.044247787445783615
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.008182534016668797,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8302826285362244,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.1966395378112793,
+          "boundary_coverage_at_0_1_radius": 0.03539822995662689
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.008997841738164425,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.4154411852359772,
+          "target_boundary_points": 113,
+          "predicted_radius_p95": 0.8169456720352173,
+          "target_radius_p95": 0.9716382622718811,
+          "boundary_mean_distance_over_radius": 0.22594010829925537,
+          "boundary_coverage_at_0_1_radius": 0.07079645991325378
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0011",
+        "input_points": 3958,
+        "target_points": 138
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.00481054000556469,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.3913043439388275,
+          "target_boundary_points": 54,
+          "predicted_radius_p95": 0.8377285003662109,
+          "target_radius_p95": 0.9822359085083008,
+          "boundary_mean_distance_over_radius": 0.2700004577636719,
+          "boundary_coverage_at_0_1_radius": 0.018518518656492233
+        },
+        "CD wide": {
+          "local_cd_squared": 0.004535403102636337,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3913043439388275,
+          "target_boundary_points": 54,
+          "predicted_radius_p95": 0.8587634563446045,
+          "target_radius_p95": 0.9822359085083008,
+          "boundary_mean_distance_over_radius": 0.24921822547912598,
+          "boundary_coverage_at_0_1_radius": 0.07407407462596893
+        },
+        "DCD": {
+          "local_cd_squared": 0.005021144635975361,
+          "predicted_outer_fraction": 0.171875,
+          "target_outer_fraction": 0.3913043439388275,
+          "target_boundary_points": 54,
+          "predicted_radius_p95": 0.8661183714866638,
+          "target_radius_p95": 0.9822359085083008,
+          "boundary_mean_distance_over_radius": 0.24343383312225342,
+          "boundary_coverage_at_0_1_radius": 0.1111111119389534
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.004531793296337128,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3913043439388275,
+          "target_boundary_points": 54,
+          "predicted_radius_p95": 0.8718776106834412,
+          "target_radius_p95": 0.9822359085083008,
+          "boundary_mean_distance_over_radius": 0.2671426236629486,
+          "boundary_coverage_at_0_1_radius": 0.03703703731298447
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004624014720320702,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.3913043439388275,
+          "target_boundary_points": 54,
+          "predicted_radius_p95": 0.8391658663749695,
+          "target_radius_p95": 0.9822359085083008,
+          "boundary_mean_distance_over_radius": 0.25858286023139954,
+          "boundary_coverage_at_0_1_radius": 0.14814814925193787
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0012",
+        "input_points": 3773,
+        "target_points": 323
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.007256309036165476,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.3900928795337677,
+          "target_boundary_points": 126,
+          "predicted_radius_p95": 0.8473504185676575,
+          "target_radius_p95": 0.9747716188430786,
+          "boundary_mean_distance_over_radius": 0.22466178238391876,
+          "boundary_coverage_at_0_1_radius": 0.02380952425301075
+        },
+        "CD wide": {
+          "local_cd_squared": 0.00759519636631012,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3900928795337677,
+          "target_boundary_points": 126,
+          "predicted_radius_p95": 0.8507585525512695,
+          "target_radius_p95": 0.9747716188430786,
+          "boundary_mean_distance_over_radius": 0.20775684714317322,
+          "boundary_coverage_at_0_1_radius": 0.15079365670681
+        },
+        "DCD": {
+          "local_cd_squared": 0.007910888642072678,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.3900928795337677,
+          "target_boundary_points": 126,
+          "predicted_radius_p95": 0.8618099093437195,
+          "target_radius_p95": 0.9747716188430786,
+          "boundary_mean_distance_over_radius": 0.21086640655994415,
+          "boundary_coverage_at_0_1_radius": 0.0793650820851326
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.0071500139310956,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3900928795337677,
+          "target_boundary_points": 126,
+          "predicted_radius_p95": 0.8457260727882385,
+          "target_radius_p95": 0.9747716188430786,
+          "boundary_mean_distance_over_radius": 0.20330168306827545,
+          "boundary_coverage_at_0_1_radius": 0.1111111119389534
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.007078459486365318,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.3900928795337677,
+          "target_boundary_points": 126,
+          "predicted_radius_p95": 0.8555497527122498,
+          "target_radius_p95": 0.9747716188430786,
+          "boundary_mean_distance_over_radius": 0.213380366563797,
+          "boundary_coverage_at_0_1_radius": 0.02380952425301075
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0013",
+        "input_points": 3719,
+        "target_points": 377
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.007850069552659988,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8144407272338867,
+          "target_radius_p95": 0.9697325825691223,
+          "boundary_mean_distance_over_radius": 0.2056838423013687,
+          "boundary_coverage_at_0_1_radius": 0.06034482643008232
+        },
+        "CD wide": {
+          "local_cd_squared": 0.007432837970554829,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8319330215454102,
+          "target_radius_p95": 0.9697325825691223,
+          "boundary_mean_distance_over_radius": 0.20719267427921295,
+          "boundary_coverage_at_0_1_radius": 0.07758620381355286
+        },
+        "DCD": {
+          "local_cd_squared": 0.00748235359787941,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8571178913116455,
+          "target_radius_p95": 0.9697325825691223,
+          "boundary_mean_distance_over_radius": 0.17634044587612152,
+          "boundary_coverage_at_0_1_radius": 0.1551724076271057
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.006863754242658615,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.843917727470398,
+          "target_radius_p95": 0.9697325825691223,
+          "boundary_mean_distance_over_radius": 0.1966698169708252,
+          "boundary_coverage_at_0_1_radius": 0.1034482792019844
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.006995940115302801,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8426315784454346,
+          "target_radius_p95": 0.9697325825691223,
+          "boundary_mean_distance_over_radius": 0.19618722796440125,
+          "boundary_coverage_at_0_1_radius": 0.1034482792019844
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0014",
+        "input_points": 3919,
+        "target_points": 177
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.005804884247481823,
+          "predicted_outer_fraction": 0.0390625,
+          "target_outer_fraction": 0.42937853932380676,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.7972933650016785,
+          "target_radius_p95": 0.9719735383987427,
+          "boundary_mean_distance_over_radius": 0.2508544623851776,
+          "boundary_coverage_at_0_1_radius": 0.03947368264198303
+        },
+        "CD wide": {
+          "local_cd_squared": 0.004715634044259787,
+          "predicted_outer_fraction": 0.0390625,
+          "target_outer_fraction": 0.42937853932380676,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.7854321599006653,
+          "target_radius_p95": 0.9719735383987427,
+          "boundary_mean_distance_over_radius": 0.2331431657075882,
+          "boundary_coverage_at_0_1_radius": 0.03947368264198303
+        },
+        "DCD": {
+          "local_cd_squared": 0.006340745836496353,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.42937853932380676,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.8870999217033386,
+          "target_radius_p95": 0.9719735383987427,
+          "boundary_mean_distance_over_radius": 0.2277791053056717,
+          "boundary_coverage_at_0_1_radius": 0.1315789520740509
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.004478040151298046,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.42937853932380676,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.8182500004768372,
+          "target_radius_p95": 0.9719735383987427,
+          "boundary_mean_distance_over_radius": 0.19931276142597198,
+          "boundary_coverage_at_0_1_radius": 0.1184210553765297
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.005495595745742321,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.42937853932380676,
+          "target_boundary_points": 76,
+          "predicted_radius_p95": 0.8442897796630859,
+          "target_radius_p95": 0.9719735383987427,
+          "boundary_mean_distance_over_radius": 0.2340012937784195,
+          "boundary_coverage_at_0_1_radius": 0.0
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0015",
+        "input_points": 3923,
+        "target_points": 173
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.004760805983096361,
+          "predicted_outer_fraction": 0.09375,
+          "target_outer_fraction": 0.52601158618927,
+          "target_boundary_points": 91,
+          "predicted_radius_p95": 0.8246660232543945,
+          "target_radius_p95": 0.9754564762115479,
+          "boundary_mean_distance_over_radius": 0.24741999804973602,
+          "boundary_coverage_at_0_1_radius": 0.04395604506134987
+        },
+        "CD wide": {
+          "local_cd_squared": 0.003331932006403804,
+          "predicted_outer_fraction": 0.0546875,
+          "target_outer_fraction": 0.52601158618927,
+          "target_boundary_points": 91,
+          "predicted_radius_p95": 0.8065046072006226,
+          "target_radius_p95": 0.9754564762115479,
+          "boundary_mean_distance_over_radius": 0.19137802720069885,
+          "boundary_coverage_at_0_1_radius": 0.10989011079072952
+        },
+        "DCD": {
+          "local_cd_squared": 0.004433349706232548,
+          "predicted_outer_fraction": 0.1953125,
+          "target_outer_fraction": 0.52601158618927,
+          "target_boundary_points": 91,
+          "predicted_radius_p95": 0.8934965133666992,
+          "target_radius_p95": 0.9754564762115479,
+          "boundary_mean_distance_over_radius": 0.20939567685127258,
+          "boundary_coverage_at_0_1_radius": 0.09890110045671463
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.0030870528426021338,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.52601158618927,
+          "target_boundary_points": 91,
+          "predicted_radius_p95": 0.8447021245956421,
+          "target_radius_p95": 0.9754564762115479,
+          "boundary_mean_distance_over_radius": 0.18895240128040314,
+          "boundary_coverage_at_0_1_radius": 0.10989011079072952
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.0037572807632386684,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.52601158618927,
+          "target_boundary_points": 91,
+          "predicted_radius_p95": 0.8585720658302307,
+          "target_radius_p95": 0.9754564762115479,
+          "boundary_mean_distance_over_radius": 0.20043472945690155,
+          "boundary_coverage_at_0_1_radius": 0.05494505539536476
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0016",
+        "input_points": 3757,
+        "target_points": 339
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.010346723720431328,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.3421829044818878,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8142809271812439,
+          "target_radius_p95": 0.9744400382041931,
+          "boundary_mean_distance_over_radius": 0.24209998548030853,
+          "boundary_coverage_at_0_1_radius": 0.06896551698446274
+        },
+        "CD wide": {
+          "local_cd_squared": 0.007550456561148167,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.3421829044818878,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.7881572246551514,
+          "target_radius_p95": 0.9744400382041931,
+          "boundary_mean_distance_over_radius": 0.21633784472942352,
+          "boundary_coverage_at_0_1_radius": 0.09482758492231369
+        },
+        "DCD": {
+          "local_cd_squared": 0.011407755315303802,
+          "predicted_outer_fraction": 0.15625,
+          "target_outer_fraction": 0.3421829044818878,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8616152405738831,
+          "target_radius_p95": 0.9744400382041931,
+          "boundary_mean_distance_over_radius": 0.22243867814540863,
+          "boundary_coverage_at_0_1_radius": 0.06896551698446274
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.008614527061581612,
+          "predicted_outer_fraction": 0.109375,
+          "target_outer_fraction": 0.3421829044818878,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8317099213600159,
+          "target_radius_p95": 0.9744400382041931,
+          "boundary_mean_distance_over_radius": 0.21018394827842712,
+          "boundary_coverage_at_0_1_radius": 0.0517241396009922
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.007979094982147217,
+          "predicted_outer_fraction": 0.125,
+          "target_outer_fraction": 0.3421829044818878,
+          "target_boundary_points": 116,
+          "predicted_radius_p95": 0.8323538303375244,
+          "target_radius_p95": 0.9744400382041931,
+          "boundary_mean_distance_over_radius": 0.20254400372505188,
+          "boundary_coverage_at_0_1_radius": 0.06896551698446274
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0017",
+        "input_points": 3833,
+        "target_points": 263
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.008376998826861382,
+          "predicted_outer_fraction": 0.078125,
+          "target_outer_fraction": 0.4182509481906891,
+          "target_boundary_points": 110,
+          "predicted_radius_p95": 0.808663547039032,
+          "target_radius_p95": 0.9785174131393433,
+          "boundary_mean_distance_over_radius": 0.2722293436527252,
+          "boundary_coverage_at_0_1_radius": 0.0
+        },
+        "CD wide": {
+          "local_cd_squared": 0.007282966282218695,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.4182509481906891,
+          "target_boundary_points": 110,
+          "predicted_radius_p95": 0.7962247729301453,
+          "target_radius_p95": 0.9785174131393433,
+          "boundary_mean_distance_over_radius": 0.24827194213867188,
+          "boundary_coverage_at_0_1_radius": 0.04545454680919647
+        },
+        "DCD": {
+          "local_cd_squared": 0.009882155805826187,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.4182509481906891,
+          "target_boundary_points": 110,
+          "predicted_radius_p95": 0.8464373350143433,
+          "target_radius_p95": 0.9785174131393433,
+          "boundary_mean_distance_over_radius": 0.28003495931625366,
+          "boundary_coverage_at_0_1_radius": 0.027272727340459824
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.0062867263332009315,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.4182509481906891,
+          "target_boundary_points": 110,
+          "predicted_radius_p95": 0.817128598690033,
+          "target_radius_p95": 0.9785174131393433,
+          "boundary_mean_distance_over_radius": 0.24690565466880798,
+          "boundary_coverage_at_0_1_radius": 0.05454545468091965
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.006762497592717409,
+          "predicted_outer_fraction": 0.0625,
+          "target_outer_fraction": 0.4182509481906891,
+          "target_boundary_points": 110,
+          "predicted_radius_p95": 0.805941104888916,
+          "target_radius_p95": 0.9785174131393433,
+          "boundary_mean_distance_over_radius": 0.2399931401014328,
+          "boundary_coverage_at_0_1_radius": 0.072727270424366
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0018",
+        "input_points": 3837,
+        "target_points": 259
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.007480036001652479,
+          "predicted_outer_fraction": 0.046875,
+          "target_outer_fraction": 0.4517374634742737,
+          "target_boundary_points": 117,
+          "predicted_radius_p95": 0.7922280430793762,
+          "target_radius_p95": 0.9813030958175659,
+          "boundary_mean_distance_over_radius": 0.23977096378803253,
+          "boundary_coverage_at_0_1_radius": 0.03418803587555885
+        },
+        "CD wide": {
+          "local_cd_squared": 0.005148925352841616,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.4517374634742737,
+          "target_boundary_points": 117,
+          "predicted_radius_p95": 0.8347184062004089,
+          "target_radius_p95": 0.9813030958175659,
+          "boundary_mean_distance_over_radius": 0.2041652798652649,
+          "boundary_coverage_at_0_1_radius": 0.04273504391312599
+        },
+        "DCD": {
+          "local_cd_squared": 0.0068636429496109486,
+          "predicted_outer_fraction": 0.1171875,
+          "target_outer_fraction": 0.4517374634742737,
+          "target_boundary_points": 117,
+          "predicted_radius_p95": 0.8177614808082581,
+          "target_radius_p95": 0.9813030958175659,
+          "boundary_mean_distance_over_radius": 0.22007745504379272,
+          "boundary_coverage_at_0_1_radius": 0.05982905998826027
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.0056069036945700645,
+          "predicted_outer_fraction": 0.15625,
+          "target_outer_fraction": 0.4517374634742737,
+          "target_boundary_points": 117,
+          "predicted_radius_p95": 0.8827441930770874,
+          "target_radius_p95": 0.9813030958175659,
+          "boundary_mean_distance_over_radius": 0.1951354593038559,
+          "boundary_coverage_at_0_1_radius": 0.14529915153980255
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.004881421569734812,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.4517374634742737,
+          "target_boundary_points": 117,
+          "predicted_radius_p95": 0.8457825779914856,
+          "target_radius_p95": 0.9813030958175659,
+          "boundary_mean_distance_over_radius": 0.19784896075725555,
+          "boundary_coverage_at_0_1_radius": 0.05982905998826027
+        }
+      }
+    },
+    {
+      "entry": {
+        "model_id": "bronze_09",
+        "split": "val",
+        "path": "val/model_0009_sample_0019",
+        "input_points": 3836,
+        "target_points": 260
+      },
+      "metrics": {
+        "CD small": {
+          "local_cd_squared": 0.005558935925364494,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8169454336166382,
+          "target_radius_p95": 0.9735583662986755,
+          "boundary_mean_distance_over_radius": 0.21378177404403687,
+          "boundary_coverage_at_0_1_radius": 0.05000000074505806
+        },
+        "CD wide": {
+          "local_cd_squared": 0.005583384074270725,
+          "predicted_outer_fraction": 0.1015625,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8330397009849548,
+          "target_radius_p95": 0.9735583662986755,
+          "boundary_mean_distance_over_radius": 0.21382981538772583,
+          "boundary_coverage_at_0_1_radius": 0.0625
+        },
+        "DCD": {
+          "local_cd_squared": 0.005553097929805517,
+          "predicted_outer_fraction": 0.140625,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8729069232940674,
+          "target_radius_p95": 0.9735583662986755,
+          "boundary_mean_distance_over_radius": 0.18836472928524017,
+          "boundary_coverage_at_0_1_radius": 0.1875
+        },
+        "Hierarchical": {
+          "local_cd_squared": 0.005799486301839352,
+          "predicted_outer_fraction": 0.0859375,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8289499282836914,
+          "target_radius_p95": 0.9735583662986755,
+          "boundary_mean_distance_over_radius": 0.21253427863121033,
+          "boundary_coverage_at_0_1_radius": 0.08749999850988388
+        },
+        "Repulsion": {
+          "local_cd_squared": 0.005208211485296488,
+          "predicted_outer_fraction": 0.1328125,
+          "target_outer_fraction": 0.3076923191547394,
+          "target_boundary_points": 80,
+          "predicted_radius_p95": 0.8510611653327942,
+          "target_radius_p95": 0.9735583662986755,
+          "boundary_mean_distance_over_radius": 0.20325756072998047,
+          "boundary_coverage_at_0_1_radius": 0.0625
+        }
+      }
+    }
+  ],
+  "limitations": "Selected examples, not random population samples. PCA uses target for display only. Ball boundary coverage is not a physical seam metric. Exact duplicate points may overlap in images. Models differ in parameter count; use wide CD for capacity comparison."
+}

@@ -27,7 +27,8 @@ def render(run):
         axes[1].plot(epochs, [r[f'{split}_cd_squared'] for r in rows], label=split)
         axes[2].plot(epochs, [r[f'{split}_fscore'] for r in rows], label=split)
     dcd = history.get('config', {}).get('loss_mode') == 'dcd'
-    loss_title = 'Density-aware Chamfer loss' if dcd else 'Loss / region radius squared'
+    loss_title = ('Exact matching distance / radius' if history.get('config',{}).get('loss_mode')=='emd_exact'
+                  else 'Density-aware Chamfer loss' if dcd else 'Loss / region radius squared')
     for ax, title in zip(axes, (loss_title, 'Local CD squared (lower is better)', 'F-score at 0.02 (higher is better)')):
         ax.set(title=title, xlabel='Epoch')
         ax.grid(alpha=0.2)

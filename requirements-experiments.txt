@@ -1,0 +1,6 @@
+-r requirements.txt
+torch>=2.3,<3
+scipy>=1.9,<2
+trimesh>=4,<5
+rtree>=1,<2
+matplotlib>=3,<4
